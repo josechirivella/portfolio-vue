@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'portfolio-vue',
+    title: 'Jose Chirivella - Software Engineer',
     htmlAttrs: {
       lang: 'en',
     },
@@ -52,4 +52,4 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-}
+};
