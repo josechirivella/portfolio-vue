@@ -1,9 +1,11 @@
 <template>
-  <div id='contactForm'>
-    <form class='card' @submit='submitForm'>
-      <input id='name' autocomplete='name' type='text' @input='contactForm.name'>
-      <input id='email' autocomplete='email' type='email' @input='contactForm.email'>
-      <textarea id='message' @input='contactForm.message'>
+  <div id='contactForm' class='border border-gray-300 rounded-lg p-4 w-1/4'>
+    <form class='card flex flex-col' @submit='submitForm'>
+      <input id='name' v-model.trim='name' autocomplete='name' class='mb-4 p-2' placeholder='Your name'
+             type='text'>
+      <input id='email' v-model.trim='email' autocomplete='email' class='mb-4 p-2' placeholder='Your email'
+             type='email'>
+      <textarea id='message' v-model='message' class='p-2' placeholder='Enter your message'>
       </textarea>
       <button>
         Submit
@@ -16,17 +18,15 @@
 export default {
   data() {
     return {
-      contactForm: {
-        name: String,
-        email: String,
-        message: String
-      }
+      name: '',
+      email: '',
+      message: ''
     };
   },
   methods: {
     submitForm(e) {
       e.preventDefault();
-      console.log('form', e);
+      // const {name, email, message} = this;
     }
   }
 };
