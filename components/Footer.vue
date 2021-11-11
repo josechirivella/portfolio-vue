@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class='copyright text-center'>
+    <div class='copyright text-center p-4'>
       &copy; {{ year }} Jose Chirivella. All Copyrights reserved.
     </div>
   </footer>
