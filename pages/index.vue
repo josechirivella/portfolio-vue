@@ -1,7 +1,13 @@
 <template>
-  <Tutorial />
+  <Footer />
 </template>
 
 <script>
-export default {}
+import Footer from '~/components/Footer'
+
+export default {
+  components: {
+    Footer
+  }
+}
 </script>
