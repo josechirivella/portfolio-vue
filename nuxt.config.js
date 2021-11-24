@@ -1,3 +1,4 @@
+const fontAwesomeIcons = ['faTimes', 'faAdjust'];
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -34,6 +35,16 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    [
+      '@nuxtjs/fontawesome',
+      {
+        component: 'fa',
+        suffix: true,
+        icons: {
+          solid: [...fontAwesomeIcons],
+        },
+      },
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

@@ -2,18 +2,21 @@
   <div>
     <Hero />
     <Contact />
+    <btn-icons icon="times"></btn-icons>
   </div>
 </template>
 
 <script>
 
-import Hero from '~/components/Hero';
-import Contact from '~/components/Contact';
+import Hero from "~/components/Hero";
+import Contact from "~/components/Contact";
+import BtnIcons from "~/components/BtnIcons";
 
 export default {
   components: {
     Hero,
-    Contact
+    Contact,
+    BtnIcons
   }
 };
 </script>
