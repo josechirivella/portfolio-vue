@@ -16,6 +16,7 @@ describe('Footer', () => {
     expect(wrapper.vm).toBeTruthy();
   });
   test('should set the current year', () => {
-    expect(wrapper.text()).toContain('2021');
+		const year = new Date().getFullYear();
+    expect(wrapper.text()).toContain(year.toString());
   });
 });
