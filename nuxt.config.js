@@ -1,4 +1,6 @@
 const fontAwesomeIcons = ['faTimes', 'faAdjust'];
+const fontAwesomeBrandIcons = ['faLinkedinIn', 'faFacebook', 'faTwitter'];
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -42,6 +44,7 @@ export default {
         suffix: true,
         icons: {
           solid: [...fontAwesomeIcons],
+          brands: [...fontAwesomeBrandIcons],
         },
       },
     ],

@@ -9,7 +9,7 @@ export default {
   name: "BtnIcons",
   props: {
     icon: {
-      type: String,
+      type: [String] || String,
       required: true
     }
   }

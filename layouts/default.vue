@@ -1,16 +1,11 @@
 <template>
-  <div id='content' class='container mx-auto'>
+  <div id='content' class='mx-auto'>
     <Nuxt />
-    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from '~/components/Footer';
 
 export default {
-  components: {
-    Footer
-  }
 }
 </script>
