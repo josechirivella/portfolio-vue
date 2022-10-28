@@ -1,15 +1,21 @@
 <template>
-  <div class="icon">
-    <fa-icon :icon="icon"></fa-icon>
-  </div>
+  <a :href="link" target="_blank">
+    <div class="icon">
+      <fa-icon :icon="icon"></fa-icon>
+    </div>
+  </a>
 </template>
 
 <script>
 export default {
   name: "BtnIcons",
   props: {
+    link: {
+      type: String,
+      required: true
+    },
     icon: {
-      type: [String] || String,
+      type: Array,
       required: true
     }
   }
@@ -18,6 +24,6 @@ export default {
 
 <style lang="scss" scoped>
 .icon {
-  @apply border-black border w-4 h-4 rounded-full flex items-center justify-center p-4;
+  @apply text-white w-4 h-4 rounded-full flex items-center justify-center p-4;
 }
 </style>

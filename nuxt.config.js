@@ -1,5 +1,10 @@
 const fontAwesomeIcons = ['faTimes', 'faAdjust'];
-const fontAwesomeBrandIcons = ['faLinkedinIn', 'faFacebook', 'faTwitter'];
+const fontAwesomeBrandIcons = [
+  'faLinkedin',
+  'faFacebook',
+  'faTwitter',
+  'faGithub',
+];
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
