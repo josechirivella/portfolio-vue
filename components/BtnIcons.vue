@@ -24,6 +24,6 @@ export default {
 
 <style lang="scss" scoped>
 .icon {
-  @apply text-white w-4 h-4 rounded-full flex items-center justify-center p-4;
+  @apply text-white w-4 h-4 rounded-full flex items-center justify-center py-4 px-8 text-4xl;
 }
 </style>
