@@ -41,6 +41,9 @@ export default {
       }, {
         link: "https://github.com/josechirivella",
         icon: ["fab", "github"]
+      }, {
+        link: "mailto:joser.chirivella@gmail.com",
+        icon: ["fa", "paper-plane"]
       }]
     };
   }
