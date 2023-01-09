@@ -53,6 +53,7 @@ export default {
         },
       },
     ],
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -71,4 +72,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  googleAnalytics: {
+    id: process.env.GA,
+    checkDuplicatedScript: true,
+    dev: process.env.BASE_URL === 'https://jchirivella.com',
+  },
 };
