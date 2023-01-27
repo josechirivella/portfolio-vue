@@ -12,7 +12,7 @@ exports[`Hero should render component 1`] = `
   </h1>
    
   <h3
-    class="hero__title"
+    class="hero__title mb-2"
   >
     Software Engineer
   </h3>

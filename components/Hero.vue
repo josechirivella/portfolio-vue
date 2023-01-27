@@ -14,7 +14,7 @@
     "
   >
     <h1 class="hero__name">Jose Chirivella</h1>
-    <h3 class="hero__title">Software Engineer</h3>
+    <h3 class="hero__title mb-2">Software Engineer</h3>
     <div id="icons-container" class="mt-4 flex align-middle">
       <template v-for="(icon, index) in icons">
         <btn-icons :key="index" :link="icon.link" :icon="icon.icon"></btn-icons>
