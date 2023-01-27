@@ -17,5 +17,6 @@ describe('BtnIcons', () => {
 
   test('should render component', () => {
     expect(wrapper.vm).toBeTruthy();
+    expect(wrapper.vm.$el).toMatchSnapshot();
   });
 });

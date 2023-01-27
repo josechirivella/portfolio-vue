@@ -14,9 +14,10 @@ describe('Footer', () => {
   });
   test('should render', () => {
     expect(wrapper.vm).toBeTruthy();
+    expect(wrapper.vm.$el).toMatchSnapshot();
   });
   test('should set the current year', () => {
-		const year = new Date().getFullYear();
+    const year = new Date().getFullYear();
     expect(wrapper.text()).toContain(year.toString());
   });
 });

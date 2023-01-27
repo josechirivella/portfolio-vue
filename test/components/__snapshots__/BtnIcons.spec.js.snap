@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BtnIcons should render component 1`] = `
+<a
+  target="_blank"
+>
+  <div
+    class="icon"
+  >
+    <fa-icon />
+  </div>
+</a>
+`;

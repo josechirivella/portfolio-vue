@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render 1`] = `
+<footer>
+  <div
+    class="copyright text-center p-4"
+  >
+    
+    © 2023 Jose Chirivella. All rights reserved.
+  
+  </div>
+</footer>
+`;

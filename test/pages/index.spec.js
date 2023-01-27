@@ -8,5 +8,6 @@ describe('Index', () => {
   });
   test('should render', () => {
     expect(wrapper.vm).toBeTruthy();
+    expect(wrapper.vm.$el).toMatchSnapshot();
   });
 });

@@ -10,10 +10,11 @@
       flex-col
       justify-center
       text-lg
+      hero
     "
   >
-    <h1>Jose Chirivella</h1>
-    <h3>Software Engineer</h3>
+    <h1 class="hero__name">Jose Chirivella</h1>
+    <h3 class="hero__title">Software Engineer</h3>
     <div id="icons-container" class="mt-4 flex align-middle">
       <template v-for="(icon, index) in icons">
         <btn-icons :key="index" :link="icon.link" :icon="icon.icon"></btn-icons>
@@ -31,7 +32,6 @@ export default {
   },
   data () {
     return {
-      iconBrands: ['facebook', 'twitter', 'linkedin'],
       icons: [ {
         link: "https://twitter.com/chiri14",
         icon: ['fab', 'twitter']
