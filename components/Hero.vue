@@ -44,6 +44,9 @@ export default {
       }, {
         link: "mailto:joser.chirivella@gmail.com",
         icon: ["fa", "paper-plane"]
+      }, {
+        link: "https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf",
+        icon: ["fa", "file-pdf"]
       }]
     };
   }

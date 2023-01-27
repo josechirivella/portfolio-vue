@@ -1,4 +1,4 @@
-const fontAwesomeIcons = ['faTimes', 'faAdjust', 'faPaperPlane'];
+const fontAwesomeIcons = ['faTimes', 'faAdjust', 'faPaperPlane', 'faFilePdf'];
 const fontAwesomeBrandIcons = [
   'faLinkedin',
   'faFacebook',
