@@ -22,23 +22,23 @@ exports[`Hero should render component 1`] = `
     id="icons-container"
   >
     <btn-icons-stub
-      icon="fab,twitter"
+      icon="[object Object]"
       link="https://twitter.com/chiri14"
     />
     <btn-icons-stub
-      icon="fab,linkedin"
+      icon="[object Object]"
       link="https://linkedin.com/in/josechirivella"
     />
     <btn-icons-stub
-      icon="fab,github"
+      icon="[object Object]"
       link="https://github.com/josechirivella"
     />
     <btn-icons-stub
-      icon="fa,paper-plane"
+      icon="[object Object]"
       link="mailto:joser.chirivella@gmail.com"
     />
     <btn-icons-stub
-      icon="fa,file-pdf"
+      icon="[object Object]"
       link="https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf"
     />
   </div>

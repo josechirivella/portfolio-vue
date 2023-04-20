@@ -7,7 +7,7 @@ exports[`BtnIcons should render component 1`] = `
   <div
     class="icon"
   >
-    <fa-icon />
+    <font-awesome-icon />
   </div>
 </a>
 `;
