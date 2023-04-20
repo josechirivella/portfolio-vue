@@ -1,4 +1,11 @@
-const fontAwesomeIcons = ['faTimes', 'faAdjust'];
+const fontAwesomeIcons = ['faTimes', 'faAdjust', 'faPaperPlane', 'faFilePdf'];
+const fontAwesomeBrandIcons = [
+  'faLinkedin',
+  'faFacebook',
+  'faTwitter',
+  'faGithub',
+];
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -42,9 +49,11 @@ export default {
         suffix: true,
         icons: {
           solid: [...fontAwesomeIcons],
+          brands: [...fontAwesomeBrandIcons],
         },
       },
     ],
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -63,4 +72,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  googleAnalytics: {
+    id: process.env.GA,
+    checkDuplicatedScript: true,
+    dev: process.env.BASE_URL === 'https://jchirivella.com',
+  },
 };

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero should render component 1`] = `
+<div
+  class="bg-black text-white min-h-screen flex items-center flex-col justify-center text-lg hero"
+  id="hero"
+>
+  <h1
+    class="hero__name"
+  >
+    Jose Chirivella
+  </h1>
+   
+  <h3
+    class="hero__title mb-2"
+  >
+    Software Engineer
+  </h3>
+   
+  <div
+    class="mt-4 flex align-middle"
+    id="icons-container"
+  >
+    <btn-icons-stub
+      icon="fab,twitter"
+      link="https://twitter.com/chiri14"
+    />
+    <btn-icons-stub
+      icon="fab,linkedin"
+      link="https://linkedin.com/in/josechirivella"
+    />
+    <btn-icons-stub
+      icon="fab,github"
+      link="https://github.com/josechirivella"
+    />
+    <btn-icons-stub
+      icon="fa,paper-plane"
+      link="mailto:joser.chirivella@gmail.com"
+    />
+    <btn-icons-stub
+      icon="fa,file-pdf"
+      link="https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf"
+    />
+  </div>
+</div>
+`;

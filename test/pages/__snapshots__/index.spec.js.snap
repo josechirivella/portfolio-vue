@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index should render 1`] = `
+<div>
+  <hero-stub />
+</div>
+`;

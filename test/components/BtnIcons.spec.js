@@ -3,11 +3,13 @@ import BtnIcons from '~/components/BtnIcons';
 
 describe('BtnIcons', () => {
   let wrapper;
+  let link;
   let icon;
   beforeAll(() => {
     icon = 'times';
     wrapper = shallowMount(BtnIcons, {
       props: {
+        link,
         icon,
       },
     });
@@ -15,5 +17,6 @@ describe('BtnIcons', () => {
 
   test('should render component', () => {
     expect(wrapper.vm).toBeTruthy();
+    expect(wrapper.vm.$el).toMatchSnapshot();
   });
 });
