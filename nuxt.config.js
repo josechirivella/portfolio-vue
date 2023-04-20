@@ -42,19 +42,15 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    [
-      '@nuxtjs/fontawesome',
-      {
-        component: 'fa',
-        suffix: true,
-        icons: {
-          solid: [...fontAwesomeIcons],
-          brands: [...fontAwesomeBrandIcons],
-        },
-      },
-    ],
+    '@nuxtjs/fontawesome',
     '@nuxtjs/google-analytics',
   ],
+  fontawesome: {
+    icons: {
+      solid: [...fontAwesomeIcons],
+      brands: [...fontAwesomeBrandIcons],
+    },
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -72,6 +68,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  purgeCSS: {
+    whitelistPatterns: [/svg.*/, /fa.*/],
+  },
 
   googleAnalytics: {
     id: process.env.GA,

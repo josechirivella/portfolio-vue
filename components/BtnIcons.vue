@@ -1,24 +1,24 @@
 <template>
   <a :href="link" target="_blank">
     <div class="icon">
-      <fa-icon :icon="icon"></fa-icon>
+      <font-awesome-icon :icon="icon"></font-awesome-icon>
     </div>
   </a>
 </template>
 
 <script>
 export default {
-  name: "BtnIcons",
+  name: 'BtnIcons',
   props: {
     link: {
       type: String,
-      required: true
+      required: true,
     },
     icon: {
-      type: Array,
-      required: true
-    }
-  }
+      type: Object,
+      required: true,
+    },
+  },
 };
 </script>
 
