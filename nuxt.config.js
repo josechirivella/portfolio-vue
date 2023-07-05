@@ -76,6 +76,6 @@ export default {
   googleAnalytics: {
     id: process.env.GA,
     checkDuplicatedScript: true,
-    dev: process.env.BASE_URL === 'https://jchirivella.com',
+    dev: process.env.BASE_URL !== 'https://jchirivella.com',
   },
 };
