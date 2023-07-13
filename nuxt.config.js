@@ -4,6 +4,7 @@ const fontAwesomeBrandIcons = [
   'faFacebook',
   'faTwitter',
   'faGithub',
+  'faMedium',
 ];
 
 export default {

@@ -14,7 +14,7 @@ describe('Hero', () => {
   describe('BtnIcons', () => {
     test('icons length should be greater than 0', () => {
       expect(wrapper.vm.icons).not.toHaveLength(0);
-      expect(wrapper.vm.icons).toHaveLength(5);
+      expect(wrapper.vm.icons).toHaveLength(6);
     });
   });
   describe('Hero content', () => {

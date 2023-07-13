@@ -35,6 +35,10 @@ exports[`Hero should render component 1`] = `
     />
     <btn-icons-stub
       icon="[object Object]"
+      link="https://medium.com/@josechirivella"
+    />
+    <btn-icons-stub
+      icon="[object Object]"
       link="mailto:joser.chirivella@gmail.com"
     />
     <btn-icons-stub
