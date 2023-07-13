@@ -1,7 +1,17 @@
 <template>
   <div
     id="hero"
-    class="bg-black text-white min-h-screen flex items-center flex-col justify-center text-lg hero"
+    class="
+      bg-black
+      text-white
+      min-h-screen
+      flex
+      items-center
+      flex-col
+      justify-center
+      text-lg
+      hero
+    "
   >
     <h1 class="hero__name">Jose Chirivella</h1>
     <h3 class="hero__title mb-2">Software Engineer</h3>
@@ -17,6 +27,7 @@
 import {
   faGithub,
   faLinkedin,
+  faMedium,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
@@ -40,6 +51,10 @@ export default {
         {
           link: 'https://github.com/josechirivella',
           icon: faGithub,
+        },
+        {
+          link: 'https://medium.com/@josechirivella',
+          icon: faMedium,
         },
         {
           link: 'mailto:joser.chirivella@gmail.com',
