@@ -14,34 +14,28 @@
 </template>
 
 <script setup lang="ts">
-import {
-  faGithub,
-  faLinkedin,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
-import { faFilePdf, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import BtnIcons from '~/components/BtnIcons';
 
 const icons = ref([
   {
     link: 'https://twitter.com/chiri14',
-    icon: faTwitter,
+    icon: 'fa-brands:twitter',
   },
   {
     link: 'https://linkedin.com/in/josechirivella',
-    icon: faLinkedin,
+    icon: 'fa-brands:linkedin',
   },
   {
     link: 'https://github.com/josechirivella',
-    icon: faGithub,
+    icon: 'fa-brands:github',
   },
   {
     link: 'mailto:joser.chirivella@gmail.com',
-    icon: faPaperPlane,
+    icon: 'fa6-regular:paper-plane',
   },
   {
     link: 'https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf',
-    icon: faFilePdf,
+    icon: 'fa6-regular:file-pdf',
   },
 ]);
 </script>
