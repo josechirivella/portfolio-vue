@@ -1,25 +1,16 @@
 <template>
-  <a :href="link" target="_blank">
+  <a :href="props.link" target="_blank">
     <div class="icon">
-      <font-awesome-icon :icon="icon"></font-awesome-icon>
+      <font-awesome-icon :icon="props.icon"></font-awesome-icon>
     </div>
   </a>
 </template>
 
-<script>
-export default {
-  name: 'BtnIcons',
-  props: {
-    link: {
-      type: String,
-      required: true,
-    },
-    icon: {
-      type: Object,
-      required: true,
-    },
-  },
-};
+<script setup lang="ts">
+const props = defineProps({
+  link: { type: String, required: true },
+  icon: { type: Object, required: true },
+});
 </script>
 
 <style lang="scss" scoped>
