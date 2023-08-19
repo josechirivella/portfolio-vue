@@ -5,9 +5,12 @@ exports[`BtnIcons should render component 1`] = `
   target="_blank"
 >
   <div
-    class="icon"
+    class="icon-wrapper"
   >
-    <font-awesome-icon />
+    <icon
+      color="white"
+      name="times"
+    />
   </div>
 </a>
 `;

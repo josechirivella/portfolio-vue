@@ -4,8 +4,6 @@ module.exports = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1',
-    '^vue$': 'vue/dist/vue.common.js',
-    '#app': '<rootDir>/node_modules/nuxt3/dist/app/index.mjs',
   },
   moduleFileExtensions: ['js', 'jsx', 'mjs', 'ts', 'vue'],
   transform: {
@@ -21,5 +19,7 @@ module.exports = {
   ],
   transformIgnorePatterns: ['node_modules/(?!(nuxt3|unenv))'],
   testEnvironment: 'jsdom',
-  setupFiles: ['./test-utils/global-test-utils-config.ts'],
+  testEnvironmentOptions: {
+    customExportConditions: ['node', 'node-addons'],
+  },
 };

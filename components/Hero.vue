@@ -14,6 +14,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import BtnIcons from '~/components/BtnIcons';
 
 const icons = ref([
