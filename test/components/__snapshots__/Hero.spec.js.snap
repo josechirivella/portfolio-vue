@@ -33,6 +33,10 @@ exports[`Hero should render component 1`] = `
       link="https://github.com/josechirivella"
     />
     <btn-icons-stub
+      icon="fa-brands:medium"
+      link="https://medium.com/@josechirivella"
+    />
+    <btn-icons-stub
       icon="fa6-regular:paper-plane"
       link="mailto:joser.chirivella@gmail.com"
     />
