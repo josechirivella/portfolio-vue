@@ -4,13 +4,6 @@
   </div>
 </template>
 
-<script>
-import Hero from "~/components/Hero";
-
-export default {
-  components: {
-    Hero
-  }
-};
+<script setup>
+import Hero from '~/components/Hero';
 </script>
-

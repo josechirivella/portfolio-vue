@@ -1,11 +1,5 @@
 <template>
-  <div id='content' class='mx-auto'>
-    <Nuxt />
+  <div id="content" class="mx-auto">
+    <slot />
   </div>
 </template>
-
-<script>
-
-export default {
-}
-</script>

@@ -1,18 +1,11 @@
-const plugin = require('tailwindcss/plugin');
+import plugin from 'tailwindcss/plugin';
 
-module.exports = {
-  purge: [
+export default {
+  content: [
     './components/**/*.{vue,js}',
     './layouts/**/*.vue',
     './pages/**/*.vue',
   ],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
   plugins: [
     require('@tailwindcss/typography'),
     plugin(function ({ addBase, theme }) {
