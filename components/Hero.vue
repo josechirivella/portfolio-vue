@@ -31,6 +31,10 @@ const icons = ref([
     icon: 'fa-brands:github',
   },
   {
+    link: 'https://medium.com/@josechirivella',
+    icon: 'fa-brands:medium',
+  },
+  {
     link: 'mailto:joser.chirivella@gmail.com',
     icon: 'fa6-regular:paper-plane',
   },
