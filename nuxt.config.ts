@@ -1,5 +1,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      posthogPublicKey: '',
+      posthogHost: ''
+    }
+  },
   app: {
     head: {
       meta: [
