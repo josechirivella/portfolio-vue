@@ -1,7 +1,7 @@
 <template>
   <div
     id="hero"
-    class="bg-black text-white min-h-screen flex items-center flex-col justify-center text-lg hero"
+    class="bg-black text-white min-h-screen flex items-center flex-col justify-center text-lg hero overflow-hidden"
   >
     <h1 class="hero__name">Jose Chirivella</h1>
     <h3 class="hero__title mb-2">Software Engineer</h3>
