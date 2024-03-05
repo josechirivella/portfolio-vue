@@ -2,6 +2,6 @@
 
 exports[`Index should render 1`] = `
 <div>
-  <hero-stub />
+  <hero />
 </div>
 `;
