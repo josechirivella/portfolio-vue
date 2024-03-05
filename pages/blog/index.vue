@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div>
     <h1>Hi! I'm Jose</h1>
     <p>I'm a Software Engineer with a focus in Front End. Here you will find my thoughts.</p>
     <div class="pages--container py-4 grid grid-cols-1 md:grid-cols-3 gap-4">
