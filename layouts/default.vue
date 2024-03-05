@@ -1,7 +1,9 @@
 <template>
   <div class="container mx-auto">
     <Nav />
-    <slot />
+    <main class="px-4">
+      <slot />
+    </main>
   </div>
 </template>
 <script setup lang="ts">
