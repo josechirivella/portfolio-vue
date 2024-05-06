@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="font-bold">Hi! I'm Jose</h1>
+    <h1 class="font-bold text-4xl">Hi! I'm Jose</h1>
     <p>I'm a Software Engineer with a focus in Front End. Here you will find my thoughts.</p>
     <div class="pages--container py-4 grid grid-cols-1 md:grid-cols-3 gap-4">
       <div v-for="(post, index) in posts" :key="index" class="max-w-sm rounded-lg border-gray-800 border p-4 overflow-hidden shadow-lg">

@@ -1,7 +1,7 @@
 <template>
-  <div class="container mx-auto">
+  <div>
     <Nav />
-    <main class="px-4">
+    <main class="container mx-auto p-4">
       <slot />
     </main>
   </div>
