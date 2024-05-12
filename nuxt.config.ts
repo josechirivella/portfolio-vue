@@ -9,8 +9,10 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      title: 'Jose Chirivella | Software Engineer',
       meta: [
         { charset: 'utf-8' },
+        { name: 'description', content: 'The portfolio website for Jose Chirivella' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'format-detection', content: 'telephone=no' },
       ],
