@@ -19,7 +19,7 @@ exports[`Hero should render component 1`] = `
     class="mt-4 grid grid-rows-2 lg:grid-rows-1 grid-flow-col gap-4"
     id="icons-container"
   >
-
+    
     <btn-icons-stub
       icon="fa-brands:twitter"
       link="https://twitter.com/chiri14"
@@ -44,7 +44,7 @@ exports[`Hero should render component 1`] = `
       icon="fa6-regular:file-pdf"
       link="https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf"
     />
-
+    
   </div>
 </div>
 `;
