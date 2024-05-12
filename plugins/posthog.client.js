@@ -1,10 +1,12 @@
 import { defineNuxtPlugin } from '#app';
 import posthog from 'posthog-js';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default defineNuxtPlugin(() => {
   const runtimeConfig = useRuntimeConfig();
   const posthogClient = posthog.init(runtimeConfig.public.posthogPublicKey, {
     api_host: runtimeConfig.public.posthogHost || 'https://app.posthog.com',
+    capture_pageview: false, // we add manual pageview capturing below
     loaded: (posthog) => {
       if (import.meta.env.MODE === 'development') posthog.debug();
     },
@@ -13,8 +15,10 @@ export default defineNuxtPlugin(() => {
   // Make sure that pageviews are captured with each route change
   const router = useRouter();
   router.afterEach((to) => {
-    posthog.capture('$pageview', {
-      current_url: to.fullPath,
+    nextTick(() => {
+      posthog.capture('$pageview', {
+        current_url: to.fullPath,
+      });
     });
   });
 
