@@ -2,7 +2,7 @@
 
 exports[`Hero should render component 1`] = `
 <div
-  class="bg-black text-white min-h-screen flex items-center flex-col justify-center text-lg hero overflow-hidden"
+  class="text-white h-[90svh] flex items-center flex-col justify-center text-lg hero overflow-hidden"
   id="hero"
 >
   <h1
@@ -16,7 +16,7 @@ exports[`Hero should render component 1`] = `
     Software Engineer
   </h3>
   <div
-    class="mt-4 flex align-middle"
+    class="mt-4 grid grid-rows-2 lg:grid-rows-1 grid-flow-col gap-4"
     id="icons-container"
   >
     

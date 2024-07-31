@@ -19,4 +19,11 @@ describe('BtnIcons', () => {
     expect(wrapper.vm).toBeTruthy();
     expect(wrapper.vm.$el).toMatchSnapshot();
   });
+
+  test('should render component with link', () => {
+    link = 'https://www.google.com';
+    icon = 'times';
+    wrapper.setProps({ link });
+    expect(wrapper.vm.$el).toMatchSnapshot();
+  });
 });

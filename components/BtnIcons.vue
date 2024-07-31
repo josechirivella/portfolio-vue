@@ -1,5 +1,5 @@
 <template>
-  <a :href="props.link" target="_blank">
+  <a v-if="props?.link && props?.icon" :href="props.link" target="_blank">
     <div class="icon-wrapper">
       <Icon :name="props.icon" color="white" />
     </div>

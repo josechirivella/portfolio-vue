@@ -2,7 +2,7 @@ import { defineNuxtPlugin } from '#app';
 import posthog from 'posthog-js';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(() => {
   const runtimeConfig = useRuntimeConfig();
   const posthogClient = posthog.init(runtimeConfig.public.posthogPublicKey, {
     api_host: runtimeConfig.public.posthogHost || 'https://app.posthog.com',
