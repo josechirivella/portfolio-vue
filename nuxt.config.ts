@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig: {
     public: {
-      posthogPublicKey: '',
-      posthogHost: ''
+      posthogPublicKey: process.env.POSTHOG_PUBLIC_KEY || '',
+      posthogHost: process.env.POSTHOG_HOST || ''
     }
   },
   app: {
