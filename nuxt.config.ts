@@ -1,12 +1,14 @@
 export default defineNuxtConfig({
   css: ["@/assets/main.scss"],
   devtools: { enabled: true },
+
   runtimeConfig: {
     public: {
       posthogPublicKey: process.env.POSTHOG_PUBLIC_KEY || '',
       posthogHost: process.env.POSTHOG_HOST || ''
     }
   },
+
   app: {
     head: {
       title: 'Jose Chirivella | Software Engineer',
@@ -53,4 +55,6 @@ export default defineNuxtConfig({
   purgeCSS: {
     whitelistPatterns: [/svg.*/, /fa.*/],
   },
+
+  compatibilityDate: '2024-08-24',
 });
