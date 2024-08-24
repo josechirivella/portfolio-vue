@@ -25,13 +25,13 @@
         <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
           <li v-for="item in navItems" :key="item.name" class="nav-item">
             <NuxtLink
-              class="px-3 py-2 flex items-center text-lg font-bold leading-snug text-white hover:opacity-75"
+              class="px-3 py-2 flex items-center text-lg font-bold leading-snug"
               :to="item.link"
               :target="item.target"
             >
               <i
                 class="text-lg leading-lg text-white opacity-75"
-              /><span class="ml-2">{{ item.name }}</span>
+              /><span class="ml-2 text-gray-400  hover:text-white">{{ item.name }}</span>
             </NuxtLink>
           </li>
         </ul>
@@ -50,6 +50,10 @@ interface INavItems {
 const showMenu = ref(false);
 const navItems: Array<INavItems> = [
   {
+    name: "Home",
+    link: "/",
+  },
+  {
     name: "About",
     link: "/about",
   },
@@ -67,3 +71,11 @@ function toggleNavbar() {
   showMenu.value = !showMenu.value;
 }
 </script>
+
+<style lang="scss">
+.nav-item {
+  .router-link-active span {
+    @apply text-white;
+  }
+}
+</style>
