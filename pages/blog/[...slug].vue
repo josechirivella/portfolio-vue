@@ -1,7 +1,7 @@
 <template>
   <ContentDoc v-slot="{ doc }">
-    <article class="mx-auto prose lg:prose-xl">
-      <h1 class="text-white">{{ doc.title }}</h1>
+    <article class="mx-auto prose dark:prose-invert lg:prose-xl">
+      <h1>{{ doc.title }}</h1>
       <img :src="doc.image" alt="Post cover">
       <ContentRenderer :value="doc" />
     </article>
