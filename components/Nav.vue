@@ -59,7 +59,9 @@ const navItems: Array<INavItems> = [
   },
   {
     name: "Blog",
-    link: "/blog",
+    // link: "/blog",
+    link: "https://medium.com/@josechirivella",
+    target: "_blank",
   },
   {
     name: "Resume",
