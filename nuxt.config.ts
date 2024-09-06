@@ -11,6 +11,9 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
       title: 'Jose Chirivella | Software Engineer',
       meta: [
         { charset: 'utf-8' },
