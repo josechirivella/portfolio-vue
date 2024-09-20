@@ -2,6 +2,8 @@ export default defineNuxtConfig({
   css: ["@/assets/main.scss"],
   devtools: { enabled: true },
 
+  ssr: true,
+
   runtimeConfig: {
     public: {
       posthogPublicKey: process.env.POSTHOG_PUBLIC_KEY || '',
