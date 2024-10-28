@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-[#141618] w-full sticky top-0">
+  <nav class="w-full sticky top-0">
     <div class="container mx-auto p-4 lg:flex">
       <div
         class="w-full relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start"
@@ -59,9 +59,7 @@ const navItems: Array<INavItems> = [
   },
   {
     name: "Blog",
-    // link: "/blog",
-    link: "https://medium.com/@josechirivella",
-    target: "_blank",
+    link: "/blog",
   },
   {
     name: "Resume",
