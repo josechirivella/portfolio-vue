@@ -20,8 +20,11 @@
     "*.{css,vue}": "stylelint"
   },
   "dependencies": {
+    "@primevue/themes": "^4.0.7",
     "@tailwindcss/typography": "^0.5.15",
-    "posthog-js": "^1.163.0"
+    "posthog-js": "^1.163.0",
+    "primevue": "^4.0.7",
+    "tailwindcss-primeui": "^0.3.4"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -36,6 +39,7 @@
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/stylelint-module": "^5.2.0",
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "@primevue/nuxt-module": "^4.0.7",
     "@types/jest": "^29.5.13",
     "@types/node": "^20.16.5",
     "@vue/test-utils": "^2.4.6",

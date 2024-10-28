@@ -1,3 +1,5 @@
+import Aura from "@primevue/themes/aura";
+
 export default defineNuxtConfig({
   css: ["@/assets/main.scss"],
   devtools: { enabled: true },
@@ -43,7 +45,20 @@ export default defineNuxtConfig({
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     'nuxt-icon',
+    '@primevue/nuxt-module'
   ],
+
+  primevue: {
+    options: {
+      ripple: true,
+      theme: {
+        preset: Aura,
+        options: {
+          darkModeSelector: 'system'
+        }
+      }
+    }
+  },
 
   eslint: {
     lintOnStart: false,
