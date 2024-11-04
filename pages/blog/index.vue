@@ -2,8 +2,8 @@
   <div class="max-w-2xl mx-auto">
     <h1 class="font-bold text-4xl">Hi! I'm Jose</h1>
     <p class="mb-4">
-      I'm a Software Engineer with a focus in Front End. Here you will find my
-      thoughts.
+      I'm a Software Engineer, over 10 years of experience. Here you will find my
+      thoughts and rants.
     </p>
     <div class="pages--container py-4 grid grid-cols-1 gap-4">
       <div v-for="(post, index) in posts" :key="index">
