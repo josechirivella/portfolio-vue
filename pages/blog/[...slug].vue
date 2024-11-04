@@ -5,6 +5,7 @@
       <img :src="doc.image" alt="Post cover">
       <ContentRenderer :value="doc" />
     </article>
+    <ScrollTop />
   </ContentDoc>
 </template>
 <script setup lang="ts">

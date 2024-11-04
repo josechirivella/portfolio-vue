@@ -22,7 +22,9 @@
               {{ post.description }}
             </template>
             <template v-if="post.tags" #footer>
-              <div class="flex"></div>
+              <Chip v-for="(tag, idx) in post.tags" :key="idx" class="mr-2">
+                {{ tag }}
+              </Chip>
             </template>
           </Card>
         </nuxt-link>
