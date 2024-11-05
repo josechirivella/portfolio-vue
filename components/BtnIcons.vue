@@ -1,13 +1,20 @@
 <template>
-  <a v-if="props?.link && props?.icon" :href="props.link" target="_blank">
+  <a
+    v-if="link && icon"
+    :href="link"
+    target="_blank"
+  >
     <div class="icon-wrapper">
-      <Icon :name="props.icon" color="white" />
+      <Icon
+        :name="icon"
+        color="white"
+      />
     </div>
   </a>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   link: { type: String, required: true },
   icon: { type: String, required: true },
 });
