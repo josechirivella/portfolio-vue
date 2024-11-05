@@ -21,10 +21,10 @@ describe('BtnIcons', () => {
     expect(wrapper.vm.$el).toMatchSnapshot();
   });
 
-  test('should render component with link', () => {
+  test('should render component with link', async () => {
     link = 'https://www.facebook.com';
     icon = 'times';
-    wrapper.setProps({ link });
+    await wrapper.setProps({ link });
     expect(wrapper.vm.$el).toMatchSnapshot();
   });
 });

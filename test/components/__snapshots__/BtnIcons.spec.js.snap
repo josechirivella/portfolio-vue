@@ -18,7 +18,7 @@ exports[`BtnIcons should render component 1`] = `
 
 exports[`BtnIcons should render component with link 1`] = `
 <a
-  href="https://www.google.com"
+  href="https://www.facebook.com"
   target="_blank"
 >
   <div
