@@ -109,13 +109,9 @@ export default defineNuxtConfig({
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
-    // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
-    // https://go.nuxtjs.dev/content
+    '@nuxt/eslint',
+    '@nuxtjs/stylelint-module', // https://go.nuxtjs.dev/tailwindcss
+    '@nuxtjs/tailwindcss', // https://go.nuxtjs.dev/content
     '@nuxt/content',
     'nuxt-icon',
     '@primevue/nuxt-module',
