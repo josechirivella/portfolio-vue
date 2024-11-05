@@ -7,6 +7,7 @@ describe('BtnIcons', () => {
   let icon;
   beforeAll(() => {
     icon = 'times';
+    link = 'https://www.google.com';
     wrapper = shallowMount(BtnIcons, {
       props: {
         link,
@@ -20,10 +21,10 @@ describe('BtnIcons', () => {
     expect(wrapper.vm.$el).toMatchSnapshot();
   });
 
-  test('should render component with link', () => {
-    link = 'https://www.google.com';
+  test('should render component with link', async () => {
+    link = 'https://www.facebook.com';
     icon = 'times';
-    wrapper.setProps({ link });
+    await wrapper.setProps({ link });
     expect(wrapper.vm.$el).toMatchSnapshot();
   });
 });

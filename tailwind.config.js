@@ -7,6 +7,7 @@ export default {
     './pages/**/*.vue',
   ],
   plugins: [
+    require('tailwindcss-primeui'),
     require('@tailwindcss/typography'),
     plugin(function ({ addBase, theme }) {
       addBase({

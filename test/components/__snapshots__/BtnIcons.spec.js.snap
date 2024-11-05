@@ -1,5 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BtnIcons should render component 1`] = `<!--v-if-->`;
+exports[`BtnIcons should render component 1`] = `
+<a
+  href="https://www.google.com"
+  target="_blank"
+>
+  <div
+    class="icon-wrapper"
+  >
+    <icon
+      color="white"
+      name="times"
+    />
+  </div>
+</a>
+`;
 
-exports[`BtnIcons should render component with link 1`] = `<!--v-if-->`;
+exports[`BtnIcons should render component with link 1`] = `
+<a
+  href="https://www.facebook.com"
+  target="_blank"
+>
+  <div
+    class="icon-wrapper"
+  >
+    <icon
+      color="white"
+      name="times"
+    />
+  </div>
+</a>
+`;

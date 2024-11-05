@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Btn should render 1`] = `
+<button
+  class="howdy btn p-4 border-0 rounded-lg"
+>
+  
+  
+</button>
+`;
+
+exports[`Btn should render btn with class 1`] = `
+<button
+  class="btn-primary btn p-4 border-0 rounded-lg"
+>
+  
+  
+</button>
+`;

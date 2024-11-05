@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-[#141618] w-full sticky top-0">
+  <nav class="w-full sticky top-0">
     <div class="container mx-auto p-4 lg:flex">
       <div
         class="w-full relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start"
@@ -29,9 +29,10 @@
               :to="item.link"
               :target="item.target"
             >
-              <i
-                class="text-lg leading-lg text-white opacity-75"
-              /><span class="ml-2 text-gray-400  hover:text-white">{{ item.name }}</span>
+              <i class="text-lg leading-lg text-white opacity-75" /><span
+                class="ml-2 text-gray-400 hover:text-white"
+                >{{ item.name }}</span
+              >
             </NuxtLink>
           </li>
         </ul>
@@ -41,34 +42,35 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue';
+
 interface INavItems {
   name: string;
   link: string;
   target?: string;
 }
+
 const showMenu = ref(false);
 const navItems: Array<INavItems> = [
   {
-    name: "Home",
-    link: "/",
+    name: 'Home',
+    link: '/',
   },
   {
-    name: "About",
-    link: "/about",
+    name: 'About',
+    link: '/about',
   },
   {
-    name: "Blog",
-    // link: "/blog",
-    link: "https://medium.com/@josechirivella",
-    target: "_blank",
+    name: 'Blog',
+    link: '/blog',
   },
   {
-    name: "Resume",
-    link: "https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf",
-    target: "_blank",
+    name: 'Resume',
+    link: 'https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf',
+    target: '_blank',
   },
 ];
+
 function toggleNavbar() {
   showMenu.value = !showMenu.value;
 }

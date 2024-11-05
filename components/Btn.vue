@@ -1,11 +1,14 @@
 <template>
-  <button class="btn p-4 border-0 rounded-lg" :class="props.classList">
+  <button
+    :class="classList"
+    class="btn p-4 border-0 rounded-lg"
+  >
     <slot />
   </button>
 </template>
 
-<script setup lang="ts">
-const props = defineProps({
+<script lang="ts" setup>
+defineProps({
   classList: { type: String, default: '' },
 });
 </script>
