@@ -123,7 +123,7 @@ export default defineNuxtConfig({
       theme: {
         preset: Noir,
         options: {
-          darkModeSelector: 'system',
+          darkModeSelector: '.dark-mode-always',
         },
       },
     },

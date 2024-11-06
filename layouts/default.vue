@@ -6,5 +6,10 @@
     </main>
   </div>
 </template>
-<script setup lang="ts">
+<script lang="ts" setup>
+useHead({
+  htmlAttrs: {
+    class: 'dark-mode-always'
+  }
+})
 </script>
