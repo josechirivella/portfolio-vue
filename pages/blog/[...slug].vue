@@ -28,10 +28,15 @@ if (!post.value) {
   });
 }
 
+console.log('route', route);
+
 useSeoMeta({
   title: `${post.value.title} - Jose Chirivella`,
   ogTitle: `${post.value.title} - Jose Chirivella`,
   description: post.value.description,
-  ogDescription: post.value.description
+  ogDescription: post.value.description,
+  ogImage: post.value.image,
+  ogUrl: window.location.href,
+  ogType: 'article',
 });
 </script>
