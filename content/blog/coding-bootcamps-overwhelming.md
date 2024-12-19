@@ -1,6 +1,6 @@
 ---
 title: Coding Bootcamps can be overwhelming
-description:
+description: My thoughts on coding bootcamps and how they can be overwhelming at first.
 image: https://miro.medium.com/v2/resize:fit:1400/format:webp/0*7SQEoBzOSLSyKy1w
 published: true
 date: 10/04/2021

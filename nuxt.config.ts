@@ -51,6 +51,15 @@ const Noir = definePreset(Aura, {
 
 export default defineNuxtConfig({
   css: ['@/assets/main.scss'],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern',
+        },
+      },
+    },
+  },
   devtools: { enabled: true },
 
   ssr: true,
@@ -76,6 +85,8 @@ export default defineNuxtConfig({
         },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'format-detection', content: 'telephone=no' },
+        { name: 'author', content: 'Jose Chirivella' },
+        { name: 'robots', content: 'index, follow' },
       ],
       link: [
         {
@@ -117,6 +128,13 @@ export default defineNuxtConfig({
     '@primevue/nuxt-module',
   ],
 
+  nitro: {
+    prerender: {
+      routes: ['/'],
+      crawlLinks: true,
+    },
+  },
+
   primevue: {
     options: {
       ripple: true,
@@ -138,8 +156,9 @@ export default defineNuxtConfig({
     exclude: ['coverage'],
   },
 
-  // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    contentHead: false
+  },
 
   purgeCSS: {
     whitelistPatterns: [/svg.*/, /fa.*/],
