@@ -28,8 +28,6 @@ if (!post.value) {
   });
 }
 
-console.log('route', route);
-
 useSeoMeta({
   title: `${post.value.title} - Jose Chirivella`,
   ogTitle: `${post.value.title} - Jose Chirivella`,
