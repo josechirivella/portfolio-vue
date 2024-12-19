@@ -15,7 +15,10 @@
           type="button"
           @click="toggleNavbar()"
         >
-          <Icon name="ci:hamburger-md" color="white" />
+          <Icon
+            color="white"
+            name="ci:hamburger-md"
+          />
         </button>
       </div>
       <div
@@ -23,16 +26,22 @@
         class="lg:flex lg:flex-grow items-center"
       >
         <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-          <li v-for="item in navItems" :key="item.name" class="nav-item">
+          <li
+            v-for="item in navItems"
+            :key="item.name"
+            class="nav-item"
+          >
             <NuxtLink
-              class="px-3 py-2 flex items-center text-lg font-bold leading-snug"
-              :to="item.link"
+              :class="{
+                'router-link-active': inBlog() && item.name === 'Blog',
+              }"
               :target="item.target"
+              :to="item.link"
+              class="px-3 py-2 flex items-center text-lg font-bold leading-snug"
             >
               <i class="text-lg leading-lg text-white opacity-75" /><span
                 class="ml-2 text-gray-400 hover:text-white"
-                >{{ item.name }}</span
-              >
+              >{{ item.name }}</span>
             </NuxtLink>
           </li>
         </ul>
@@ -41,7 +50,7 @@
   </nav>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { ref } from 'vue';
 
 interface INavItems {
@@ -50,6 +59,7 @@ interface INavItems {
   target?: string;
 }
 
+const route = useRoute();
 const showMenu = ref(false);
 const navItems: Array<INavItems> = [
   {
@@ -73,6 +83,10 @@ const navItems: Array<INavItems> = [
 
 function toggleNavbar() {
   showMenu.value = !showMenu.value;
+}
+
+function inBlog(): boolean {
+  return route.name === 'blog-slug';
 }
 </script>
 
