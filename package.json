@@ -55,7 +55,7 @@
     "jsdom": "^22.1.0",
     "lint-staged": "^10.5.4",
     "nuxt": "^3.14.1592",
-    "nuxt-icon": "^0.4.2",
+    "nuxt-icon": "^0.6.10",
     "postcss": "^8.4.49",
     "prettier": "^2.8.8",
     "sass": "^1.83.0",
