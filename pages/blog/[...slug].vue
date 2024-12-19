@@ -16,6 +16,7 @@
 
 <script lang="ts" setup>
 const route = useRoute();
+const url = useRequestURL();
 const { data: post } = await useAsyncData(route.path, () =>
   queryContent(route.path).findOne()
 );
@@ -34,7 +35,7 @@ useSeoMeta({
   description: post.value.description,
   ogDescription: post.value.description,
   ogImage: post.value.image,
-  ogUrl: window.location.href,
+  ogUrl: url.href,
   ogType: 'article',
 });
 </script>
