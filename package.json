@@ -39,7 +39,7 @@
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@primevue/nuxt-module": "^4.2.5",
     "@types/jest": "^29.5.14",
-    "@types/node": "^20.17.11",
+    "@types/node": "^22.10.5",
     "@vue/test-utils": "^2.4.6",
     "@vue/vue3-jest": "^28.1.0",
     "babel-jest": "^28.1.3",
