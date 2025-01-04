@@ -51,6 +51,7 @@ const Noir = definePreset(Aura, {
 
 export default defineNuxtConfig({
   css: ['@/assets/main.scss'],
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -60,8 +61,8 @@ export default defineNuxtConfig({
       },
     },
   },
-  devtools: { enabled: true },
 
+  devtools: { enabled: true },
   ssr: true,
 
   runtimeConfig: {
@@ -118,14 +119,13 @@ export default defineNuxtConfig({
     },
   },
 
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxt/eslint',
-    '@nuxtjs/stylelint-module', // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss', // https://go.nuxtjs.dev/content
+    // '@nuxtjs/stylelint-module',
+    '@nuxtjs/tailwindcss',
     '@nuxt/content',
-    'nuxt-icon',
     '@primevue/nuxt-module',
+    '@nuxt/icon',
   ],
 
   nitro: {
@@ -157,12 +157,12 @@ export default defineNuxtConfig({
   },
 
   content: {
-    contentHead: false
+    contentHead: false,
   },
 
   purgeCSS: {
     whitelistPatterns: [/svg.*/, /fa.*/],
   },
 
-  compatibilityDate: '2024-08-24',
+  compatibilityDate: '2025-01-03',
 });

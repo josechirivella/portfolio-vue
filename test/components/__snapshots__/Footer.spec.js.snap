@@ -5,7 +5,7 @@ exports[`Footer should render 1`] = `
   <div
     class="copyright text-center p-4"
   >
-     © 2024 Jose Chirivella. All rights reserved. 
+     © 2025 Jose Chirivella. All rights reserved. 
   </div>
 </footer>
 `;
