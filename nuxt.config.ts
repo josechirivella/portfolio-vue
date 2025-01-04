@@ -52,6 +52,10 @@ const Noir = definePreset(Aura, {
 export default defineNuxtConfig({
   css: ['@/assets/main.scss'],
 
+  experimental: {
+    viewTransition: true,
+  },
+
   vite: {
     css: {
       preprocessorOptions: {
