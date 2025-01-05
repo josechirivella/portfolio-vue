@@ -125,7 +125,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/eslint',
-    // '@nuxtjs/stylelint-module',
+    '@nuxtjs/stylelint-module',
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
     '@primevue/nuxt-module',
