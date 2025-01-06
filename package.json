@@ -36,6 +36,7 @@
     "@nuxt/devtools": "^1.7.0",
     "@nuxt/eslint": "^0.7.4",
     "@nuxt/icon": "1.10.3",
+    "@nuxt/image": "1.8.1",
     "@nuxtjs/stylelint-module": "^5.2.0",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@primevue/nuxt-module": "^4.2.5",

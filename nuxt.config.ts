@@ -131,6 +131,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@primevue/nuxt-module',
     '@nuxt/icon',
+    '@nuxt/image',
   ],
 
   nitro: {
