@@ -56,11 +56,13 @@ const runtimeConfig = useRuntimeConfig();
 const whereQuery = runtimeConfig.public.production
   ? { published: { $ne: true } }
   : {};
-const posts = await queryContent('/')
-  .where(whereQuery)
-  .limit(9)
-  .only(['title', 'description', 'image', 'tags', '_id', '_path'])
-  .skip(9 * (pageNo.value - 1))
-  .sort({ date: -1 })
-  .find();
+const { data: posts } = useAsyncData('posts', () =>
+  queryContent('/')
+    .where(whereQuery)
+    .limit(9)
+    .only(['title', 'description', 'image', 'tags', '_id', '_path'])
+    .skip(9 * (pageNo.value - 1))
+    .sort({ date: 1 })
+    .find(),
+);
 </script>
