@@ -22,7 +22,7 @@ enjoy reading my posts, and feel free to leave a comment if you have any questio
 
 Thank you for visiting my blog, and I hope to see you again soon!
 
-## About Me
+## Who am I
 
 Male, 29 years old, married, no kids, 2 dogs that count as kids, 2 siblings. Born in Venezuela, moved to the US in 2014
 via the
@@ -53,7 +53,7 @@ without any test or scores to public school which it was one of the best in the 
 and become a Doctor, but I didn't have the discipline of studying and Medical school required a lot, but what really
 threw me off was the current health system in Venezuela, parents suffering, no supplies, no medicine, no equipment, no
 nothing, and I didn't want to be part of that. So, I went with my third option, which was Computer Engineering. Second
-option was being a Pilot but it would mean spending a lot of time travelling and I had a girlfriend at the time which I
+option was being a Pilot, but it would mean spending a lot of time travelling and I had a girlfriend at the time which I
 eventually married her.
 
 ## College
@@ -98,13 +98,132 @@ nothing about backend, nightmares about the terminal, and databases. But, I didn
 another state without emotional support.
 
 I decided to stay in Durham and take the Ruby on Rails Engineering course. I was the youngest in the class, 2nd youngest
-to possible graduate. Everyone had a different background, different expectations and different goals.
+to possible graduate. Everyone had a different background, different expectations and different goals. I'll probably
+cover my experience in another blog post.
+
+Graduated in December 2014, with no job lined up, my roommate needed the room back, and I had to move out by the End of
+the month.
+I was in a pickle but my parents were there to help me out. I moved to Miami, Florida, where I had relatives, and I
+started looking for a job there but no luck on that front until Mid February 2015, when I got the opportunity to go back
+to Durham and my cousin told me that a company called Windsor Circle was looking for a Dev Intern for the Summer. Had
+the meeting with the Engineering Manager, Ben and went out great, talking about my resume and my experiences which
+wasn't much but I think he appreciated the honesty and the willingness to learn.
+
+After a week in Durham, lined up a few calls, meetings, that interview, but it was time to get back to Florida. I didn't
+hear back until April, woke up to an early email from the VP of Engineering offering the internship for the summer with
+great pay to start in about a week. I was beyond excited, and the timeline couldn't be better since many things lined up
+perfectly.
 
 ## The first job in tech
 
+I started at Windsor Circle in April 2015, as a Dev Intern, they were using Marionette and BackboneJS for the Front End,
+back end was Python, but they were more interested in the Front End for myself. But I knew nothing about Javascript,
+just Ruby on Rails and, HTML and some CSS. I was in for a ride, but I was eager to learn and prove myself. My teammates
+Brett and Tam were super helpful, they carried me through. I was able to learn a lot from them, and I was able to
+commit.
+The whole experience at Windsor Circle was delightful, I went through multiple departments, different tasks, talking to
+other engineers, and learning from them. My biggest takeaway was at the end when they tasked me to write the first E2E
+test for the company, using a library called Nightwatch which used Selenium under the hood, but you had to write
+Javascript for the commands. I believe I did a whole suite in like 2 days, my manager was impressed, and they gave me
+the news they hire a QA Engineer which he also was impressed by the work I did with my little to none experience.
+
+Second task meaningful was when I was tasked to switch rendering the Front End from the client to the server, I didn't
+know what was the difference, and everything was like too much information. But, in a couple of days I had everything
+like 90% figured it out, but I couldn't quite get and my teammates taught me that if better to ask for help early than
+later. At the end, Ben saw my face and asked me what was wrong, I told him that I couldn't figure it out, I showed him
+what I had, and he quickly figured it out what I was missing, a couple of lines of code, switched to the browser, looked
+at the network tab and BAM!
+The savings were astronomical, it was like 10x faster, and felt smoother also.
+
+It was almost time to wrap up my internship of three months when on the last day, the VP of Engineering told me what
+were my plans for the next month. Told him that I had nothing, and he asked me if I wanted to renew my internship for
+another month. Which I gladly accepted! I was having a blast, learning a lot, and I was getting paid for it. Then at the
+end of the other month, another renewal. We were talking about a full-time position, but they needed a little bit more
+speed and investment so they didn't offer me a position, but I left with my head high, and I was proud of what the work
+I did. Left with an amazing reference from the VP and my Manager.
+
+Shortly after, I was hired as a contractor for a Marketing agency where I met also amazing people which ended up working
+with them multiple times in my 10 years of experience. _I'm watching you Neal and Rob_ <3
+
 ## The first startup and web frameworks
 
+Around 2016, from this marketing agency I just mentioned, I decided to move to my first startup called EmployUs. Windsor
+was also a startup at the time, but they were growing like crazy, so their startup days were over.
+
+EmployUs was and still is my favorite time in my career, I was the first engineer besides the CTO, Front-end and doing
+newly released Angular 2, barely out of beta. Before hiring me, they gave me a small project to do which was my first
+time coding with a framework, my experience was all vanilla javascript and jQuery. I was reading the Angular Docs from
+top to bottom to get the app working that would get me hired.
+
+My first task with the CTO and CEO was to deliver a mobile app using Ionic which I also had no idea and just thinking
+about writing code to deliver a mobile app was intimidating. **I did it in a month!** I was proud of myself, and I was
+just getting better at coding. Working with Matt (the CTO) was a slap in the face every day since the guy is so freaking
+smart. It was like he was seeing the matrix and Ryan (the CEO) was the visionary. I was learning a lot and it was time
+to hire our second engineer and decided to bring along a guy I used to work with at the marketing agency who taught me
+many things. Here comes Rob to the table, and we were just, the three of us, killing it. We had power days every
+Tuesdays
+and Thursdays where we worked 16 hours straight, and we were just in the zone. We were building a product that was going
+to change the way companies referred employees.
+
+The whole idea of EmployUs was an internal system / admin site where internal employees could refer others to that
+company easily. We just made it so easy to keep track of and the payout. Since I got Rob referred, I got a referral
+bonus for using our app and the first referral in our company history for it.
+
+### A sad ending
+
+Around March 2017, the company didn't have much runway to keep going, and I remember it vividly when I was in the zone
+coding, we had a daily all hands, but I was just killing it. Walking to the elevator, thinking about the problem at
+hand, got into the meeting, still thinking about the issue at hand and I just hear Ryan that this is going to be the
+**last day** for everybody. I froze. I was in shock.
+
+It felt like a heartbreak where you are just processing what just happened and you are just in shock. I was in a daze
+and I remember looking at Rob like holy $%$&. What now?
+
 ## The first big company
+
+After EmployUs, it was a sad time for me because I wasn't ready to look for jobs, I was still in shock. I was depressed.
+Every interview felt like a humiliation, I am just not good enough, smart enough and I was just in a dark place. I just
+suck at job interviews.
+
+One day, a recruiter called me. Cisco System was hiring. Yeah... That Cisco. That was like a dream company to work at,
+and my brother since he was IT. I remember talking to the recruiter about the interview process, he was like...
+Relaxxxxxx... It's going to be fine. They are just going to ask you about your resume and experience and that's it.
+
+### The interview
+
+Arrived at Cisco, they had 12 buildings in RTP... Like... :blown_away:
+
+I was greeted by some Manager, and he took me to the interview room, and I was greeted by 5 people. 5! I was like...
+Wat.
+
+From right to left, they were the Manager, 3 Senior Engineers and some Front End Engineer from another team.
+
+I just kept saying to my head, relax, it's going to be fine. They are just going to ask you about your resume.
+
+First question. Can you tell me the command to see the processes running in a Linux VM? *in a russian accent*
+
+WHAT
+
+Luckily I knew the answer, and in that quick second of me thinking, oh ^%%#$, this is going to be another humiliation
+and hard interview. I replied. Yeah, is `px aux`
+
+Him: Ok, and if I want to filter by a specific process? *more russian*
+
+Me: `px aux | grep process`
+
+Him: Ok, that's all I needed to know. *russian smile*
+
+After that, the hard questions kept coming by, more in the sense of my experience. The last guy asked me really good
+questions of Angular, RxJs, and Observables. There were some I didn't know and I was honest about it. I didn't know.
+
+After the interview, I received a call from the recruiter asking how it went? I told him, "you lied to me, they didn't
+ask just about my experience" and proceeded to tell him about it.
+
+I wasn't sure that I got the job until a few days later he calls me laughing... Dude, you got the job, they were
+impressed. The upper manager was having some doubts that you didn't have a College Degree but the people on the
+interview defended you which it was impressive.
+
+I cried and proceeded to tell my parents that I got the job at Cisco and my dad's face was of proud and happiness.
 
 ## The Lead
 
