@@ -1,7 +1,9 @@
 <template>
   <ContentDoc v-slot="{ doc }">
     <BlogReadProgress />
-    <article class="mx-auto prose dark:prose-invert lg:prose-xl">
+    <article
+      class="mx-auto prose dark:prose-invert prose-code:before:content-none prose-code:after:content-none lg:prose-xl"
+    >
       <h1>{{ doc.title }}</h1>
       <span>{{ doc?.date }}</span>
       <NuxtImg

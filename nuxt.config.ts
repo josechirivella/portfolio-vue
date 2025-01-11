@@ -164,6 +164,12 @@ export default defineNuxtConfig({
 
   content: {
     contentHead: false,
+    highlight: {
+      theme: {
+        default: 'one-dark-pro',
+        dark: 'github-dark',
+      },
+    },
   },
 
   purgeCSS: {
