@@ -1,7 +1,7 @@
 import { defineNuxtPlugin } from '#app';
 import posthog from 'posthog-js';
 
-const production = import.meta.env.NODE_ENV === 'production';
+const production = import.meta.env.MODE === 'production';
 
 export default defineNuxtPlugin(() => {
   const runtimeConfig = useRuntimeConfig();
@@ -12,8 +12,9 @@ export default defineNuxtPlugin(() => {
       if (!production) {
         // posthog.debug();
         posthog.opt_out_capturing();
-        posthog.set_config({disable_session_recording: true})
+        posthog.set_config({ disable_session_recording: true });
       }
+      console.log('production?', production);
     },
   });
 
