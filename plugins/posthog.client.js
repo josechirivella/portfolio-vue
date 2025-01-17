@@ -14,7 +14,6 @@ export default defineNuxtPlugin(() => {
         posthog.opt_out_capturing();
         posthog.set_config({ disable_session_recording: true });
       }
-      console.log('production?', production);
     },
   });
 
