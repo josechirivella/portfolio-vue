@@ -53,7 +53,6 @@
 <script lang="ts" setup>
 const pageNo = ref(1);
 const config = useRuntimeConfig();
-console.log(import.meta.env);
 const whereQuery = config.public.production ? { published: { $ne: true } } : {};
 const { data: posts } = useAsyncData('posts', () =>
   queryContent('/')
