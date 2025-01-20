@@ -1,13 +1,21 @@
 <template>
   <ContentDoc v-slot="{ doc }">
-    <article class="mx-auto prose dark:prose-invert lg:prose-xl">
+    <BlogReadProgress />
+    <article
+      class="mx-auto prose dark:prose-invert prose-code:before:content-none prose-code:after:content-none lg:prose-xl"
+    >
       <h1>{{ doc.title }}</h1>
       <span>{{ doc?.date }}</span>
-      <img
+      <NuxtImg
         :src="doc?.image"
         alt="Post cover"
-        class="rounded-lg"
-      >
+        class="rounded-lg mx-auto"
+      />
+      <!-- Table of contents -->
+      <LazyBlogToc
+        v-if="doc.body.toc?.links.length > 0"
+        :toc="doc.body.toc"
+      />
       <ContentRenderer :value="doc" />
     </article>
     <ScrollTop />
@@ -18,7 +26,7 @@
 const route = useRoute();
 const url = useRequestURL();
 const { data: post } = await useAsyncData(route.path, () =>
-  queryContent(route.path).findOne()
+  queryContent(route.path).findOne(),
 );
 
 if (!post.value) {
@@ -35,7 +43,11 @@ useSeoMeta({
   description: post.value.description,
   ogDescription: post.value.description,
   ogImage: post.value.image,
+  ogImageAlt: post.value.imageAlt ?? '',
   ogUrl: url.href,
   ogType: 'article',
+  twitterCard: 'summary_large_image',
+  twitterTitle: `${post.value.title} - Jose Chirivella`,
+  twitterCreator: 'chiri14',
 });
 </script>

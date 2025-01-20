@@ -73,6 +73,7 @@ export default defineNuxtConfig({
     public: {
       posthogPublicKey: process.env.POSTHOG_PUBLIC_KEY || '',
       posthogHost: process.env.POSTHOG_HOST || '',
+      production: import.meta.env.NODE_ENV === 'production',
     },
   },
 
@@ -125,16 +126,17 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/eslint',
-    // '@nuxtjs/stylelint-module',
+    '@nuxtjs/stylelint-module',
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
     '@primevue/nuxt-module',
     '@nuxt/icon',
+    '@nuxt/image',
   ],
 
   nitro: {
     prerender: {
-      routes: ['/'],
+      routes: ['/', '/sitemap.xml'],
       crawlLinks: true,
     },
   },
@@ -162,6 +164,12 @@ export default defineNuxtConfig({
 
   content: {
     contentHead: false,
+    highlight: {
+      theme: {
+        default: 'one-dark-pro',
+        dark: 'github-dark',
+      },
+    },
   },
 
   purgeCSS: {
