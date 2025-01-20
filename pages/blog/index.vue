@@ -52,10 +52,7 @@
 
 <script lang="ts" setup>
 const pageNo = ref(1);
-const runtimeConfig = useRuntimeConfig();
-const whereQuery = runtimeConfig.public.production
-  ? { published: { $ne: true } }
-  : {};
+const whereQuery = import.meta.env.PROD ? { published: { $ne: true } } : {};
 const { data: posts } = useAsyncData('posts', () =>
   queryContent('/')
     .where(whereQuery)
