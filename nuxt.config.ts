@@ -73,7 +73,7 @@ export default defineNuxtConfig({
     public: {
       posthogPublicKey: process.env.POSTHOG_PUBLIC_KEY || '',
       posthogHost: process.env.POSTHOG_HOST || '',
-      production: import.meta.env.NODE_ENV === 'production',
+      production: import.meta.env.PROD,
     },
   },
 
