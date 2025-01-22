@@ -48,6 +48,7 @@ useSeoMeta({
   ogType: 'article',
   twitterCard: 'summary_large_image',
   twitterTitle: `${post.value.title} - Jose Chirivella`,
-  twitterCreator: 'chiri14',
+  twitterImage: post.value.image,
+  twitterImageAlt: post.value.imageAlt ?? '',
 });
 </script>

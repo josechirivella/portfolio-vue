@@ -87,7 +87,41 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         {
           name: 'description',
-          content: 'The portfolio website for Jose Chirivella',
+          content:
+            'The portfolio website for Jose Chirivella. Software Engineer who writes and codes.',
+        },
+        { name: 'og:title', content: 'Jose Chirivella | Software Engineer' },
+        {
+          name: 'og:description',
+          content:
+            'The portfolio website for Jose Chirivella. Software Engineer who writes and codes.',
+        },
+        {
+          name: 'og:image',
+          content: '/jchirivella-portrait-flq-resized-700px.png',
+        },
+        { name: 'og:type', content: 'website' },
+        { name: 'og:url', content: 'https://josechirivella.com' },
+        {
+          name: 'og:site_name',
+          content: 'Jose Chirivella | Software Engineer',
+        },
+        { name: 'og:locale', content: 'en_US' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@chiri14' },
+        { name: 'twitter:creator', content: '@chiri14' },
+        {
+          name: 'twitter:title',
+          content: 'Jose Chirivella',
+        },
+        {
+          name: 'twitter:description',
+          content:
+            'The portfolio website for Jose Chirivella. Software Engineer who writes and codes.',
+        },
+        {
+          name: 'twitter:image',
+          content: '/jchirivella-portrait-flq-resized-700px.png',
         },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'format-detection', content: 'telephone=no' },
