@@ -22,7 +22,7 @@
   "dependencies": {
     "@primevue/themes": "^4.2.5",
     "@tailwindcss/typography": "^0.5.16",
-    "posthog-js": "^1.207.0",
+    "posthog-js": "^1.207.2",
     "primevue": "^4.2.5",
     "sitemap": "^8.0.0",
     "tailwindcss-primeui": "^0.3.4"
