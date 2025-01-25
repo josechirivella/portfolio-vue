@@ -166,6 +166,7 @@ export default defineNuxtConfig({
     '@primevue/nuxt-module',
     '@nuxt/icon',
     '@nuxt/image',
+    '@sentry/nuxt/module',
   ],
 
   nitro: {
@@ -211,4 +212,17 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-01-03',
+
+  sentry: {
+    sourceMapsUploadOptions: {
+      org: 'frustrated-developer',
+      project: 'javascript-nuxt',
+    },
+
+    autoInjectServerSentry: 'top-level-import',
+  },
+
+  sourcemap: {
+    client: 'hidden',
+  },
 });
