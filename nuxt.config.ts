@@ -216,7 +216,7 @@ export default defineNuxtConfig({
   sentry: {
     sourceMapsUploadOptions: {
       org: 'frustrated-developer',
-      project: 'javascript-nuxt',
+      project: 'portfolio-vue',
     },
 
     autoInjectServerSentry: 'top-level-import',
