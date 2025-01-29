@@ -1,9 +1,8 @@
 import { defineNuxtPlugin } from '#app';
 import posthog from 'posthog-js';
 
-const runtimeConfig = useRuntimeConfig();
-
 export default defineNuxtPlugin(() => {
+  const runtimeConfig = useRuntimeConfig();
   const posthogClient = posthog.init(runtimeConfig.public.posthogPublicKey, {
     api_host: runtimeConfig.public.posthogHost || 'https://app.posthog.com',
     capture_pageview: false, // we add manual pageview capturing below
