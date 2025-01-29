@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@primevue/themes": "^4.2.5",
-    "@sentry/nuxt": "^8.51.0",
+    "@sentry/nuxt": "^8.52.0",
     "@tailwindcss/typography": "^0.5.16",
     "import-in-the-middle": "^1.12.0",
     "posthog-js": "^1.211.0",
