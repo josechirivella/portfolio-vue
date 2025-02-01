@@ -4,15 +4,16 @@ import posthog from 'posthog-js';
 //eslint-disable-next-line
 export default defineNuxtPlugin((nuxtApp) => {
   const runtimeConfig = useRuntimeConfig();
+  // const production = !!runtimeConfig.public.production;
   const posthogClient = posthog.init(runtimeConfig.public.posthogPublicKey, {
     api_host: runtimeConfig.public.posthogHost || 'https://us.i.posthog.com',
     capture_pageview: false, // we add manual pageview capturing below
     loaded: (posthog) => {
       posthog.debug();
-      if (!runtimeConfig.public.production) {
-        posthog.opt_out_capturing();
-        posthog.set_config({ disable_session_recording: true });
-      }
+      // if (!runtimeConfig.public.production) {
+      //   posthog.opt_out_capturing();
+      //   posthog.set_config({ disable_session_recording: true });
+      // }
     },
   });
 
