@@ -9,7 +9,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     capture_pageview: false, // we add manual pageview capturing below
     loaded: (posthog) => {
       posthog.debug();
-      if (runtimeConfig.public.production) {
+      if (!runtimeConfig.public.production) {
         posthog.opt_out_capturing();
         posthog.set_config({ disable_session_recording: true });
       }
