@@ -8,8 +8,9 @@ export default defineNuxtPlugin((nuxtApp) => {
   const posthogClient = posthog.init(runtimeConfig.public.posthogPublicKey, {
     api_host: runtimeConfig.public.posthogHost || 'https://us.i.posthog.com',
     capture_pageview: false, // we add manual pageview capturing below
+    // eslint-disable-next-line
     loaded: (posthog) => {
-      posthog.debug();
+      // posthog.debug();
       // if (!runtimeConfig.public.production) {
       //   posthog.opt_out_capturing();
       //   posthog.set_config({ disable_session_recording: true });
