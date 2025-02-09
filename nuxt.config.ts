@@ -181,9 +181,9 @@ export default defineNuxtConfig({
       ripple: true,
       theme: {
         preset: Noir,
-        options: {
-          darkModeSelector: '.dark-mode-always',
-        },
+        // options: {
+        //   darkModeSelector: true,
+        // },
       },
     },
   },

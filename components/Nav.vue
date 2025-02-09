@@ -5,13 +5,13 @@
         class="w-full relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start"
       >
         <NuxtLink
-          class="text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-white"
+          class="text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap"
           to="/"
         >
           Jose Chirivella
         </NuxtLink>
         <button
-          class="text-white cursor-pointer text-xl leading-none px-3 py-1 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+          class="cursor-pointer text-xl leading-none px-3 py-1 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
           type="button"
           @click="toggleNavbar()"
         >
@@ -40,9 +40,9 @@
               class="px-3 py-2 flex items-center text-lg font-bold leading-snug"
               @click="toggleNavbar()"
             >
-              <i class="text-lg leading-lg text-white opacity-75" /><span
-                class="ml-2 text-gray-400 hover:text-white"
-              >{{ item.name }}</span>
+              <i class="text-lg leading-lg opacity-75" /><span class="ml-2">{{
+                item.name
+              }}</span>
             </NuxtLink>
           </li>
         </ul>
@@ -94,7 +94,7 @@ function inBlog(): boolean {
 <style lang="scss">
 .nav-item {
   .router-link-active span {
-    @apply text-white;
+    //@apply text-white;
   }
 }
 </style>
