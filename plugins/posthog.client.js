@@ -7,10 +7,11 @@ export default defineNuxtPlugin((nuxtApp) => {
   // const production = !!runtimeConfig.public.production;
   const posthogClient = posthog.init(runtimeConfig.public.posthogPublicKey, {
     api_host: runtimeConfig.public.posthogHost || 'https://us.i.posthog.com',
+    person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
     capture_pageview: false, // we add manual pageview capturing below
-    // eslint-disable-next-line
+
     loaded: (posthog) => {
-      // posthog.debug();
+      if (import.meta.env.MODE === 'development') posthog.debug();
       // if (!runtimeConfig.public.production) {
       //   posthog.opt_out_capturing();
       //   posthog.set_config({ disable_session_recording: true });
