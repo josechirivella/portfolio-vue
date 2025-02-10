@@ -2,18 +2,18 @@
 
 exports[`Hero should render component 1`] = `
 <div
-  class="text-white h-[90svh] flex items-center flex-col justify-center text-lg hero overflow-hidden"
+  class="h-[90svh] flex items-center flex-col justify-center text-lg hero overflow-hidden"
   id="hero"
 >
   <h1
     class="hero__name"
   >
-    Jose Chirivella
+     Jose Chirivella 
   </h1>
   <h3
     class="hero__title mb-2"
   >
-    Software Engineer
+     Software Engineer 
   </h3>
   <div
     class="mt-4 grid grid-rows-2 lg:grid-rows-1 grid-flow-col gap-4"
