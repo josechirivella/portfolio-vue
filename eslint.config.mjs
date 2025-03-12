@@ -1,12 +1,10 @@
 import eslintConfigPrettier from 'eslint-config-prettier';
 // @ts-check
-import withNuxt from './.nuxt/eslint.config.mjs'
-import pluginVue from 'eslint-plugin-vue';
+import withNuxt from './.nuxt/eslint.config.mjs';
 import pluginJest from 'eslint-plugin-jest';
 
 export default withNuxt(
   eslintConfigPrettier,
-  ...pluginVue.configs['flat/recommended'],
   pluginJest.configs['flat/recommended'],
   {
     files: ['**/*.vue'],
@@ -15,4 +13,4 @@ export default withNuxt(
     },
     ignores: ['node_modules', '.nuxt', 'dist', 'public'],
   },
-)
+);
