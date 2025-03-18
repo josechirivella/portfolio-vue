@@ -70,6 +70,7 @@ export default defineNuxtConfig({
   ssr: true,
 
   runtimeConfig: {
+    SENTRY_DSN: process.env.SENTRY_DSN || '',
     public: {
       posthogPublicKey: process.env.POSTHOG_PUBLIC_KEY || '',
       posthogHost: process.env.POSTHOG_HOST || '',

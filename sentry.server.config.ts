@@ -2,7 +2,7 @@ import * as Sentry from '@sentry/nuxt';
 
 if (process.env.SENTRY_DSN) {
   Sentry.init({
-    dsn: 'https://4b6d740a23ac182df208104fdaedce13@o4508702962548736.ingest.us.sentry.io/4508702965301248',
+    dsn: process.env.SENTRY_DSN as string | undefined,
 
     // We recommend adjusting this value in production, or using tracesSampler
     // for finer control
