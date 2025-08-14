@@ -11,7 +11,6 @@
     "start": "nuxt start",
     "lint:js": "eslint .",
     "lint:style": "stylelint \"**/*.{vue,css,scss}\" --ignore-path .gitignore",
-    "prepare": "husky install",
     "lint": "pnpm lint:js && pnpm lint:style",
     "test": "jest"
   },
