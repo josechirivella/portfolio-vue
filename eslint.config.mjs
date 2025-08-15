@@ -1,4 +1,4 @@
-import eslintConfigPrettier from 'eslint-config-prettier';
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
 // @ts-check
 import withNuxt from './.nuxt/eslint.config.mjs';
 import vitest from '@vitest/eslint-plugin';
