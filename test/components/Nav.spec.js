@@ -54,27 +54,24 @@ describe('Nav', () => {
   });
 
   describe('inBlog function', () => {
-    test('should return false when route name is not blog', async () => {
-      const testWrapper = await mountSuspended(Nav, {
-        route: { name: 'index' },
+    const createRouteWrapper = async (routeName) => {
+      return await mountSuspended(Nav, {
+        route: { name: routeName },
         global: {
           stubs: {
             Icon: true,
           },
         },
       });
+    };
+
+    test('should return false when route name is not blog', async () => {
+      const testWrapper = await createRouteWrapper('index');
       expect(testWrapper.vm.inBlog()).toBe(false);
     });
 
     test('should return true when route name is blog', async () => {
-      const testWrapper = await mountSuspended(Nav, {
-        route: { name: 'blog' },
-        global: {
-          stubs: {
-            Icon: true,
-          },
-        },
-      });
+      const testWrapper = await createRouteWrapper('blog');
       expect(testWrapper.vm.inBlog()).toBe(true);
     });
   });
