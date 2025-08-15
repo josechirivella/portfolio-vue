@@ -1,28 +1,22 @@
-import { beforeAll, describe, expect, test, vi } from 'vitest';
-import { shallowMount } from '@vue/test-utils';
+import { beforeAll, describe, expect, test } from 'vitest';
+import { mountSuspended } from '@nuxt/test-utils/runtime';
 import Nav from '~/components/Nav.vue';
-
-// Mock the useRoute composable
-const mockRoute = {
-  name: 'index',
-};
-
-vi.mock('vue-router', () => ({
-  useRoute: vi.fn(() => mockRoute),
-}));
 
 describe('Nav', () => {
   let wrapper;
 
-  beforeAll(() => {
-    wrapper = shallowMount(Nav, {
+  const createWrapper = async () => {
+    return await mountSuspended(Nav, {
       global: {
         stubs: {
-          NuxtLink: true,
           Icon: true,
         },
       },
     });
+  };
+
+  beforeAll(async () => {
+    wrapper = await createWrapper();
   });
 
   test('should render component', () => {
@@ -47,27 +41,41 @@ describe('Nav', () => {
   describe('Toggle navbar', () => {
     test('toggleNavbar should toggle showMenu value', async () => {
       // Initial state
-      expect(wrapper.vm.showMenu).toBe(false);
+      expect(wrapper.vm.showMenu.value).toBe(false);
 
       // Toggle
       await wrapper.vm.toggleNavbar();
-      expect(wrapper.vm.showMenu).toBe(true);
+      expect(wrapper.vm.showMenu.value).toBe(true);
 
       // Toggle again
       await wrapper.vm.toggleNavbar();
-      expect(wrapper.vm.showMenu).toBe(false);
+      expect(wrapper.vm.showMenu.value).toBe(false);
     });
   });
 
   describe('inBlog function', () => {
-    test('should return false when route name is not blog-slug', () => {
-      mockRoute.name = 'index';
-      expect(wrapper.vm.inBlog()).toBe(false);
+    test('should return false when route name is not blog', async () => {
+      const testWrapper = await mountSuspended(Nav, {
+        route: { name: 'index' },
+        global: {
+          stubs: {
+            Icon: true,
+          },
+        },
+      });
+      expect(testWrapper.vm.inBlog()).toBe(false);
     });
 
-    test('should return true when route name is blog-slug', () => {
-      mockRoute.name = 'blog-slug';
-      expect(wrapper.vm.inBlog()).toBe(true);
+    test('should return true when route name is blog', async () => {
+      const testWrapper = await mountSuspended(Nav, {
+        route: { name: 'blog' },
+        global: {
+          stubs: {
+            Icon: true,
+          },
+        },
+      });
+      expect(testWrapper.vm.inBlog()).toBe(true);
     });
   });
 });

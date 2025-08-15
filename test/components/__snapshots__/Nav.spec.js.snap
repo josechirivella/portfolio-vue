@@ -10,17 +10,20 @@ exports[`Nav > should render component 1`] = `
     <div
       class="w-full relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start"
     >
-      <nuxt-link-stub
+      <a
         class="text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap"
-        to="/"
-      />
+        href="/"
+      >
+         Jose Chirivella 
+      </a>
       <button
         class="cursor-pointer text-xl leading-none px-3 py-1 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
         type="button"
       >
-        <nuxt-icon-stub
+        <span
+          aria-hidden="true"
+          class="iconify i-ci:hamburger-md"
           color="white"
-          name="ci:hamburger-md"
         />
       </button>
     </div>
@@ -34,35 +37,72 @@ exports[`Nav > should render component 1`] = `
         <li
           class="nav-item"
         >
-          <nuxt-link-stub
+          <a
             class="px-3 py-2 flex items-center text-lg font-bold leading-snug"
-            to="/"
-          />
+            href="/"
+          >
+            <i
+              class="text-lg leading-lg opacity-75"
+            />
+            <span
+              class="ml-2"
+            >
+              Home
+            </span>
+          </a>
         </li>
         <li
           class="nav-item"
         >
-          <nuxt-link-stub
+          <a
             class="px-3 py-2 flex items-center text-lg font-bold leading-snug"
-            to="/about"
-          />
+            href="/about"
+          >
+            <i
+              class="text-lg leading-lg opacity-75"
+            />
+            <span
+              class="ml-2"
+            >
+              About
+            </span>
+          </a>
         </li>
         <li
           class="nav-item"
         >
-          <nuxt-link-stub
+          <a
             class="px-3 py-2 flex items-center text-lg font-bold leading-snug"
-            to="/blog"
-          />
+            href="/blog"
+          >
+            <i
+              class="text-lg leading-lg opacity-75"
+            />
+            <span
+              class="ml-2"
+            >
+              Blog
+            </span>
+          </a>
         </li>
         <li
           class="nav-item"
         >
-          <nuxt-link-stub
+          <a
             class="px-3 py-2 flex items-center text-lg font-bold leading-snug"
+            href="https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf"
+            rel="noopener noreferrer"
             target="_blank"
-            to="https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf"
-          />
+          >
+            <i
+              class="text-lg leading-lg opacity-75"
+            />
+            <span
+              class="ml-2"
+            >
+              Resume
+            </span>
+          </a>
         </li>
         
       </ul>
