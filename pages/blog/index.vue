@@ -48,7 +48,7 @@ const { data: posts } = useAsyncData('posts', () => {
   return query
     .limit(9)
     .skip(9 * (pageNo.value - 1))
-    .order('date', 'DESC')
+    .order('date', 'ASC')
     .all();
 });
 </script>

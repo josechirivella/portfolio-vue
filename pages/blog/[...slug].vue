@@ -36,14 +36,15 @@ if (!post.value) {
 useSeoMeta({
   title: `${post.value.title} - Jose Chirivella`,
   ogTitle: `${post.value.title} - Jose Chirivella`,
-  description: post.value.description,
-  ogDescription: post.value.description,
+  description: post.value.description ?? '',
+  ogDescription: post.value.description ?? '',
   ogImage: post.value.image,
   ogImageAlt: post.value.imageAlt ?? '',
   ogUrl: url.href,
   ogType: 'article',
   twitterCard: 'summary_large_image',
   twitterTitle: `${post.value.title} - Jose Chirivella`,
+  twitterDescription: post.value.description ?? '',
   twitterImage: post.value.image,
   twitterImageAlt: post.value.imageAlt ?? '',
 });
