@@ -12,16 +12,16 @@ This project uses **pnpm** as the package manager, not npm or yarn.
 - `pnpm generate` - Generate static site
 - `pnpm start` - Start production server
 - `pnpm preview` - Preview production build
-- `pnpm test` - Run Jest tests
+- `pnpm test` - Run Vitest tests
 - `pnpm lint` - Run both ESLint and Stylelint (combines `pnpm lint:js && pnpm lint:style`)
 - `pnpm lint:js` - Run ESLint only
 - `pnpm lint:style` - Run Stylelint for Vue, CSS, and SCSS files
 
 ### Testing
-- Tests are located in the `test/` directory using Jest with Vue Test Utils
+- Tests are located in the `test/` directory using Vitest with Vue Test Utils
 - Component tests are in `test/components/`
 - Page tests are in `test/pages/`
-- Jest snapshots are used for component testing
+- Vitest snapshots are used for component testing
 - Run `pnpm test` to execute all tests
 
 ## Architecture Overview
@@ -35,7 +35,7 @@ This is a **Nuxt 3** portfolio website with the following key characteristics:
 - **Icons**: Nuxt Icon module with FontAwesome icons
 - **Analytics**: PostHog integration
 - **Error Tracking**: Sentry integration
-- **Testing**: Jest with Vue Test Utils
+- **Testing**: Vitest with Vue Test Utils
 
 ### Project Structure
 - `components/` - Vue components (Btn, Hero, Nav, Footer, Contact, blog components)
@@ -67,7 +67,7 @@ This is a **Nuxt 3** portfolio website with the following key characteristics:
 - Tag system for categorization
 
 ### Code Quality
-- ESLint configuration with Nuxt and Jest plugins
+- ESLint configuration with Nuxt and Vitest plugins
 - Stylelint for CSS/SCSS/Vue style validation
 - Husky + lint-staged for pre-commit hooks
 - Commitlint for conventional commit messages

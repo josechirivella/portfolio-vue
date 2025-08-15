@@ -15,10 +15,7 @@
           type="button"
           @click="toggleNavbar()"
         >
-          <Icon
-            color="white"
-            name="ci:hamburger-md"
-          />
+          <Icon color="white" name="ci:hamburger-md" />
         </button>
       </div>
       <div
@@ -26,11 +23,7 @@
         class="lg:flex lg:flex-grow items-center"
       >
         <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-          <li
-            v-for="item in navItems"
-            :key="item.name"
-            class="nav-item"
-          >
+          <li v-for="item in navItems" :key="item.name" class="nav-item">
             <NuxtLink
               :class="{
                 'router-link-active': inBlog() && item.name === 'Blog',
@@ -87,7 +80,7 @@ function toggleNavbar() {
 }
 
 function inBlog(): boolean {
-  return route.name === 'blog-slug';
+  return route.name === 'blog';
 }
 </script>
 

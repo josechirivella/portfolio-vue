@@ -94,3 +94,7 @@ sw.*
 
 # Sentry Config File
 .env.sentry-build-plugin
+
+# Sqlite
+.data
+identifier.sqlite

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Hero should render component 1`] = `
+exports[`Hero > should render component 1`] = `
 <div
   class="h-[90svh] flex items-center flex-col justify-center text-lg hero overflow-hidden"
   id="hero"
