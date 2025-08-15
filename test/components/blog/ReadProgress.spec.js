@@ -3,14 +3,12 @@ import { shallowMount } from '@vue/test-utils';
 import ReadProgress from '~/components/blog/ReadProgress.vue';
 
 // Mock window methods and properties
-global.window = Object.create(window);
-Object.defineProperty(window, 'scrollY', { value: 0 });
 Object.defineProperty(window, 'addEventListener', { value: vi.fn() });
 Object.defineProperty(window, 'removeEventListener', { value: vi.fn() });
 
-// Mock document properties
-global.document.body.clientHeight.valueOf(1000);
-global.document.documentElement.clientHeight.valueOf(500);
+// Mock document properties for calculating scroll progress
+Object.defineProperty(document.body, 'clientHeight', { value: 1000, configurable: true });
+Object.defineProperty(document.documentElement, 'clientHeight', { value: 500, configurable: true });
 
 describe('ReadProgress', () => {
   let wrapper;
@@ -64,12 +62,14 @@ describe('ReadProgress', () => {
       // Initial value
       expect(wrapper.vm.readProgress).toBe(0);
 
-      // Mock scrollY and call updateReadProgress
-      Object.defineProperty(window, 'scrollY', { value: 250 });
+      // Mock scrollY by spying on the property
+      const scrollYSpy = vi.spyOn(window, 'scrollY', 'get').mockReturnValue(250);
       await wrapper.vm.updateReadProgress();
 
       // Check that readProgress was updated
       expect(wrapper.vm.readProgress).toBe(50);
+      
+      scrollYSpy.mockRestore();
     });
   });
 
