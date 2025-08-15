@@ -1,4 +1,4 @@
-import { beforeAll, describe, expect, test, vi } from 'vitest';
+import { beforeAll, describe, expect, test } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import Contact from '~/components/Contact.vue';
 
@@ -61,13 +61,13 @@ describe('Contact', () => {
     test('should trigger submit event on form', async () => {
       const form = wrapper.find('form');
       let submitTriggered = false;
-      
+
       // Listen for submit event
       form.element.addEventListener('submit', (e) => {
         e.preventDefault();
         submitTriggered = true;
       });
-      
+
       await form.trigger('submit');
       expect(submitTriggered).toBe(true);
     });
@@ -76,16 +76,18 @@ describe('Contact', () => {
       const nameInput = wrapper.find('#name');
       const emailInput = wrapper.find('#email');
       const messageTextarea = wrapper.find('#message');
-      
+
       expect(nameInput.attributes('type')).toBe('text');
       expect(nameInput.attributes('autocomplete')).toBe('name');
       expect(nameInput.attributes('placeholder')).toBe('Your name');
-      
+
       expect(emailInput.attributes('type')).toBe('email');
       expect(emailInput.attributes('autocomplete')).toBe('email');
       expect(emailInput.attributes('placeholder')).toBe('Your email');
-      
-      expect(messageTextarea.attributes('placeholder')).toBe('Enter your message');
+
+      expect(messageTextarea.attributes('placeholder')).toBe(
+        'Enter your message',
+      );
     });
   });
 });

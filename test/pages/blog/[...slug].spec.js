@@ -1,4 +1,4 @@
-import { beforeAll, describe, expect, test, vi } from 'vitest';
+import { beforeAll, describe, expect, test } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import BlogSlug from '~/pages/blog/[...slug].vue';
 
@@ -7,7 +7,7 @@ describe('Blog Slug Page', () => {
 
   const defaultMountOptions = {
     route: {
-      path: '/blog/test-post'
+      path: '/blog/test-post',
     },
     global: {
       stubs: {
@@ -15,9 +15,9 @@ describe('Blog Slug Page', () => {
         LazyBlogToc: true,
         ContentRenderer: true,
         ScrollTop: true,
-        NuxtImg: true
-      }
-    }
+        NuxtImg: true,
+      },
+    },
   };
 
   const createWrapper = async (customOptions = {}) => {
@@ -26,12 +26,12 @@ describe('Blog Slug Page', () => {
       ...customOptions,
       route: {
         ...defaultMountOptions.route,
-        ...customOptions.route
+        ...customOptions.route,
       },
       global: {
         ...defaultMountOptions.global,
-        ...customOptions.global
-      }
+        ...customOptions.global,
+      },
     };
     return await mountSuspended(BlogSlug, mergedOptions);
   };
@@ -52,7 +52,7 @@ describe('Blog Slug Page', () => {
   test('should have conditional rendering based on post existence', () => {
     // Component should exist and handle the conditional rendering logic
     expect(wrapper.vm).toBeTruthy();
-    
+
     // Check if the component has the expected conditional structure
     // This tests the v-if="post" condition without needing actual post data
     const html = wrapper.html();
@@ -70,8 +70,8 @@ describe('Blog Slug Page', () => {
       // Test that the component can handle cases where no post is found
       const errorWrapper = await createWrapper({
         route: {
-          path: '/blog/non-existent-post'
-        }
+          path: '/blog/non-existent-post',
+        },
       });
 
       // Component should still exist even if post is not found
