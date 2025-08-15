@@ -30,7 +30,7 @@
     "posthog-js": "^1.260.1",
     "primevue": "^4.3.7",
     "sitemap": "^8.0.0",
-    "tailwindcss-primeui": "^0.3.4"
+    "tailwindcss-primeui": "^0.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.28.3",
