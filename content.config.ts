@@ -13,6 +13,7 @@ export default defineContentConfig({
         image: z.string(),
         imageAlt: z.string().optional(),
         published: z.boolean().optional(),
+        keywords: z.array(z.string()).optional(),
       }),
     }),
   },
