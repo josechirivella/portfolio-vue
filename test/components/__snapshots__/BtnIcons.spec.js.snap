@@ -1,31 +1,37 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`BtnIcons should render component 1`] = `
+exports[`BtnIcons > should render component 1`] = `
 <a
+  data-v-4943a209=""
   href="https://www.google.com"
   target="_blank"
 >
   <div
     class="icon-wrapper"
+    data-v-4943a209=""
   >
-    <icon
+    <nuxt-icon-stub
       color="white"
+      data-v-4943a209=""
       name="times"
     />
   </div>
 </a>
 `;
 
-exports[`BtnIcons should render component with link 1`] = `
+exports[`BtnIcons > should render component with link 1`] = `
 <a
+  data-v-4943a209=""
   href="https://www.facebook.com"
   target="_blank"
 >
   <div
     class="icon-wrapper"
+    data-v-4943a209=""
   >
-    <icon
+    <nuxt-icon-stub
       color="white"
+      data-v-4943a209=""
       name="times"
     />
   </div>

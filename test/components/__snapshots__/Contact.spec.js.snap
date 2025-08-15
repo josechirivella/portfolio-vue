@@ -1,0 +1,37 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Contact > should render component 1`] = `
+<div
+  class="border border-gray-300 rounded-lg p-4 w-1/4"
+  id="contactForm"
+>
+  <form
+    class="card flex flex-col"
+  >
+    <input
+      autocomplete="name"
+      class="mb-4 p-2"
+      id="name"
+      placeholder="Your name"
+      type="text"
+    />
+    <input
+      autocomplete="email"
+      class="mb-4 p-2"
+      id="email"
+      placeholder="Your email"
+      type="email"
+    />
+    <textarea
+      class="p-2"
+      id="message"
+      placeholder="Enter your message"
+    >
+
+    </textarea>
+    <button>
+      Submit
+    </button>
+  </form>
+</div>
+`;

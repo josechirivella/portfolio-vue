@@ -1,3 +1,4 @@
+import { beforeAll, describe, expect, test } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
 import Hero from '~/components/Hero.vue';
 
