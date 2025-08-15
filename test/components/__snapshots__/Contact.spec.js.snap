@@ -27,7 +27,7 @@ exports[`Contact > should render component 1`] = `
       id="message"
       placeholder="Enter your message"
     >
-
+            
     </textarea>
     <button>
       Submit
