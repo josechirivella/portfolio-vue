@@ -1,7 +1,7 @@
 import eslintConfigPrettier from 'eslint-config-prettier';
 // @ts-check
 import withNuxt from './.nuxt/eslint.config.mjs';
-import vitest from 'eslint-plugin-vitest';
+import vitest from '@vitest/eslint-plugin';
 
 export default withNuxt(
   eslintConfigPrettier,
