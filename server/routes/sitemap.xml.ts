@@ -1,4 +1,3 @@
-import { serverQueryContent } from '#content/server';
 import { SitemapStream, streamToPromise } from 'sitemap';
 import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'node:url';
@@ -6,14 +5,14 @@ import * as fs from 'node:fs';
 
 export default defineEventHandler(async (event) => {
   // Fetch all documents
-  const docs = await serverQueryContent(event).find();
+  const docs = await queryCollection(event, 'content').all();
   const sitemap = new SitemapStream({
     hostname: 'https://jchirivella.com',
   });
 
   for (const doc of docs) {
     sitemap.write({
-      url: doc._path,
+      url: doc.path,
       changefreq: 'monthly',
     });
   }
