@@ -12,8 +12,9 @@
     "lint:js": "eslint .",
     "lint:style": "stylelint \"**/*.{vue,css,scss}\" --ignore-path .gitignore",
     "lint": "pnpm lint:js && pnpm lint:style",
-    "test": "vitest --run",
-    "test:coverage": "vitest --coverage"
+    "test": "vitest run",
+    "test:watch": "vitest run --watch",
+    "test:coverage": "vitest run --coverage"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",
