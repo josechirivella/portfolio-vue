@@ -39,13 +39,10 @@
 const pageNo = ref(1);
 const config = useRuntimeConfig();
 const { data: posts } = useAsyncData('posts', () => {
-  let query = queryCollection('content');
-
-  if (config.public.production) {
-    query = query.where('published', '=', true);
-  }
+  const query = queryCollection('content');
 
   return query
+    .where('published', '=', config.public.production)
     .limit(9)
     .skip(9 * (pageNo.value - 1))
     .order('date', 'ASC')
