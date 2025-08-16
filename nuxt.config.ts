@@ -102,7 +102,7 @@ export default defineNuxtConfig({
           content: '/jchirivella-portrait-flq-resized-700px.png',
         },
         { name: 'og:type', content: 'website' },
-        { name: 'og:url', content: 'https://josechirivella.com' },
+        { name: 'og:url', content: 'https://jchirivella.com' },
         {
           name: 'og:site_name',
           content: 'Jose Chirivella | Software Engineer',
