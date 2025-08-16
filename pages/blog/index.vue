@@ -41,11 +41,13 @@ const config = useRuntimeConfig();
 const { data: posts } = useAsyncData('posts', () => {
   const query = queryCollection('content');
 
-  return query
-    .where('published', '=', config.public.production)
-    .limit(9)
-    .skip(9 * (pageNo.value - 1))
-    .order('date', 'ASC')
-    .all();
+  return (
+    query
+      // .where('published', '=', config.public.production)
+      .limit(9)
+      .skip(9 * (pageNo.value - 1))
+      .order('date', 'ASC')
+      .all()
+  );
 });
 </script>
