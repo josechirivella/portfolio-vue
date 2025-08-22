@@ -6,11 +6,13 @@ import vitest from '@vitest/eslint-plugin';
 export default withNuxt(
   eslintConfigPrettier,
   {
+    ignores: ['node_modules', '.nuxt', 'dist', 'public', 'coverage', '.data'],
+  },
+  {
     files: ['**/*.vue'],
     rules: {
       'vue/multi-word-component-names': 'off',
     },
-    ignores: ['node_modules', '.nuxt', 'dist', 'public', 'coverage', '.data'],
   },
   {
     files: ['test/**/*.spec.js'],
