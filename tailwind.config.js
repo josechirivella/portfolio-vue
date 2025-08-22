@@ -5,6 +5,7 @@ export default {
     './app/components/**/*.{vue,js}',
     './app/layouts/**/*.vue',
     './app/pages/**/*.vue',
+    './content/**/*.md',
   ],
   plugins: [
     require('tailwindcss-primeui'),
