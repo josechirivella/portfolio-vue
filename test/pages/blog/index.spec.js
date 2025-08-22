@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, test, vi } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
-import BlogIndex from '~/app/pages/blog/index.vue';
+import BlogIndex from '@/pages/blog/index.vue';
 
 // Mock the queryCollection function
 vi.mock('#content', () => ({

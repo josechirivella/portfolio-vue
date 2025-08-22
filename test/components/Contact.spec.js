@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, test } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
-import Contact from '~/app/components/Contact.vue';
+import Contact from '@/components/Contact.vue';
 
 describe('Contact', () => {
   let wrapper;

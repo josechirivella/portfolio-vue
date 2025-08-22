@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, test, vi } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
-import ReadProgress from '~/app/components/blog/ReadProgress.vue';
+import ReadProgress from '@/components/blog/ReadProgress.vue';
 
 // Mock window methods and properties
 Object.defineProperty(window, 'addEventListener', { value: vi.fn() });

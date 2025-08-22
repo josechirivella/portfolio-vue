@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, test } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
-import Toc from '~/app/components/blog/Toc.vue';
+import Toc from '@/components/blog/Toc.vue';
 
 describe('Toc', () => {
   let wrapper;

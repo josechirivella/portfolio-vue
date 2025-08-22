@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, test } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
-import Tags from '~/app/components/blog/Tags.vue';
+import Tags from '@/components/blog/Tags.vue';
 
 describe('Tags', () => {
   let wrapper;
