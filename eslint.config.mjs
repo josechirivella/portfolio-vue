@@ -10,7 +10,7 @@ export default withNuxt(
     rules: {
       'vue/multi-word-component-names': 'off',
     },
-    ignores: ['node_modules', '.nuxt', 'dist', 'public'],
+    ignores: ['node_modules', '.nuxt', 'dist', 'public', 'coverage', '.data'],
   },
   {
     files: ['test/**/*.spec.js'],

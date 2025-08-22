@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, test } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
-import BlogSlug from '~/pages/blog/[...slug].vue';
+import BlogSlug from '~/app/pages/blog/[...slug].vue';
 
 describe('Blog Slug Page', () => {
   let wrapper;
