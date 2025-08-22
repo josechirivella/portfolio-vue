@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, test } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
-import Index from '~/pages';
+import Index from '@/pages';
 
 describe('Index', () => {
   let wrapper;

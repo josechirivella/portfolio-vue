@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, test } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
-import BtnIcons from '~/components/BtnIcons';
+import BtnIcons from '@/components/BtnIcons';
 
 describe('BtnIcons', () => {
   let wrapper;

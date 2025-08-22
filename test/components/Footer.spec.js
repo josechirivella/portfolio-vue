@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, test } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
-import Footer from '~/components/Footer';
+import Footer from '@/components/Footer';
 
 describe('Footer', () => {
   let wrapper;

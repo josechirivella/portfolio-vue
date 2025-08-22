@@ -2,9 +2,10 @@ import plugin from 'tailwindcss/plugin';
 
 export default {
   content: [
-    './components/**/*.{vue,js}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
+    './app/components/**/*.{vue,js}',
+    './app/layouts/**/*.vue',
+    './app/pages/**/*.vue',
+    './content/**/*.md',
   ],
   plugins: [
     require('tailwindcss-primeui'),

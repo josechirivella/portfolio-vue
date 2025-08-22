@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, test } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
-import Nav from '~/components/Nav.vue';
+import Nav from '@/components/Nav.vue';
 
 describe('Nav', () => {
   let wrapper;

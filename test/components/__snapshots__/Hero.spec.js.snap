@@ -8,12 +8,12 @@ exports[`Hero > should render component 1`] = `
   <h1
     class="hero__name"
   >
-     Jose Chirivella 
+    Jose Chirivella
   </h1>
   <h3
     class="hero__title mb-2"
   >
-     Software Engineer 
+    Software Engineer
   </h3>
   <div
     class="mt-4 grid grid-rows-2 lg:grid-rows-1 grid-flow-col gap-4"

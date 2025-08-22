@@ -33,7 +33,7 @@ export default defineEventHandler(async (event) => {
 
 const getStaticEndpoints = (): string[] => {
   const __dirname = dirname(fileURLToPath(import.meta.url));
-  const files = getFiles(`${__dirname}/../../pages`);
+  const files = getFiles(`${__dirname}/../../../../../app/pages`);
   return files
     .filter((file) => !file.includes('slug'))
     .map((file) => file.split('pages')[1])

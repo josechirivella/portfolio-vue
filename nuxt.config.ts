@@ -50,6 +50,7 @@ const Noir = definePreset(Aura, {
 });
 
 export default defineNuxtConfig({
+  srcDir: 'app',
   css: ['@/assets/main.scss'],
 
   experimental: {
