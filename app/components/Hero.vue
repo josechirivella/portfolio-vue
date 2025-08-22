@@ -17,9 +17,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import BtnIcons from './BtnIcons.vue';
 
-const icons = ref([
+const icons = [
   {
     link: 'https://twitter.com/chiri14',
     icon: 'fa-brands:twitter',
@@ -44,5 +44,5 @@ const icons = ref([
     link: 'https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf',
     icon: 'fa6-regular:file-pdf',
   },
-]);
+];
 </script>
