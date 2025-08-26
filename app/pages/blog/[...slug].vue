@@ -14,6 +14,12 @@
       />
       <ContentRenderer v-if="post" :value="post" />
     </article>
+    
+    <!-- Like system -->
+    <div class="max-w-4xl mx-auto mt-8 mb-8">
+      <BlogLikes :slug="postSlug" />
+    </div>
+    
     <ScrollTop />
   </div>
 </template>
@@ -24,6 +30,12 @@ const url = useRequestURL();
 const { data: post } = await useAsyncData(route.path, () =>
   queryCollection('content').path(route.path).first(),
 );
+
+// Extract slug for like system
+const postSlug = computed(() => {
+  // Convert route path to slug by removing /blog/ prefix
+  return route.path.replace('/blog/', '')
+})
 
 if (!post.value) {
   throw createError({
