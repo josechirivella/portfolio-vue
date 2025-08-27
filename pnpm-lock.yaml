@@ -30,8 +30,8 @@ importers:
         specifier: ^1.14.2
         version: 1.14.2
       posthog-js:
-        specifier: ^1.260.2
-        version: 1.260.2(@rrweb/types@2.0.0-alpha.17)
+        specifier: ^1.260.3
+        version: 1.260.3(@rrweb/types@2.0.0-alpha.17)
       primevue:
         specifier: ^4.3.7
         version: 4.3.7(vue@3.5.19(typescript@5.9.2))
@@ -857,8 +857,8 @@ packages:
     resolution: {integrity: sha512-/yCrWGCoA1SVKOks25EGadP9Pnj0oAIHGpl2wH2M2Y46dPM2ueb8wyCVOD7O3WCTkaJ0IkKvzhl1JY7+uCT2Dw==}
     engines: {node: '>=v18'}
 
-  '@csstools/color-helpers@5.0.2':
-    resolution: {integrity: sha512-JqWH1vsgdGcw2RR6VliXXdA0/59LttzlU8UlRT/iUUsEeWfYq8I+K0yhihEUTTHLRm1EXvpsCx3083EU15ecsA==}
+  '@csstools/color-helpers@5.1.0':
+    resolution: {integrity: sha512-S11EXWJyy0Mz5SYvRmY8nJYTFFd1LCNV+7cXyAgQtOOuzb4EsgfqDufL+9esx72/eLhsRdGZwaldu/h+E4t4BA==}
     engines: {node: '>=18'}
 
   '@csstools/css-calc@2.1.4':
@@ -868,8 +868,8 @@ packages:
       '@csstools/css-parser-algorithms': ^3.0.5
       '@csstools/css-tokenizer': ^3.0.4
 
-  '@csstools/css-color-parser@3.0.10':
-    resolution: {integrity: sha512-TiJ5Ajr6WRd1r8HSiwJvZBiJOqtH86aHpUjq5aEKWHiII2Qfjqd/HCWKPOW8EP4vcspXbHnXrwIDlu5savQipg==}
+  '@csstools/css-color-parser@3.1.0':
+    resolution: {integrity: sha512-nbtKwh3a6xNVIp/VRuXV64yTKnb1IjTAEEh3irzS+HkKjAOYLTGNb9pmVNntZ8iVBHcWDA2Dof0QtPgFI1BaTA==}
     engines: {node: '>=18'}
     peerDependencies:
       '@csstools/css-parser-algorithms': ^3.0.5
@@ -2209,6 +2209,9 @@ packages:
   '@poppinss/exception@1.2.2':
     resolution: {integrity: sha512-m7bpKCD4QMlFCjA/nKTs23fuvoVFoA83brRKmObCUNmi/9tVu8Ve3w4YQAnJu4q3Tjf5fr685HYIC/IA2zHRSg==}
 
+  '@posthog/core@1.0.1':
+    resolution: {integrity: sha512-bwXUeHe+MLgENm8+/FxEbiNocOw1Vjewmm+HEUaYQe6frq8OhZnrvtnzZU3Q3DF6N0UbAmD/q+iNfNgyx8mozg==}
+
   '@primeuix/forms@0.1.0':
     resolution: {integrity: sha512-LctcQidb+B5PuvAFWH24YH/SIzmHlOabLHpaTeGY/k51iBv1WyCp+5w9JMYuMB/BplSvV0ZGySxQVkN5Azr/aQ==}
     engines: {node: '>=12.11.0'}
@@ -2723,6 +2726,9 @@ packages:
 
   '@types/node@22.17.2':
     resolution: {integrity: sha512-gL6z5N9Jm9mhY+U2KXZpteb+09zyffliRkZyZOHODGATyC5B1Jt/7TzuuiLkFsSUMLbS1OLmlj/E+/3KF4Q/4w==}
+
+  '@types/node@22.18.0':
+    resolution: {integrity: sha512-m5ObIqwsUp6BZzyiy4RdZpzWGub9bqLJMvZDD0QMXhxjqMHMENlj+SqF5QxoUwaQNFe+8kz8XM8ZQhqkQPTgMQ==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -6642,8 +6648,8 @@ packages:
     resolution: {integrity: sha512-9ZhXKM/rw350N1ovuWHbGxnGh/SNJ4cnxHiM0rxE4VN41wsg8P8zWn9hv/buK00RP4WvlOyr/RBDiptyxVbkZQ==}
     engines: {node: '>=0.10.0'}
 
-  posthog-js@1.260.2:
-    resolution: {integrity: sha512-2Q+QUz9j9+uG16wp0WcOEbezVsLZCobZyTX8NvWPMGKyPaf2lOsjbPjznsq5JiIt324B6NAqzpWYZTzvhn9k9Q==}
+  posthog-js@1.260.3:
+    resolution: {integrity: sha512-FCtksk0GQn22Rk9P7x7dsmAO7a2aBxPeYb2O2KXSraxR8xd2G6lUOOthVDK+qgtmuhpUZuur/mHrXEslMUEtjg==}
     peerDependencies:
       '@rrweb/types': 2.0.0-alpha.17
       rrweb-snapshot: 2.0.0-alpha.17
@@ -7417,8 +7423,8 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  tapable@2.2.2:
-    resolution: {integrity: sha512-Re10+NauLTMCudc7T5WLFLAwDhQ0JWdrMK+9B2M8zR5hRExKmsRDCBA7/aV/pNJFltmBFO5BAMlQFi/vq3nKOg==}
+  tapable@2.2.3:
+    resolution: {integrity: sha512-ZL6DDuAlRlLGghwcfmSn9sK3Hr6ArtyudlSAiCqQ6IfE+b+HHbydbYDIG15IfS5do+7XQQBdBiubF/cV2dnDzg==}
     engines: {node: '>=6'}
 
   tar-fs@2.1.3:
@@ -8319,7 +8325,7 @@ snapshots:
   '@asamuzakjp/css-color@3.2.0':
     dependencies:
       '@csstools/css-calc': 2.1.4(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)
-      '@csstools/css-color-parser': 3.0.10(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)
+      '@csstools/css-color-parser': 3.1.0(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)
       '@csstools/css-parser-algorithms': 3.0.5(@csstools/css-tokenizer@3.0.4)
       '@csstools/css-tokenizer': 3.0.4
       lru-cache: 10.4.3
@@ -9224,7 +9230,7 @@ snapshots:
       '@types/conventional-commits-parser': 5.0.1
       chalk: 5.6.0
 
-  '@csstools/color-helpers@5.0.2':
+  '@csstools/color-helpers@5.1.0':
     optional: true
 
   '@csstools/css-calc@2.1.4(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)':
@@ -9233,9 +9239,9 @@ snapshots:
       '@csstools/css-tokenizer': 3.0.4
     optional: true
 
-  '@csstools/css-color-parser@3.0.10(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)':
+  '@csstools/css-color-parser@3.1.0(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)':
     dependencies:
-      '@csstools/color-helpers': 5.0.2
+      '@csstools/color-helpers': 5.1.0
       '@csstools/css-calc': 2.1.4(@csstools/css-parser-algorithms@3.0.5(@csstools/css-tokenizer@3.0.4))(@csstools/css-tokenizer@3.0.4)
       '@csstools/css-parser-algorithms': 3.0.5(@csstools/css-tokenizer@3.0.4)
       '@csstools/css-tokenizer': 3.0.4
@@ -9599,7 +9605,7 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.17.2
+      '@types/node': 22.18.0
       jest-mock: 29.7.0
     optional: true
 
@@ -9620,7 +9626,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 22.17.2
+      '@types/node': 22.18.0
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -10874,6 +10880,8 @@ snapshots:
 
   '@poppinss/exception@1.2.2': {}
 
+  '@posthog/core@1.0.1': {}
+
   '@primeuix/forms@0.1.0':
     dependencies:
       '@primeuix/utils': 0.6.1
@@ -11398,7 +11406,7 @@ snapshots:
 
   '@types/graceful-fs@4.1.9':
     dependencies:
-      '@types/node': 22.17.2
+      '@types/node': 22.18.0
     optional: true
 
   '@types/hast@3.0.4':
@@ -11436,6 +11444,10 @@ snapshots:
       undici-types: 6.21.0
 
   '@types/node@22.17.2':
+    dependencies:
+      undici-types: 6.21.0
+
+  '@types/node@22.18.0':
     dependencies:
       undici-types: 6.21.0
 
@@ -13042,7 +13054,7 @@ snapshots:
   enhanced-resolve@5.18.3:
     dependencies:
       graceful-fs: 4.2.11
-      tapable: 2.2.2
+      tapable: 2.2.3
 
   entities@4.5.0: {}
 
@@ -14326,7 +14338,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@types/graceful-fs': 4.1.9
-      '@types/node': 22.17.2
+      '@types/node': 22.18.0
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.11
@@ -14363,7 +14375,7 @@ snapshots:
   jest-mock@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.17.2
+      '@types/node': 22.18.0
       jest-util: 29.7.0
     optional: true
 
@@ -14407,7 +14419,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.17.2
+      '@types/node': 22.18.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -16139,8 +16151,9 @@ snapshots:
     dependencies:
       xtend: 4.0.2
 
-  posthog-js@1.260.2(@rrweb/types@2.0.0-alpha.17):
+  posthog-js@1.260.3(@rrweb/types@2.0.0-alpha.17):
     dependencies:
+      '@posthog/core': 1.0.1
       core-js: 3.45.1
       fflate: 0.4.8
       preact: 10.27.1
@@ -17168,7 +17181,7 @@ snapshots:
     transitivePeerDependencies:
       - ts-node
 
-  tapable@2.2.2: {}
+  tapable@2.2.3: {}
 
   tar-fs@2.1.3:
     dependencies:
@@ -17913,7 +17926,7 @@ snapshots:
       mime-types: 2.1.35
       neo-async: 2.6.2
       schema-utils: 3.3.0
-      tapable: 2.2.2
+      tapable: 2.2.3
       terser-webpack-plugin: 5.3.14(esbuild@0.25.9)(webpack@5.97.1(esbuild@0.25.9))
       watchpack: 2.4.4
       webpack-sources: 3.3.3
