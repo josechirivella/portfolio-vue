@@ -15,12 +15,7 @@ export const postLikes = sqliteTable(
       .default(sql`(datetime('now'))`)
       .notNull(),
   },
-  (table) => ({
-    uniqueUserPost: unique('unique_user_post').on(
-      table.postSlug,
-      table.userHash,
-    ),
-  }),
+  (table) => [unique('unique_user_post').on(table.postSlug, table.userHash)],
 );
 
 export type PostLike = typeof postLikes.$inferSelect;

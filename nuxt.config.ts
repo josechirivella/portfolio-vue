@@ -217,7 +217,7 @@ export default defineNuxtConfig({
     whitelistPatterns: [/svg.*/, /fa.*/],
   },
 
-  compatibilityDate: '2025-01-03',
+  compatibilityDate: 'latest',
 
   sentry: {
     sourceMapsUploadOptions: {
