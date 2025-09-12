@@ -30,8 +30,8 @@ importers:
         specifier: ^1.14.2
         version: 1.14.2
       posthog-js:
-        specifier: ^1.262.0
-        version: 1.262.0(@rrweb/types@2.0.0-alpha.17)
+        specifier: ^1.264.2
+        version: 1.264.2(@rrweb/types@2.0.0-alpha.17)
       primevue:
         specifier: ^4.3.9
         version: 4.3.9(vue@3.5.21(typescript@5.9.2))
@@ -1235,6 +1235,9 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.30':
     resolution: {integrity: sha512-GQ7Nw5G2lTu/BtHTKfXhKHok2WGetd4XYcVKGx00SjAk8GMwgJM3zr6zORiPGuOE+/vkc90KtTosSSvaCjKb2Q==}
+
+  '@jridgewell/trace-mapping@0.3.31':
+    resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
   '@jsdevtools/ono@7.1.3':
     resolution: {integrity: sha512-4JQNk+3mVzK3xh2rqd6RB4J46qUR19azEHBneZyTZM+c456qOrbbM/5xcR8huNCCcbVt7+UmizG6GuUvPvKUYg==}
@@ -6257,8 +6260,8 @@ packages:
     resolution: {integrity: sha512-9ZhXKM/rw350N1ovuWHbGxnGh/SNJ4cnxHiM0rxE4VN41wsg8P8zWn9hv/buK00RP4WvlOyr/RBDiptyxVbkZQ==}
     engines: {node: '>=0.10.0'}
 
-  posthog-js@1.262.0:
-    resolution: {integrity: sha512-RPbm+0qLVsgKQEN3KjfYAK+0qOwBPT28RHDg4WIstN8/z2m6PczMqSirOIXSqbvDwSCQQQRPTKS6fSurevqJMA==}
+  posthog-js@1.264.2:
+    resolution: {integrity: sha512-9dFtXlC9NaI1BqgeY8V5lt4mONVIaFZA13tD8CmrIT943XNehBO9yVSF+2CWPMKXCLy9J8PKcnSl+ouMaGYLJg==}
     peerDependencies:
       '@rrweb/types': 2.0.0-alpha.17
       rrweb-snapshot: 2.0.0-alpha.17
@@ -9102,7 +9105,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.4
       '@jest/types': 29.6.3
-      '@jridgewell/trace-mapping': 0.3.30
+      '@jridgewell/trace-mapping': 0.3.31
       babel-plugin-istanbul: 6.1.1
       chalk: 4.1.2
       convert-source-map: 2.0.0
@@ -9148,6 +9151,11 @@ snapshots:
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
   '@jridgewell/trace-mapping@0.3.30':
+    dependencies:
+      '@jridgewell/resolve-uri': 3.1.2
+      '@jridgewell/sourcemap-codec': 1.5.5
+
+  '@jridgewell/trace-mapping@0.3.31':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
@@ -15334,7 +15342,7 @@ snapshots:
     dependencies:
       xtend: 4.0.2
 
-  posthog-js@1.262.0(@rrweb/types@2.0.0-alpha.17):
+  posthog-js@1.264.2(@rrweb/types@2.0.0-alpha.17):
     dependencies:
       '@posthog/core': 1.0.2
       core-js: 3.45.1
@@ -16358,7 +16366,7 @@ snapshots:
 
   terser-webpack-plugin@5.3.14(esbuild@0.25.9)(webpack@5.97.1(esbuild@0.25.9)):
     dependencies:
-      '@jridgewell/trace-mapping': 0.3.30
+      '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
       schema-utils: 4.3.2
       serialize-javascript: 6.0.2
