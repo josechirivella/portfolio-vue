@@ -22,7 +22,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@primevue/themes": "^4.3.9",
+    "@primevue/themes": "^4.4.0",
     "@sentry/nuxt": "^10.16.0",
     "@tailwindcss/typography": "^0.5.19",
     "@vercel/speed-insights": "^1.2.0",
