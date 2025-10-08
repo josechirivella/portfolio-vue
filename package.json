@@ -38,7 +38,7 @@
     "@babel/eslint-parser": "^7.28.4",
     "@babel/preset-env": "^7.28.3",
     "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/config-conventional": "^20.0.0",
     "@nuxt/content": "^3.7.1",
     "@nuxt/devtools": "^2.6.5",
     "@nuxt/eslint": "^1.9.0",
