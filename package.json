@@ -27,7 +27,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "@vercel/speed-insights": "^1.2.0",
     "better-sqlite3": "^12.4.1",
-    "import-in-the-middle": "^1.14.4",
+    "import-in-the-middle": "^1.15.0",
     "posthog-js": "^1.273.0",
     "primevue": "^4.4.1",
     "sitemap": "^8.0.0",
