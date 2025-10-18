@@ -55,7 +55,7 @@
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-nuxt": "^4.0.0",
-    "happy-dom": "^18.0.1",
+    "happy-dom": "^20.0.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.4",
     "nuxt": "^4.1.3",
