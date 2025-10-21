@@ -30,7 +30,7 @@
     "import-in-the-middle": "^1.15.0",
     "posthog-js": "^1.276.0",
     "primevue": "^4.4.1",
-    "sitemap": "^8.0.0",
+    "sitemap": "^8.0.1",
     "tailwindcss-primeui": "^0.6.1"
   },
   "devDependencies": {
