@@ -28,7 +28,7 @@
     "@vercel/speed-insights": "^1.2.0",
     "better-sqlite3": "^12.4.1",
     "import-in-the-middle": "^1.15.0",
-    "posthog-js": "^1.276.0",
+    "posthog-js": "^1.279.1",
     "primevue": "^4.4.1",
     "sitemap": "^8.0.0",
     "tailwindcss-primeui": "^0.6.1"
