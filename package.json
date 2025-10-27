@@ -23,7 +23,7 @@
   "type": "module",
   "dependencies": {
     "@primevue/themes": "^4.4.1",
-    "@sentry/nuxt": "^10.20.0",
+    "@sentry/nuxt": "^10.22.0",
     "@tailwindcss/typography": "^0.5.19",
     "@vercel/speed-insights": "^1.2.0",
     "better-sqlite3": "^12.4.1",
