@@ -37,7 +37,7 @@ This is a **Nuxt 3** portfolio website with the following key characteristics:
 - **Content**: Nuxt Content module for markdown blog posts
 - **Icons**: Nuxt Icon module with FontAwesome icons
 - **Analytics**: PostHog integration
-- **Error Tracking**: Sentry integration
+- **Error Tracking**: PostHog integration
 - **Testing**: Vitest with Vue Test Utils
 
 ### Project Structure
