@@ -8,11 +8,11 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { SpeedInsights } from '@vercel/speed-insights/nuxt';
+import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 
 useHead({
   htmlAttrs: {
-    class: 'dark-mode-always',
+    class: "dark-mode-always",
   },
 });
 </script>

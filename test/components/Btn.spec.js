@@ -1,22 +1,22 @@
-import { beforeAll, describe, expect, test } from 'vitest';
-import { shallowMount } from '@vue/test-utils';
-import Btn from '@/components/Btn.vue';
+import { shallowMount } from "@vue/test-utils";
+import { beforeAll, describe, expect, test } from "vitest";
+import Btn from "@/components/Btn.vue";
 
-describe('Btn', () => {
+describe("Btn", () => {
   let wrapper;
   beforeAll(() => {
     wrapper = shallowMount(Btn, {
       props: {
-        classList: 'howdy',
+        classList: "howdy",
       },
     });
   });
-  test('should render', () => {
+  test("should render", () => {
     expect(wrapper.vm).toBeTruthy();
     expect(wrapper.vm.$el).toMatchSnapshot();
   });
-  test('should render btn with class', async () => {
-    await wrapper.setProps({ classList: 'btn-primary' });
+  test("should render btn with class", async () => {
+    await wrapper.setProps({ classList: "btn-primary" });
     expect(wrapper.vm.$el).toMatchSnapshot();
   });
 });

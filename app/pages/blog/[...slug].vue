@@ -22,13 +22,13 @@
 const route = useRoute();
 const url = useRequestURL();
 const { data: post } = await useAsyncData(route.path, () =>
-  queryCollection('content').path(route.path).first(),
+  queryCollection("content").path(route.path).first(),
 );
 
 if (!post.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: 'Page not found',
+    statusMessage: "Page not found",
     fatal: true,
   });
 }
@@ -36,16 +36,16 @@ if (!post.value) {
 useSeoMeta({
   title: `${post.value.title} - Jose Chirivella`,
   ogTitle: `${post.value.title} - Jose Chirivella`,
-  description: post.value.description ?? '',
-  ogDescription: post.value.description ?? '',
+  description: post.value.description ?? "",
+  ogDescription: post.value.description ?? "",
   ogImage: post.value.image,
-  ogImageAlt: post.value.imageAlt ?? '',
+  ogImageAlt: post.value.imageAlt ?? "",
   ogUrl: url.href,
-  ogType: 'article',
-  twitterCard: 'summary_large_image',
+  ogType: "article",
+  twitterCard: "summary_large_image",
   twitterTitle: `${post.value.title} - Jose Chirivella`,
-  twitterDescription: post.value.description ?? '',
+  twitterDescription: post.value.description ?? "",
   twitterImage: post.value.image,
-  twitterImageAlt: post.value.imageAlt ?? '',
+  twitterImageAlt: post.value.imageAlt ?? "",
 });
 </script>

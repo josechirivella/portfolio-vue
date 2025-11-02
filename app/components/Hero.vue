@@ -17,32 +17,32 @@
 </template>
 
 <script lang="ts" setup>
-import BtnIcons from './BtnIcons.vue';
+import BtnIcons from "./BtnIcons.vue";
 
 const icons = [
   {
-    link: 'https://twitter.com/chiri14',
-    icon: 'fa-brands:twitter',
+    link: "https://twitter.com/chiri14",
+    icon: "fa-brands:twitter",
   },
   {
-    link: 'https://linkedin.com/in/josechirivella',
-    icon: 'fa-brands:linkedin',
+    link: "https://linkedin.com/in/josechirivella",
+    icon: "fa-brands:linkedin",
   },
   {
-    link: 'https://github.com/josechirivella',
-    icon: 'fa-brands:github',
+    link: "https://github.com/josechirivella",
+    icon: "fa-brands:github",
   },
   {
-    link: 'https://medium.com/@josechirivella',
-    icon: 'fa-brands:medium',
+    link: "https://medium.com/@josechirivella",
+    icon: "fa-brands:medium",
   },
   {
-    link: 'mailto:joser.chirivella@gmail.com',
-    icon: 'fa6-regular:paper-plane',
+    link: "mailto:joser.chirivella@gmail.com",
+    icon: "fa6-regular:paper-plane",
   },
   {
-    link: 'https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf',
-    icon: 'fa6-regular:file-pdf',
+    link: "https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf",
+    icon: "fa6-regular:file-pdf",
   },
 ];
 </script>

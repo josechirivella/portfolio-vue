@@ -1,8 +1,8 @@
-import { beforeAll, describe, expect, test } from 'vitest';
-import { shallowMount } from '@vue/test-utils';
-import Footer from '@/components/Footer';
+import { shallowMount } from "@vue/test-utils";
+import { beforeAll, describe, expect, test } from "vitest";
+import Footer from "@/components/Footer";
 
-describe('Footer', () => {
+describe("Footer", () => {
   let wrapper;
   beforeAll(() => {
     wrapper = shallowMount(Footer, {
@@ -13,11 +13,11 @@ describe('Footer', () => {
       },
     });
   });
-  test('should render', () => {
+  test("should render", () => {
     expect(wrapper.vm).toBeTruthy();
     expect(wrapper.vm.$el).toMatchSnapshot();
   });
-  test('should set the current year', () => {
+  test("should set the current year", () => {
     const year = new Date().getFullYear();
     expect(wrapper.text()).toContain(year.toString());
   });

@@ -9,6 +9,6 @@
 
 <script lang="ts" setup>
 defineProps({
-  classList: { type: String, default: '' },
+  classList: { type: String, default: "" },
 });
 </script>

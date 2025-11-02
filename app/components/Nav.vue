@@ -45,7 +45,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 interface INavItems {
   name: string;
@@ -57,21 +57,21 @@ const route = useRoute();
 const showMenu = ref(false);
 const navItems: Array<INavItems> = [
   {
-    name: 'Home',
-    link: '/',
+    name: "Home",
+    link: "/",
   },
   {
-    name: 'About',
-    link: '/about',
+    name: "About",
+    link: "/about",
   },
   {
-    name: 'Blog',
-    link: '/blog',
+    name: "Blog",
+    link: "/blog",
   },
   {
-    name: 'Resume',
-    link: 'https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf',
-    target: '_blank',
+    name: "Resume",
+    link: "https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf",
+    target: "_blank",
   },
 ];
 
@@ -80,7 +80,7 @@ function toggleNavbar() {
 }
 
 function inBlog(): boolean {
-  return route.name === 'blog';
+  return route.name === "blog";
 }
 </script>
 

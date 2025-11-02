@@ -23,9 +23,17 @@
       "vue": "recommended"
     }
   },
+  "html": {
+    "experimentalFullSupportEnabled": true
+  },
   "javascript": {
     "formatter": {
       "quoteStyle": "double"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
     }
   },
   "assist": {

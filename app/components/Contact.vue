@@ -30,9 +30,9 @@
 </template>
 
 <script setup lang="ts">
-const name = ref('');
-const email = ref('');
-const message = ref('');
+const name = ref("");
+const email = ref("");
+const message = ref("");
 
 function submitForm(e: Event) {
   e.preventDefault();

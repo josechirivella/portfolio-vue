@@ -11,7 +11,6 @@
 
 <script lang="ts" setup>
 defineProps({
-  tags: { type: Array<string>, required: true }
+  tags: { type: Array<string>, required: true },
 });
-
 </script>

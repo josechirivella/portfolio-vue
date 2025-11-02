@@ -1,8 +1,8 @@
-import { beforeAll, describe, expect, test } from 'vitest';
-import { mountSuspended } from '@nuxt/test-utils/runtime';
-import Nav from '@/components/Nav.vue';
+import { mountSuspended } from "@nuxt/test-utils/runtime";
+import { beforeAll, describe, expect, test } from "vitest";
+import Nav from "@/components/Nav.vue";
 
-describe('Nav', () => {
+describe("Nav", () => {
   let wrapper;
 
   const createWrapper = async () => {
@@ -19,27 +19,27 @@ describe('Nav', () => {
     wrapper = await createWrapper();
   });
 
-  test('should render component', () => {
+  test("should render component", () => {
     expect(wrapper.vm).toBeTruthy();
     expect(wrapper.vm.$el).toMatchSnapshot();
   });
 
-  describe('Navigation items', () => {
-    test('should have the correct number of navigation items', () => {
+  describe("Navigation items", () => {
+    test("should have the correct number of navigation items", () => {
       expect(wrapper.vm.navItems.length).toBe(4);
     });
 
-    test('should have the correct navigation item names', () => {
+    test("should have the correct navigation item names", () => {
       const navItemNames = wrapper.vm.navItems.map((item) => item.name);
-      expect(navItemNames).toContain('Home');
-      expect(navItemNames).toContain('About');
-      expect(navItemNames).toContain('Blog');
-      expect(navItemNames).toContain('Resume');
+      expect(navItemNames).toContain("Home");
+      expect(navItemNames).toContain("About");
+      expect(navItemNames).toContain("Blog");
+      expect(navItemNames).toContain("Resume");
     });
   });
 
-  describe('Toggle navbar', () => {
-    test('toggleNavbar should toggle showMenu value', async () => {
+  describe("Toggle navbar", () => {
+    test("toggleNavbar should toggle showMenu value", async () => {
       // Initial state
       expect(wrapper.vm.showMenu.value).toBe(false);
 
@@ -53,7 +53,7 @@ describe('Nav', () => {
     });
   });
 
-  describe('inBlog function', () => {
+  describe("inBlog function", () => {
     const createRouteWrapper = async (routeName) => {
       return await mountSuspended(Nav, {
         route: { name: routeName },
@@ -65,13 +65,13 @@ describe('Nav', () => {
       });
     };
 
-    test('should return false when route name is not blog', async () => {
-      const testWrapper = await createRouteWrapper('index');
+    test("should return false when route name is not blog", async () => {
+      const testWrapper = await createRouteWrapper("index");
       expect(testWrapper.vm.inBlog()).toBe(false);
     });
 
-    test('should return true when route name is blog', async () => {
-      const testWrapper = await createRouteWrapper('blog');
+    test("should return true when route name is blog", async () => {
+      const testWrapper = await createRouteWrapper("blog");
       expect(testWrapper.vm.inBlog()).toBe(true);
     });
   });

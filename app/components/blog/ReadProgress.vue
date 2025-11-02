@@ -18,11 +18,11 @@
 defineProps({
   color: {
     type: String,
-    default: 'var(--p-primary-color)',
+    default: "var(--p-primary-color)",
   },
   height: {
     type: String,
-    default: '4px',
+    default: "4px",
   },
   opacity: {
     type: [String, Number],
@@ -36,11 +36,11 @@ defineProps({
 const readProgress = ref(0);
 
 onMounted(() => {
-  window.addEventListener('scroll', updateReadProgress);
+  window.addEventListener("scroll", updateReadProgress);
 });
 
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', updateReadProgress);
+  window.removeEventListener("scroll", updateReadProgress);
 });
 
 function updateReadProgress(): void {

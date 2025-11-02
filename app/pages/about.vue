@@ -29,6 +29,6 @@
 </template>
 <script lang="ts" setup>
 useSeoMeta({
-  ogType: 'profile',
+  ogType: "profile",
 });
 </script>
