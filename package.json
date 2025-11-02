@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start": "nuxt start",
-    "lint:js": "eslint .",
+    "lint:js": "biome check .",
+    "lint:write:js": "biome check --write .",
     "lint:style": "stylelint \"**/*.{vue,css,scss}\" --ignore-path .gitignore",
     "lint": "pnpm lint:js && pnpm lint:style",
     "test": "vitest run",
@@ -17,7 +18,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "lint-staged": {
-    "*.{js,vue}": "",
+    "*.{js,vue}": "biome lint",
     "*.{css,vue}": "stylelint"
   },
   "type": "module",
@@ -37,6 +38,7 @@
     "@babel/core": "^7.28.4",
     "@babel/eslint-parser": "^7.28.4",
     "@babel/preset-env": "^7.28.3",
+    "@biomejs/biome": "2.3.2",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@nuxt/content": "^3.7.1",
