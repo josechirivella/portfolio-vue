@@ -161,7 +161,6 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@nuxt/eslint',
     '@nuxtjs/stylelint-module',
     '@nuxt/test-utils/module',
     '@nuxtjs/tailwindcss',
@@ -192,10 +191,6 @@ export default defineNuxtConfig({
     components: {
       exclude: ['Form', 'FormField', 'Editor', 'Chart'],
     },
-  },
-
-  eslint: {
-    lintOnStart: false,
   },
 
   stylelint: {
