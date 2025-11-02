@@ -72,8 +72,9 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      posthogPublicKey: process.env.POSTHOG_PUBLIC_KEY || '',
-      posthogHost: process.env.POSTHOG_HOST || '',
+      posthogPersonalApiKey: '',
+      posthogPublicKey: '',
+      posthogHost: '',
       production: process.env.NODE_ENV || false,
     },
   },
@@ -160,6 +161,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    '@posthog/nuxt',
     '@nuxt/eslint',
     '@nuxtjs/stylelint-module',
     '@nuxt/test-utils/module',
@@ -174,6 +176,27 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/', '/sitemap.xml'],
       crawlLinks: true,
+    },
+    rollupConfig: {
+      output: {
+        sourcemapExcludeSources: false,
+      },
+    },
+  },
+
+  posthogConfig: {
+    publicKey: process.env.NUXT_PUBLIC_POSTHOG_PUBLIC_KEY, // Find it in project settings https://app.posthog.com/settings/project
+    clientConfig: {
+      capture_exceptions: true, // Enables automatic exception capture on the client side (Vue)
+    },
+    serverConfig: {
+      enableExceptionAutocapture: true, // Enables automatic exception capture on the server side (Nitro)
+    },
+    sourcemaps: {
+      enabled: true,
+      envId: 47437, // Your environment ID from PostHog settings https://app.posthog.com/settings/environment#variables
+      personalApiKey: process.env.NUXT_PUBLIC_POSTHOG_PERSONAL_API_KEY, // Your personal API key from PostHog settings https://app.posthog.com/settings/user-api-keys
+      project: 'portfolio', // Optional: defaults to git repository name
     },
   },
 
@@ -215,9 +238,11 @@ export default defineNuxtConfig({
     whitelistPatterns: [/svg.*/, /fa.*/],
   },
 
-  compatibilityDate: '2025-01-03',
+  compatibilityDate: 'latest',
 
   sourcemap: {
     client: 'hidden',
   },
 });
+
+// console.log('process.env', process.env);
