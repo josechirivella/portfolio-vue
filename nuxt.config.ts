@@ -182,6 +182,9 @@ export default defineNuxtConfig({
         sourcemapExcludeSources: false,
       },
     },
+    output: {
+      dir: '.output',
+    },
   },
 
   posthogConfig: {
