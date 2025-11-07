@@ -22,7 +22,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@posthog/nuxt": "^0.0.25",
+    "@posthog/nuxt": "^1.1.1",
     "@primevue/themes": "^4.4.1",
     "@tailwindcss/typography": "^0.5.19",
     "@vercel/speed-insights": "^1.2.0",
@@ -69,9 +69,6 @@
     "vitest": "^3.2.4"
   },
   "pnpm": {
-    "overrides": {
-      "@vercel/nft": "^0.27.4"
-    },
     "onlyBuiltDependencies": [
       "@parcel/watcher",
       "@posthog/cli",
@@ -83,5 +80,15 @@
       "unrs-resolver",
       "vue-demi"
     ]
-  }
+  },
+  "overrides": {
+    "@vercel/nft": "^0.27.4"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "@posthog/cli",
+    "@vercel/speed-insights",
+    "core-js",
+    "unrs-resolver"
+  ]
 }
