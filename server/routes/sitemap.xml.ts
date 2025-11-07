@@ -1,6 +1,6 @@
 import { SitemapStream, streamToPromise } from 'sitemap';
-import { dirname, resolve } from 'path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath } from 'bun'
+import { dirname, resolve } from 'node:path';
 import * as fs from 'node:fs';
 
 export default defineEventHandler(async (event) => {

@@ -1,5 +1,5 @@
 . "$(dirname "$0")/common.sh"
 
-pnpm lint-staged
-pnpm lint
-pnpm run test -u
+bun --bun run lint-staged
+bun --bun run lint
+bun --bun run test -u
