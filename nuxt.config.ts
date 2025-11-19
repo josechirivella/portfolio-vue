@@ -197,8 +197,9 @@ export default defineNuxtConfig({
     },
     sourcemaps: {
       enabled: true,
-      envId: 47437, // Your environment ID from PostHog settings https://app.posthog.com/settings/environment#variables
-      personalApiKey: process.env.NUXT_PUBLIC_POSTHOG_PERSONAL_API_KEY, // Your personal API key from PostHog settings https://app.posthog.com/settings/user-api-keys
+      envId: '47437', // Your environment ID from PostHog settings https://app.posthog.com/settings/environment#variables
+      personalApiKey: process.env
+        .NUXT_PUBLIC_POSTHOG_PERSONAL_API_KEY as string, // Your personal API key from PostHog settings https://app.posthog.com/settings/user-api-keys
       project: 'portfolio', // Optional: defaults to git repository name
     },
   },
