@@ -52,8 +52,8 @@ importers:
         specifier: ^20.0.0
         version: 20.0.0
       '@nuxt/content':
-        specifier: ^3.8.2
-        version: 3.8.2(better-sqlite3@12.5.0)(magicast@0.5.1)
+        specifier: ^3.9.0
+        version: 3.9.0(better-sqlite3@12.5.0)(magicast@0.5.1)
       '@nuxt/devtools':
         specifier: ^3.1.1
         version: 3.1.1(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass@1.94.2)(terser@5.44.1)(yaml@2.8.2))(vue@3.5.25(typescript@5.9.3))
@@ -1608,15 +1608,16 @@ packages:
     engines: {node: ^16.10.0 || >=18.0.0}
     hasBin: true
 
-  '@nuxt/content@3.8.2':
-    resolution: {integrity: sha512-bqqS2bTpkmLJDCCU3GuApBQBa6BlHuT7OW9GGoTEZ14evilwjlKSLlFNRYKIyS3Ua4L+GXz7Its7pLbXe+nW5w==}
+  '@nuxt/content@3.9.0':
+    resolution: {integrity: sha512-ayCDADViRdx/mksxCsWn6CsNgAiSY96UOQI8M9uJ/AfTFrd6E/7pfWMd5yamEziqmRzFLNXO3Q6hE90ZjnW5nQ==}
+    engines: {node: '>= 20.19.0'}
     peerDependencies:
       '@electric-sql/pglite': '*'
       '@libsql/client': '*'
       '@valibot/to-json-schema': ^1.3.0
-      better-sqlite3: ^12.4.1
+      better-sqlite3: ^12.5.0
       sqlite3: '*'
-      valibot: ^1.1.0
+      valibot: ^1.2.0
     peerDependenciesMeta:
       '@electric-sql/pglite':
         optional: true
@@ -1761,8 +1762,8 @@ packages:
       rolldown:
         optional: true
 
-  '@nuxtjs/mdc@0.18.4':
-    resolution: {integrity: sha512-lM4R0Mbbhw5h5Fwj7LqGiw6eanqjjPkzi+9FaXfn1BdmfbW8GlR2quLIiBXTbw0wUrWYyOWoc5FGIE/gpZUTjQ==}
+  '@nuxtjs/mdc@0.19.1':
+    resolution: {integrity: sha512-XqhisvgaqTGo2vnF69pn2sQzRwAxgU6pmYa0+Llfz+TrOUrASr9hSxWDt25YhOYocsD40HFpeZyo7pU1TTL+jA==}
 
   '@nuxtjs/stylelint-module@5.2.1':
     resolution: {integrity: sha512-ONcEZYelJH7+lUM3Q4sZ1olAsyKayOMbcuR1cDXsfPz4cqVO6WBPlDl7DkIlUjEW26MND7j9LfazcIHiOt19FA==}
@@ -2396,26 +2397,26 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@shikijs/core@3.17.1':
-    resolution: {integrity: sha512-VWsduykcibGU0WMi66PflThDWyqEeTOiWdCRa3wmsZuishh+1PDSOh5gGxHdSrOtS+v1pmYaxodk/JNzwusElA==}
+  '@shikijs/core@3.19.0':
+    resolution: {integrity: sha512-L7SrRibU7ZoYi1/TrZsJOFAnnHyLTE1SwHG1yNWjZIVCqjOEmCSuK2ZO9thnRbJG6TOkPp+Z963JmpCNw5nzvA==}
 
-  '@shikijs/engine-javascript@3.17.1':
-    resolution: {integrity: sha512-Ars0DVJITQrkOl5Swwy+94NL/BlOi/w1NSFbPGkcsln7Dv+M2qHaVpNHwdtWCC4/arzvjuHbyWBUsWExDHPDLw==}
+  '@shikijs/engine-javascript@3.19.0':
+    resolution: {integrity: sha512-ZfWJNm2VMhKkQIKT9qXbs76RRcT0SF/CAvEz0+RkpUDAoDaCx0uFdCGzSRiD9gSlhm6AHkjdieOBJMaO2eC1rQ==}
 
-  '@shikijs/engine-oniguruma@3.17.1':
-    resolution: {integrity: sha512-fsXPy4va/4iblEGS+22nP5V08IwwBcM+8xHUzSON0QmHm29/AJRghA95w9VDnxuwp9wOdJxEhfPkKp6vqcsN+w==}
+  '@shikijs/engine-oniguruma@3.19.0':
+    resolution: {integrity: sha512-1hRxtYIJfJSZeM5ivbUXv9hcJP3PWRo5prG/V2sWwiubUKTa+7P62d2qxCW8jiVFX4pgRHhnHNp+qeR7Xl+6kg==}
 
-  '@shikijs/langs@3.17.1':
-    resolution: {integrity: sha512-YTBVN+L2j7zBuOVjNZ2XiSNQEkm/7wZ1TSc5UO77GJPcg7Rk25WSscWA7y8pW7Bo25JIU0EWchUkq/UQjOJlJA==}
+  '@shikijs/langs@3.19.0':
+    resolution: {integrity: sha512-dBMFzzg1QiXqCVQ5ONc0z2ebyoi5BKz+MtfByLm0o5/nbUu3Iz8uaTCa5uzGiscQKm7lVShfZHU1+OG3t5hgwg==}
 
-  '@shikijs/themes@3.17.1':
-    resolution: {integrity: sha512-aohwwqNUB5h2ATfgrqYRPl8vyazqCiQ2wIV4xq+UzaBRHpqLMGSemkasK+vIEpl0YaendoaKUsDfpwhCqyHIaQ==}
+  '@shikijs/themes@3.19.0':
+    resolution: {integrity: sha512-H36qw+oh91Y0s6OlFfdSuQ0Ld+5CgB/VE6gNPK+Hk4VRbVG/XQgkjnt4KzfnnoO6tZPtKJKHPjwebOCfjd6F8A==}
 
-  '@shikijs/transformers@3.17.1':
-    resolution: {integrity: sha512-vFKeOSDAK2Ju631LS2wez0aGadtiZmRd+wiTsgb8xkBMAN3s2K++HPFAzoT6JJ5HcSyqUvASuUykEHEphdt9Cg==}
+  '@shikijs/transformers@3.19.0':
+    resolution: {integrity: sha512-e6vwrsyw+wx4OkcrDbL+FVCxwx8jgKiCoXzakVur++mIWVcgpzIi8vxf4/b4dVTYrV/nUx5RjinMf4tq8YV8Fw==}
 
-  '@shikijs/types@3.17.1':
-    resolution: {integrity: sha512-yUFLiCnZHHJ16KbVbt3B1EzBUadU3OVpq0PEyb301m5BbuFKApQYBzJGhrK48hH/tYWSjzwcj7BSmYbBc0zntQ==}
+  '@shikijs/types@3.19.0':
+    resolution: {integrity: sha512-Z2hdeEQlzuntf/BZpFG8a+Fsw9UVXdML7w0o3TgSXV3yNESGon+bs9ITkQb3Ki7zxoXOOu5oJWqZ2uto06V9iQ==}
 
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
@@ -5636,8 +5637,8 @@ packages:
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
-  nuxt-component-meta@0.14.2:
-    resolution: {integrity: sha512-pxEnARUzRmq3zbOm8fJkWLPR8mL82NeP5Pu/iYff4otl6jPJwgC1Cbpz3Z77HlVeYVtzhSpQRsCSo/+296CwYw==}
+  nuxt-component-meta@0.15.0:
+    resolution: {integrity: sha512-IW8xzHQdpmfgAyDYw4NPVQLnHAWrNltgJUD3Bww5Miogy8dd/dDdEKexCzFvI+gSa/uAe52zDRcIx9wwavmAmg==}
     hasBin: true
 
   nuxt@4.2.1:
@@ -6565,8 +6566,8 @@ packages:
     resolution: {integrity: sha512-ObmnIF4hXNg1BqhnHmgbDETF8dLPCggZWBjkQfhZpbszZnYur5DUljTcCHii5LC3J5E0yeO/1LIMyH+UvHQgyw==}
     engines: {node: '>= 0.4'}
 
-  shiki@3.17.1:
-    resolution: {integrity: sha512-KbAPJo6pQpfjupOg5HW0fk/OSmeBfzza2IjZ5XbNKbqhZaCoxro/EyOgesaLvTdyDfrsAUDA6L4q14sc+k9i7g==}
+  shiki@3.19.0:
+    resolution: {integrity: sha512-77VJr3OR/VUZzPiStyRhADmO2jApMM0V2b1qf0RpfWya8Zr1PeZev5AEpPGAAKWdiYUtcZGBE4F5QvJml1PvWA==}
 
   side-channel-list@1.0.0:
     resolution: {integrity: sha512-FCLHtRD/gnpCiCHEiJLOwdmFP+wzCmDEkc9y7NsYxeF4u7Btsn1ZuwgwJGxImImHicJArLP4R0yX4c2KCrMrTA==}
@@ -7288,8 +7289,8 @@ packages:
   unwasm@0.3.11:
     resolution: {integrity: sha512-Vhp5gb1tusSQw5of/g3Q697srYgMXvwMgXMjcG4ZNga02fDX9coxJ9fAb0Ci38hM2Hv/U1FXRPGgjP2BYqhNoQ==}
 
-  unwasm@0.5.0:
-    resolution: {integrity: sha512-6pGyUVJuqGRyyWc0JHbbjXwalBlc/9lEqfuE5j56L4V/MXhdBLRtbX7ciazT+EnzOVV+j++qnxJRTkjna+LgcQ==}
+  unwasm@0.5.2:
+    resolution: {integrity: sha512-uWhB7IXQjMC4530uVAeu0lzvYK6P3qHVnmmdQniBi48YybOLN/DqEzcP9BRGk1YTDG3rRWRD8me55nIYoTHyMg==}
 
   update-browserslist-db@1.1.4:
     resolution: {integrity: sha512-q0SPT4xyU84saUX+tomz1WLkxUbuaJnR1xWt17M7fJtEJigJeWUNGUqrauFXsHnqev9y9JTRGwk13tFBuKby4A==}
@@ -9382,16 +9383,16 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@nuxt/content@3.8.2(better-sqlite3@12.5.0)(magicast@0.5.1)':
+  '@nuxt/content@3.9.0(better-sqlite3@12.5.0)(magicast@0.5.1)':
     dependencies:
       '@nuxt/kit': 4.2.1(magicast@0.5.1)
-      '@nuxtjs/mdc': 0.18.4(magicast@0.5.1)
-      '@shikijs/langs': 3.17.1
+      '@nuxtjs/mdc': 0.19.1(magicast@0.5.1)
+      '@shikijs/langs': 3.19.0
       '@sqlite.org/sqlite-wasm': 3.50.4-build1
       '@standard-schema/spec': 1.0.0
       '@webcontainer/env': 1.1.1
       c12: 3.3.2(magicast@0.5.1)
-      chokidar: 4.0.3
+      chokidar: 5.0.0
       consola: 3.4.2
       db0: 0.3.4(better-sqlite3@12.5.0)
       defu: 6.1.4
@@ -9412,14 +9413,14 @@ snapshots:
       minimark: 0.2.0
       minimatch: 10.1.1
       modern-tar: 0.7.2
-      nuxt-component-meta: 0.14.2(magicast@0.5.1)
+      nuxt-component-meta: 0.15.0(magicast@0.5.1)
       nypm: 0.6.2
       ohash: 2.0.11
       pathe: 2.0.3
       pkg-types: 2.3.0
       remark-mdc: 3.9.0
       scule: 1.3.0
-      shiki: 3.17.1
+      shiki: 3.19.0
       slugify: 1.6.6
       socket.io-client: 4.8.1
       std-env: 3.10.0
@@ -9872,13 +9873,13 @@ snapshots:
       - vue-tsc
       - yaml
 
-  '@nuxtjs/mdc@0.18.4(magicast@0.5.1)':
+  '@nuxtjs/mdc@0.19.1(magicast@0.5.1)':
     dependencies:
       '@nuxt/kit': 4.2.1(magicast@0.5.1)
-      '@shikijs/core': 3.17.1
-      '@shikijs/langs': 3.17.1
-      '@shikijs/themes': 3.17.1
-      '@shikijs/transformers': 3.17.1
+      '@shikijs/core': 3.19.0
+      '@shikijs/langs': 3.19.0
+      '@shikijs/themes': 3.19.0
+      '@shikijs/transformers': 3.19.0
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
       '@vue/compiler-core': 3.5.25
@@ -9910,12 +9911,12 @@ snapshots:
       remark-rehype: 11.1.2
       remark-stringify: 11.0.0
       scule: 1.3.0
-      shiki: 3.17.1
+      shiki: 3.19.0
       ufo: 1.6.1
       unified: 11.0.5
       unist-builder: 4.0.0
       unist-util-visit: 5.0.0
-      unwasm: 0.5.0
+      unwasm: 0.5.2
       vfile: 6.0.3
     transitivePeerDependencies:
       - magicast
@@ -10414,38 +10415,38 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.53.3':
     optional: true
 
-  '@shikijs/core@3.17.1':
+  '@shikijs/core@3.19.0':
     dependencies:
-      '@shikijs/types': 3.17.1
+      '@shikijs/types': 3.19.0
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.4
       hast-util-to-html: 9.0.5
 
-  '@shikijs/engine-javascript@3.17.1':
+  '@shikijs/engine-javascript@3.19.0':
     dependencies:
-      '@shikijs/types': 3.17.1
+      '@shikijs/types': 3.19.0
       '@shikijs/vscode-textmate': 10.0.2
       oniguruma-to-es: 4.3.4
 
-  '@shikijs/engine-oniguruma@3.17.1':
+  '@shikijs/engine-oniguruma@3.19.0':
     dependencies:
-      '@shikijs/types': 3.17.1
+      '@shikijs/types': 3.19.0
       '@shikijs/vscode-textmate': 10.0.2
 
-  '@shikijs/langs@3.17.1':
+  '@shikijs/langs@3.19.0':
     dependencies:
-      '@shikijs/types': 3.17.1
+      '@shikijs/types': 3.19.0
 
-  '@shikijs/themes@3.17.1':
+  '@shikijs/themes@3.19.0':
     dependencies:
-      '@shikijs/types': 3.17.1
+      '@shikijs/types': 3.19.0
 
-  '@shikijs/transformers@3.17.1':
+  '@shikijs/transformers@3.19.0':
     dependencies:
-      '@shikijs/core': 3.17.1
-      '@shikijs/types': 3.17.1
+      '@shikijs/core': 3.19.0
+      '@shikijs/types': 3.19.0
 
-  '@shikijs/types@3.17.1':
+  '@shikijs/types@3.19.0':
     dependencies:
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.4
@@ -14335,7 +14336,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nuxt-component-meta@0.14.2(magicast@0.5.1):
+  nuxt-component-meta@0.15.0(magicast@0.5.1):
     dependencies:
       '@nuxt/kit': 4.2.1(magicast@0.5.1)
       citty: 0.1.6
@@ -15541,14 +15542,14 @@ snapshots:
 
   shell-quote@1.8.3: {}
 
-  shiki@3.17.1:
+  shiki@3.19.0:
     dependencies:
-      '@shikijs/core': 3.17.1
-      '@shikijs/engine-javascript': 3.17.1
-      '@shikijs/engine-oniguruma': 3.17.1
-      '@shikijs/langs': 3.17.1
-      '@shikijs/themes': 3.17.1
-      '@shikijs/types': 3.17.1
+      '@shikijs/core': 3.19.0
+      '@shikijs/engine-javascript': 3.19.0
+      '@shikijs/engine-oniguruma': 3.19.0
+      '@shikijs/langs': 3.19.0
+      '@shikijs/themes': 3.19.0
+      '@shikijs/types': 3.19.0
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.4
 
@@ -16392,7 +16393,7 @@ snapshots:
       pkg-types: 2.3.0
       unplugin: 2.3.11
 
-  unwasm@0.5.0:
+  unwasm@0.5.2:
     dependencies:
       exsolve: 1.0.8
       knitwork: 1.3.0
