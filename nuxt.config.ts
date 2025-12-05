@@ -173,7 +173,6 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
-    preset: 'bun',
     prerender: {
       routes: ['/', '/sitemap.xml'],
       crawlLinks: true,
@@ -244,6 +243,12 @@ export default defineNuxtConfig({
 
   sourcemap: {
     client: 'hidden',
+  },
+
+  vercel: {
+    functions: {
+      runtime: 'bun1.x',
+    },
   },
 });
 
