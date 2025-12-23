@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, test } from 'vitest';
-import { shallowMount } from '@vue/test-utils';
+import { mountSuspended } from '@nuxt/test-utils/runtime';
 import Toc from '@/components/blog/Toc.vue';
 
 describe('Toc', () => {
@@ -28,8 +28,8 @@ describe('Toc', () => {
     ],
   };
 
-  beforeAll(() => {
-    wrapper = shallowMount(Toc, {
+  beforeAll(async () => {
+    wrapper = await mountSuspended(Toc, {
       props: {
         toc: mockToc,
       },

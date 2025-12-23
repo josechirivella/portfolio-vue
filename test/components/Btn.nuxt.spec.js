@@ -1,11 +1,11 @@
 import { beforeAll, describe, expect, test } from 'vitest';
-import { shallowMount } from '@vue/test-utils';
+import { mountSuspended } from '@nuxt/test-utils/runtime';
 import Btn from '@/components/Btn.vue';
 
 describe('Btn', () => {
   let wrapper;
-  beforeAll(() => {
-    wrapper = shallowMount(Btn, {
+  beforeAll(async () => {
+    wrapper = await mountSuspended(Btn, {
       props: {
         classList: 'howdy',
       },
