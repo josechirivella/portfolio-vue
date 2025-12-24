@@ -1,5 +1,6 @@
+#!/bin/sh
+
 . "$(dirname "$0")/common.sh"
 
 bun --bun run lint-staged
-bun --bun run lint
-bun --bun run test -u
+bun --bun run test
