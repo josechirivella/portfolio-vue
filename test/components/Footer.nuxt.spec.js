@@ -1,17 +1,11 @@
 import { beforeAll, describe, expect, test } from 'vitest';
-import { shallowMount } from '@vue/test-utils';
+import { mountSuspended } from '@nuxt/test-utils/runtime';
 import Footer from '@/components/Footer';
 
 describe('Footer', () => {
   let wrapper;
-  beforeAll(() => {
-    wrapper = shallowMount(Footer, {
-      data() {
-        return {
-          year: new Date().getFullYear(),
-        };
-      },
-    });
+  beforeAll(async () => {
+    wrapper = await mountSuspended(Footer);
   });
   test('should render', () => {
     expect(wrapper.vm).toBeTruthy();

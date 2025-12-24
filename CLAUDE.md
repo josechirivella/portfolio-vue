@@ -4,19 +4,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Development Commands
 
-This project uses **pnpm** as the package manager, not npm or yarn.
+This project uses **bun** as the package manager, used to be with **pnpm**.
 
 ### Common Commands
 
-- `pnpm dev` - Start development server with hot reload at localhost:3000
-- `pnpm build` - Build for production
-- `pnpm generate` - Generate static site
-- `pnpm start` - Start production server
-- `pnpm preview` - Preview production build
-- `pnpm test` - Run Vitest tests
-- `pnpm lint` - Run both ESLint and Stylelint (combines `pnpm lint:js && pnpm lint:style`)
-- `pnpm lint:js` - Run ESLint only
-- `pnpm lint:style` - Run Stylelint for Vue, CSS, and SCSS files
+- `bun dev` - Start development server with hot reload at localhost:3000
+- `bun build` - Build for production
+- `bun generate` - Generate static site
+- `bun start` - Start production server
+- `bun preview` - Preview production build
+- `bun test` - Run Vitest tests
+- `bun lint` - Run both ESLint and Stylelint (combines `bun lint:js && bun lint:style`)
+- `bun lint:js` - Run ESLint only
+- `bun lint:style` - Run Stylelint for Vue, CSS, and SCSS files
 
 ### Testing
 
@@ -24,7 +24,7 @@ This project uses **pnpm** as the package manager, not npm or yarn.
 - Component tests are in `test/components/`
 - Page tests are in `test/pages/`
 - Vitest snapshots are used for component testing
-- Run `pnpm test` to execute all tests
+- Run `bun --bun test` to execute all tests
 
 ## Architecture Overview
 

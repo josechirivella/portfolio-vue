@@ -1,18 +1,23 @@
 import { beforeAll, describe, expect, test } from 'vitest';
-import { shallowMount } from '@vue/test-utils';
+import { mountSuspended } from '@nuxt/test-utils/runtime';
 import BtnIcons from '@/components/BtnIcons';
 
 describe('BtnIcons', () => {
   let wrapper;
   let link;
   let icon;
-  beforeAll(() => {
+  beforeAll(async () => {
     icon = 'times';
     link = 'https://www.google.com';
-    wrapper = shallowMount(BtnIcons, {
+    wrapper = await mountSuspended(BtnIcons, {
       props: {
         link,
         icon,
+      },
+      global: {
+        stubs: {
+          Icon: true,
+        },
       },
     });
   });

@@ -10,10 +10,11 @@ exports[`BtnIcons > should render component 1`] = `
     class="icon-wrapper"
     data-v-4943a209=""
   >
-    <nuxt-icon-stub
+    <span
+      aria-hidden="true"
+      class="iconify i-times"
       color="white"
       data-v-4943a209=""
-      name="times"
     />
   </div>
 </a>
@@ -29,10 +30,11 @@ exports[`BtnIcons > should render component with link 1`] = `
     class="icon-wrapper"
     data-v-4943a209=""
   >
-    <nuxt-icon-stub
+    <span
+      aria-hidden="true"
+      class="iconify i-times"
       color="white"
       data-v-4943a209=""
-      name="times"
     />
   </div>
 </a>

@@ -182,9 +182,6 @@ export default defineNuxtConfig({
         sourcemapExcludeSources: false,
       },
     },
-    output: {
-      dir: '.output',
-    },
   },
 
   posthogConfig: {
@@ -246,6 +243,12 @@ export default defineNuxtConfig({
 
   sourcemap: {
     client: 'hidden',
+  },
+
+  vercel: {
+    functions: {
+      runtime: 'bun1.x',
+    },
   },
 });
 

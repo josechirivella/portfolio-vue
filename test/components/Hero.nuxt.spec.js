@@ -1,11 +1,18 @@
 import { beforeAll, describe, expect, test } from 'vitest';
-import { shallowMount } from '@vue/test-utils';
+import { mountSuspended } from '@nuxt/test-utils/runtime';
 import Hero from '@/components/Hero.vue';
 
 describe('Hero', () => {
   let wrapper;
-  beforeAll(() => {
-    wrapper = shallowMount(Hero, {});
+  beforeAll(async () => {
+    wrapper = await mountSuspended(Hero, {
+      global: {
+        stubs: {
+          BtnIcons: true,
+          NuxtImg: true,
+        },
+      },
+    });
   });
 
   test('should render component', () => {

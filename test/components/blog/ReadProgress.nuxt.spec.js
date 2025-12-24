@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, test, vi } from 'vitest';
-import { shallowMount } from '@vue/test-utils';
+import { mountSuspended } from '@nuxt/test-utils/runtime';
 import ReadProgress from '@/components/blog/ReadProgress.vue';
 
 // Mock window methods and properties
@@ -19,8 +19,8 @@ Object.defineProperty(document.documentElement, 'clientHeight', {
 describe('ReadProgress', () => {
   let wrapper;
 
-  beforeAll(() => {
-    wrapper = shallowMount(ReadProgress, {});
+  beforeAll(async () => {
+    wrapper = await mountSuspended(ReadProgress, {});
   });
 
   test('should render component', () => {

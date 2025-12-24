@@ -1,13 +1,13 @@
 import { beforeAll, describe, expect, test } from 'vitest';
-import { shallowMount } from '@vue/test-utils';
+import { mountSuspended } from '@nuxt/test-utils/runtime';
 import Tags from '@/components/blog/Tags.vue';
 
 describe('Tags', () => {
   let wrapper;
   const mockTags = ['vue', 'javascript', 'testing'];
 
-  beforeAll(() => {
-    wrapper = shallowMount(Tags, {
+  beforeAll(async () => {
+    wrapper = await mountSuspended(Tags, {
       props: {
         tags: mockTags,
       },
