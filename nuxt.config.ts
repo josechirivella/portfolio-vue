@@ -84,10 +84,6 @@ export default defineNuxtConfig({
     name: 'Jose Chirivella | Software Engineer',
   },
 
-  sitemap: {
-    zeroRuntime: true,
-  },
-
   app: {
     head: {
       htmlAttrs: {
