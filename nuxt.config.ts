@@ -79,6 +79,15 @@ export default defineNuxtConfig({
     },
   },
 
+  site: {
+    url: 'https://www.jchirivella.com',
+    name: 'Jose Chirivella | Software Engineer',
+  },
+
+  sitemap: {
+    zeroRuntime: true,
+  },
+
   app: {
     head: {
       htmlAttrs: {
@@ -166,6 +175,7 @@ export default defineNuxtConfig({
     '@nuxtjs/stylelint-module',
     '@nuxt/test-utils/module',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/sitemap',
     '@nuxt/content',
     '@primevue/nuxt-module',
     '@nuxt/icon',

@@ -47,7 +47,6 @@ This is a **Nuxt 3** portfolio website with the following key characteristics:
 - `content/blog/` - Markdown blog posts
 - `app/layouts/` - Layout components (default.vue)
 - `app/plugins/` - Client-side plugins (posthog.client.js)
-- `server/routes/` - Server routes (sitemap.xml.ts)
 - `assets/` - SCSS stylesheets
 - `public/` - Static assets
 
