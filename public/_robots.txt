@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /public/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /wp-admin/
+Disallow: /admin/
+Content-Usage: train-ai=n
+Content-Signal: search=yes, ai-train=no
+
+Sitemap: https://jchirivella.com/sitemap.xml
