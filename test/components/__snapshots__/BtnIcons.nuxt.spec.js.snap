@@ -2,19 +2,19 @@
 
 exports[`BtnIcons > should render component 1`] = `
 <a
-  data-v-4943a209=""
+  data-v-fa03cf5c=""
   href="https://www.google.com"
   target="_blank"
 >
   <div
     class="icon-wrapper"
-    data-v-4943a209=""
+    data-v-fa03cf5c=""
   >
     <span
       aria-hidden="true"
       class="iconify i-times"
       color="white"
-      data-v-4943a209=""
+      data-v-fa03cf5c=""
     />
   </div>
 </a>
@@ -22,19 +22,19 @@ exports[`BtnIcons > should render component 1`] = `
 
 exports[`BtnIcons > should render component with link 1`] = `
 <a
-  data-v-4943a209=""
+  data-v-fa03cf5c=""
   href="https://www.facebook.com"
   target="_blank"
 >
   <div
     class="icon-wrapper"
-    data-v-4943a209=""
+    data-v-fa03cf5c=""
   >
     <span
       aria-hidden="true"
       class="iconify i-times"
       color="white"
-      data-v-4943a209=""
+      data-v-fa03cf5c=""
     />
   </div>
 </a>

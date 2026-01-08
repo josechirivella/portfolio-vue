@@ -3,11 +3,11 @@
 exports[`ReadProgress > should render component 1`] = `
 <div
   class="read-progress-container"
-  data-v-38d9cd48=""
+  data-v-60a17c63=""
 >
   <span
     class="with-shadow read-progress-bar"
-    data-v-38d9cd48=""
+    data-v-60a17c63=""
     style="width: 0%; color: var(--p-primary-color); height: 4px; opacity: 1; background-color: var(--p-primary-color);"
   />
 </div>
