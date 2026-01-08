@@ -70,13 +70,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
 
-  runtimeConfig: {
-    public: {
-      posthogPersonalApiKey: '',
-      posthogPublicKey: '',
-      posthogHost: '',
-      production: process.env.NODE_ENV || false,
-    },
+  runtimeConfig: {},
+
+  sitemap: {
+    zeroRuntime: true,
   },
 
   site: {
@@ -179,6 +176,7 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
+    preset: process.env.NITRO_PRESET,
     prerender: {
       routes: ['/', '/sitemap.xml'],
       crawlLinks: true,
@@ -191,7 +189,7 @@ export default defineNuxtConfig({
   },
 
   posthogConfig: {
-    publicKey: process.env.NUXT_PUBLIC_POSTHOG_PUBLIC_KEY, // Find it in project settings https://app.posthog.com/settings/project
+    publicKey: process.env.POSTHOG_PUBLIC_KEY, // Find it in project settings https://app.posthog.com/settings/project
     clientConfig: {
       capture_exceptions: true, // Enables automatic exception capture on the client side (Vue)
     },
@@ -199,10 +197,9 @@ export default defineNuxtConfig({
       enableExceptionAutocapture: true, // Enables automatic exception capture on the server side (Nitro)
     },
     sourcemaps: {
-      enabled: true,
-      envId: '47437', // Your environment ID from PostHog settings https://app.posthog.com/settings/environment#variables
-      personalApiKey: process.env
-        .NUXT_PUBLIC_POSTHOG_PERSONAL_API_KEY as string, // Your personal API key from PostHog settings https://app.posthog.com/settings/user-api-keys
+      enabled: process.env.POSTHOG_SOURCEMAPS_ENABLED === 'true',
+      envId: process.env.POSTHOG_ENV_ID as string, // Your environment ID from PostHog settings https://app.posthog.com/settings/environment#variables
+      personalApiKey: process.env.POSTHOG_PERSONAL_API_KEY as string, // Your personal API key from PostHog settings https://app.posthog.com/settings/user-api-keys
       project: 'portfolio', // Optional: defaults to git repository name
     },
   },
@@ -255,6 +252,12 @@ export default defineNuxtConfig({
     functions: {
       runtime: 'bun1.x',
     },
+  },
+
+  icon: {
+    mode: 'css',
+    cssLayer: 'base',
+    serverBundle: 'remote',
   },
 });
 

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --dotenv .env.local",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -36,6 +36,9 @@
     "@babel/preset-env": "^7.28.5",
     "@commitlint/cli": "^20.3.0",
     "@commitlint/config-conventional": "^20.3.0",
+    "@iconify-json/ci": "^1.2.2",
+    "@iconify-json/fa-brands": "^1.2.2",
+    "@iconify-json/fa6-regular": "^1.2.4",
     "@nuxt/content": "^3.10.0",
     "@nuxt/devtools": "^3.1.1",
     "@nuxt/eslint": "^1.12.1",
