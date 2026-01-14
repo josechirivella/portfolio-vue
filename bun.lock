@@ -43,7 +43,7 @@
         "lint-staged": "^16.2.7",
         "nuxt": "^4.2.2",
         "postcss": "^8.5.6",
-        "postcss-html": "^1.8.0",
+        "postcss-html": "^1.8.1",
         "postcss-scss": "^4.0.9",
         "prettier": "^3.7.4",
         "sass": "^1.97.2",
@@ -2488,7 +2488,7 @@
 
     "postcss-discard-overridden": ["postcss-discard-overridden@7.0.1", "", { "peerDependencies": { "postcss": "8.5.6" } }, "sha512-7c3MMjjSZ/qYrx3uc1940GSOzN1Iqjtlqe8uoSg+qdVPYyRb0TILSqqmtlSFuE4mTDECwsm397Ya7iXGzfF7lg=="],
 
-    "postcss-html": ["postcss-html@1.8.0", "", { "dependencies": { "htmlparser2": "8.0.2", "js-tokens": "9.0.1", "postcss": "8.5.6", "postcss-safe-parser": "6.0.0" } }, "sha512-5mMeb1TgLWoRKxZ0Xh9RZDfwUUIqRrcxO2uXO+Ezl1N5lqpCiSU5Gk6+1kZediBfBHFtPCdopr2UZ2SgUsKcgQ=="],
+    "postcss-html": ["postcss-html@1.8.1", "", { "dependencies": { "htmlparser2": "^8.0.0", "js-tokens": "^9.0.0", "postcss": "^8.5.0", "postcss-safe-parser": "^6.0.0" } }, "sha512-OLF6P7qctfAWayOhLpcVnTGqVeJzu2W3WpIYelfz2+JV5oGxfkcEvweN9U4XpeqE0P98dcD9ssusGwlF0TK0uQ=="],
 
     "postcss-import": ["postcss-import@15.1.0", "", { "dependencies": { "postcss-value-parser": "4.2.0", "read-cache": "1.0.0", "resolve": "1.22.10" }, "peerDependencies": { "postcss": "8.5.6" } }, "sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew=="],
 
