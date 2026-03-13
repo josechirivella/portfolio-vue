@@ -1,14 +1,7 @@
 <template>
-  <a
-    v-if="link && icon"
-    :href="link"
-    target="_blank"
-  >
+  <a v-if="link && icon" :href="link" target="_blank">
     <div class="icon-wrapper">
-      <Icon
-        :name="icon"
-        color="white"
-      />
+      <Icon :name="icon" color="white" />
     </div>
   </a>
 </template>

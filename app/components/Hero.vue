@@ -1,14 +1,8 @@
 <template>
-  <div
-    id="hero"
-    class="h-[90svh] flex items-center flex-col justify-center text-lg hero overflow-hidden"
-  >
+  <div id="hero" class="h-[90svh] flex items-center flex-col justify-center text-lg hero overflow-hidden">
     <h1 class="hero__name">Jose Chirivella</h1>
     <h3 class="hero__title mb-2">Software Engineer</h3>
-    <div
-      id="icons-container"
-      class="mt-4 grid grid-rows-2 lg:grid-rows-1 grid-flow-col gap-4"
-    >
+    <div id="icons-container" class="mt-4 grid grid-rows-2 lg:grid-rows-1 grid-flow-col gap-4">
       <template v-for="(icon, index) in icons" :key="index">
         <btn-icons :icon="icon.icon" :link="icon.link" />
       </template>

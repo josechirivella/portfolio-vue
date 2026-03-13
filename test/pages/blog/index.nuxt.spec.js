@@ -1,5 +1,6 @@
-import { beforeAll, describe, expect, test } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { beforeAll, describe, expect, test } from 'vitest';
+
 import BlogIndex from '@/pages/blog/index.vue';
 
 describe('Blog Index Page', () => {
@@ -19,9 +20,7 @@ describe('Blog Index Page', () => {
 
   test('should display intro content', () => {
     expect(wrapper.find('h1').text()).toBe("Hi! I'm Jose");
-    expect(wrapper.text()).toContain(
-      'Software Engineer, over 10 years of experience',
-    );
+    expect(wrapper.text()).toContain('Software Engineer, over 10 years of experience');
     expect(wrapper.text()).toContain('thoughts and rants');
   });
 

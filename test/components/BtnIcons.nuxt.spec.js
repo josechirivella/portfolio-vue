@@ -1,5 +1,6 @@
-import { beforeAll, describe, expect, test } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { beforeAll, describe, expect, test } from 'vitest';
+
 import BtnIcons from '@/components/BtnIcons';
 
 describe('BtnIcons', () => {

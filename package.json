@@ -2,6 +2,7 @@
   "name": "portfolio-vue",
   "version": "1.1.1",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --dotenv .env.local",
@@ -19,11 +20,6 @@
     "test:watch": "vitest --project nuxt",
     "test:coverage": "vitest run --project nuxt --coverage"
   },
-  "lint-staged": {
-    "*.{js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
-  },
-  "type": "module",
   "dependencies": {
     "@posthog/nuxt": "^1.5.83",
     "@primeuix/themes": "^2.0.3",
@@ -70,6 +66,10 @@
     "stylelint-config-recommended-vue": "^1.6.1",
     "typescript": "^5.9.3",
     "vitest": "^4.1.0"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "oxlint",
+    "*.{css,vue}": "stylelint"
   },
   "trustedDependencies": [
     "@parcel/watcher",

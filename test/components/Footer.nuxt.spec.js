@@ -1,5 +1,6 @@
-import { beforeAll, describe, expect, test } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { beforeAll, describe, expect, test } from 'vitest';
+
 import Footer from '@/components/Footer';
 
 describe('Footer', () => {
