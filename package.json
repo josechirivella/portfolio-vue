@@ -26,7 +26,7 @@
   "type": "module",
   "dependencies": {
     "@posthog/nuxt": "^1.5.83",
-    "@primevue/themes": "^4.5.4",
+    "@primeuix/themes": "^2.0.3",
     "@tailwindcss/typography": "^0.5.19",
     "@vercel/speed-insights": "^2.0.0",
     "better-sqlite3": "^12.6.2",
