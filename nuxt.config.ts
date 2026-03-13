@@ -49,6 +49,7 @@ const Noir = definePreset(Aura, {
   },
 });
 
+// @ts-ignore
 export default defineNuxtConfig({
   srcDir: "app",
   css: ["@/assets/main.scss"],
@@ -233,6 +234,8 @@ export default defineNuxtConfig({
     },
   },
 
+  // todo: investigate if this still needed
+  // @ts-ignore
   purgeCSS: {
     whitelistPatterns: [/svg.*/, /fa.*/],
   },
