@@ -162,6 +162,7 @@ export default defineNuxtConfig({
     '@primevue/nuxt-module',
     '@nuxt/icon',
     '@nuxt/image',
+    '@vercel/speed-insights',
   ],
 
   nitro: {
