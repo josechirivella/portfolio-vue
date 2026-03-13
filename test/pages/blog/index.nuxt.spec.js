@@ -1,34 +1,6 @@
-import { beforeAll, describe, expect, test, vi } from 'vitest';
+import { beforeAll, describe, expect, test } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import BlogIndex from '@/pages/blog/index.vue';
-
-// Mock the queryCollection function
-vi.mock('#content', () => ({
-  queryCollection: vi.fn(() => ({
-    where: vi.fn().mockReturnThis(),
-    limit: vi.fn().mockReturnThis(),
-    skip: vi.fn().mockReturnThis(),
-    order: vi.fn().mockReturnThis(),
-    all: vi.fn().mockResolvedValue([
-      {
-        id: '1',
-        path: '/blog/post-1',
-        title: 'Test Post 1',
-        description: 'Test description 1',
-        image: '/test-image-1.jpg',
-        tags: ['vue', 'nuxt'],
-      },
-      {
-        id: '2',
-        path: '/blog/post-2',
-        title: 'Test Post 2',
-        description: 'Test description 2',
-        image: '/test-image-2.jpg',
-        tags: ['javascript'],
-      },
-    ]),
-  })),
-}));
 
 describe('Blog Index Page', () => {
   let wrapper;
