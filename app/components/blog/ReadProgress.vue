@@ -48,11 +48,7 @@ function updateReadProgress(): void {
 }
 
 function currentScrollPosition(position: number): number {
-  return (
-    (position /
-      (document.body.clientHeight - document.documentElement.clientHeight)) *
-    100
-  );
+  return (position / (document.body.clientHeight - document.documentElement.clientHeight)) * 100;
 }
 </script>
 

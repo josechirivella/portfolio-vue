@@ -8,10 +8,7 @@
       <span>{{ post?.date }}</span>
       <NuxtImg :src="post?.image" alt="Post cover" class="rounded-lg mx-auto" />
       <!-- Table of contents -->
-      <LazyBlogToc
-        v-if="post.body.toc?.links?.length > 0"
-        :toc="post.body.toc"
-      />
+      <LazyBlogToc v-if="post.body.toc?.links?.length > 0" :toc="post.body.toc" />
       <ContentRenderer v-if="post" :value="post" />
     </article>
     <ScrollTop />
@@ -21,9 +18,7 @@
 <script lang="ts" setup>
 const route = useRoute();
 const url = useRequestURL();
-const { data: post } = await useAsyncData(route.path, () =>
-  queryCollection('content').path(route.path).first(),
-);
+const { data: post } = await useAsyncData(route.path, () => queryCollection('content').path(route.path).first());
 
 if (!post.value) {
   throw createError({

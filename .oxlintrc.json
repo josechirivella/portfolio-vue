@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["unicorn", "typescript", "vitest", "import", "vue", "oxc"],
+  "categories": {},
+  "rules": {
+    "vue/multi-word-component-names": "off",
+    "quotes": "allow"
+  },
+  "settings": {
+    "vitest": {
+      "typecheck": true
+    },
+    "oxc": {
+      "typecheck": true
+    }
+  },
+  "jsPlugins": ["eslint-plugin-nuxt"],
+  "env": {
+    "builtin": true
+  },
+  "options": {
+    "typeAware": true,
+    "typeCheck": true
+  },
+  "globals": {},
+  "ignorePatterns": []
+}

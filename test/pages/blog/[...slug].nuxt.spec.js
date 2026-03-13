@@ -1,5 +1,6 @@
-import { beforeAll, describe, expect, test } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { beforeAll, describe, expect, test } from 'vitest';
+
 import BlogSlug from '@/pages/blog/[...slug].vue';
 
 describe('Blog Slug Page', () => {

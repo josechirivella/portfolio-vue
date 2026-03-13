@@ -1,5 +1,6 @@
-import { beforeAll, describe, expect, test, vi } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { beforeAll, describe, expect, test, vi } from 'vitest';
+
 import ReadProgress from '@/components/blog/ReadProgress.vue';
 
 // Mock window methods and properties
@@ -69,9 +70,7 @@ describe('ReadProgress', () => {
       expect(wrapper.vm.readProgress).toBe(0);
 
       // Mock scrollY by spying on the property
-      const scrollYSpy = vi
-        .spyOn(window, 'scrollY', 'get')
-        .mockReturnValue(250);
+      const scrollYSpy = vi.spyOn(window, 'scrollY', 'get').mockReturnValue(250);
       await wrapper.vm.updateReadProgress();
 
       // Check that readProgress was updated
@@ -83,18 +82,12 @@ describe('ReadProgress', () => {
 
   describe('Lifecycle hooks', () => {
     test('should add event listener on mount', () => {
-      expect(window.addEventListener).toHaveBeenCalledWith(
-        'scroll',
-        wrapper.vm.updateReadProgress,
-      );
+      expect(window.addEventListener).toHaveBeenCalledWith('scroll', wrapper.vm.updateReadProgress);
     });
 
     test('should remove event listener before unmount', () => {
       wrapper.unmount();
-      expect(window.removeEventListener).toHaveBeenCalledWith(
-        'scroll',
-        wrapper.vm.updateReadProgress,
-      );
+      expect(window.removeEventListener).toHaveBeenCalledWith('scroll', wrapper.vm.updateReadProgress);
     });
   });
 });

@@ -1,5 +1,5 @@
-import Aura from '@primevue/themes/aura';
 import { definePreset } from '@primeuix/styled';
+import Aura from '@primeuix/themes/aura';
 
 const Noir = definePreset(Aura, {
   semantic: {
@@ -20,7 +20,7 @@ const Noir = definePreset(Aura, {
       light: {
         primary: {
           color: '{zinc.950}',
-          inverseColor: '#ffffff',
+          contrastColor: '#ffffff',
           hoverColor: '{zinc.900}',
           activeColor: '{zinc.800}',
         },
@@ -34,7 +34,7 @@ const Noir = definePreset(Aura, {
       dark: {
         primary: {
           color: '{zinc.50}',
-          inverseColor: '{zinc.950}',
+          contrastColor: '{zinc.950}',
           hoverColor: '{zinc.100}',
           activeColor: '{zinc.200}',
         },
@@ -49,6 +49,7 @@ const Noir = definePreset(Aura, {
   },
 });
 
+// @ts-ignore
 export default defineNuxtConfig({
   srcDir: 'app',
   css: ['@/assets/main.scss'],
@@ -58,12 +59,8 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: 'modern',
-        },
-      },
+    optimizeDeps: {
+      include: ['@vue/devtools-core', '@vue/devtools-kit'],
     },
   },
 
@@ -91,14 +88,12 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         {
           name: 'description',
-          content:
-            'The portfolio website for Jose Chirivella. Software Engineer who writes and codes.',
+          content: 'The portfolio website for Jose Chirivella. Software Engineer who writes and codes.',
         },
         { name: 'og:title', content: 'Jose Chirivella | Software Engineer' },
         {
           name: 'og:description',
-          content:
-            'The portfolio website for Jose Chirivella. Software Engineer who writes and codes.',
+          content: 'The portfolio website for Jose Chirivella. Software Engineer who writes and codes.',
         },
         {
           name: 'og:image',
@@ -120,8 +115,7 @@ export default defineNuxtConfig({
         },
         {
           name: 'twitter:description',
-          content:
-            'The portfolio website for Jose Chirivella. Software Engineer who writes and codes.',
+          content: 'The portfolio website for Jose Chirivella. Software Engineer who writes and codes.',
         },
         {
           name: 'twitter:image',
@@ -164,7 +158,6 @@ export default defineNuxtConfig({
 
   modules: [
     '@posthog/nuxt',
-    '@nuxt/eslint',
     '@nuxtjs/stylelint-module',
     '@nuxt/test-utils/module',
     '@nuxtjs/tailwindcss',
@@ -173,6 +166,7 @@ export default defineNuxtConfig({
     '@primevue/nuxt-module',
     '@nuxt/icon',
     '@nuxt/image',
+    '@vercel/speed-insights',
   ],
 
   nitro: {
@@ -219,25 +213,26 @@ export default defineNuxtConfig({
     },
   },
 
-  eslint: {
-    lintOnStart: false,
-  },
-
   stylelint: {
     lintOnStart: false,
     exclude: ['coverage'],
   },
 
   content: {
-    contentHead: false,
-    highlight: {
-      theme: {
-        default: 'one-dark-pro',
-        dark: 'github-dark',
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: 'one-dark-pro',
+            dark: 'github-dark',
+          },
+        },
       },
     },
   },
 
+  // todo: investigate if this still needed
+  // @ts-ignore
   purgeCSS: {
     whitelistPatterns: [/svg.*/, /fa.*/],
   },

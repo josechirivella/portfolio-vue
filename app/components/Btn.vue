@@ -1,8 +1,5 @@
 <template>
-  <button
-    :class="classList"
-    class="btn p-4 border-0 rounded-lg"
-  >
+  <button :class="classList" class="btn p-4 border-0 rounded-lg">
     <slot />
   </button>
 </template>

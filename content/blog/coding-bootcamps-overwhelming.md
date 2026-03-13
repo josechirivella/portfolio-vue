@@ -40,4 +40,3 @@ Bootcamp.
 
 So, hang in there! You can do it, it is a lot of info but in the end, you can program pretty much anything, develop your
 apps to solve any issues you have with your life and learn something in the process.
-

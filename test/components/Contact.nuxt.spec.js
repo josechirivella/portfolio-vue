@@ -1,5 +1,6 @@
-import { beforeAll, describe, expect, test } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { beforeAll, describe, expect, test } from 'vitest';
+
 import Contact from '@/components/Contact.vue';
 
 describe.skip('Contact', () => {
@@ -85,9 +86,7 @@ describe.skip('Contact', () => {
       expect(emailInput.attributes('autocomplete')).toBe('email');
       expect(emailInput.attributes('placeholder')).toBe('Your email');
 
-      expect(messageTextarea.attributes('placeholder')).toBe(
-        'Enter your message',
-      );
+      expect(messageTextarea.attributes('placeholder')).toBe('Enter your message');
     });
   });
 });

@@ -1,5 +1,6 @@
-import { beforeAll, describe, expect, test } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
+import { beforeAll, describe, expect, test } from 'vitest';
+
 import Toc from '@/components/blog/Toc.vue';
 
 describe('Toc', () => {
@@ -64,9 +65,7 @@ describe('Toc', () => {
 
     test('should render nested children for links that have them', () => {
       // First link has children
-      const firstLinkChildren = wrapper.findAll(
-        'ul > li:first-child > ul > li',
-      );
+      const firstLinkChildren = wrapper.findAll('ul > li:first-child > ul > li');
       expect(firstLinkChildren.length).toBe(mockToc.links[0].children.length);
 
       mockToc.links[0].children.forEach((child, index) => {

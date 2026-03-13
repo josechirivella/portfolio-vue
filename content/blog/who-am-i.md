@@ -2,10 +2,10 @@
 title: What have I done for the past 10 years
 description: This will be the start of my blog, where I will be covering my endeavors, tech, and whatever I would like to write about.
 published: true
-keywords: [ personal, tech, software engineer, web development, mobile development, cloud computing, the iron yard ]
+keywords: [personal, tech, software engineer, web development, mobile development, cloud computing, the iron yard]
 image: https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=3538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 date: 01/17/2025
-tags: [ personal ]
+tags: [personal]
 ---
 
 # Prelude
@@ -43,10 +43,10 @@ I went to a private school, and I was able to learn English from a young age, wh
 moved to the US.
 My Brother is a Computer Engineer and my sister is a Chemical Engineer. I was the only one who didn't graduate from
 College
-*spoiler alert*, but I'll get on that later.
+_spoiler alert_, but I'll get on that later.
 
 Elementary did ok, High School did terrible, graduated with a low GPA, too lazy to study, did great in Sports (soccer,
-tennis and golf)
+tennis, and golf)
 
 In Venezuela, and some colleges in the US, if the parent is a Professor at the University, the kids get a one-pass entry
 without any test or scores to the university which the one I was thinking is one of the best in the nation. I wanted to
@@ -54,8 +54,7 @@ follow in my Mom steps and become a Doctor, but I didn't have the discipline to 
 but what threw me off was the current health system in Venezuela, parents suffering, no supplies, no medicine,
 no equipment, no nothing, and I didn't want to be part of that. So, I went with my third option, which was Computer
 Engineering. The second option was being a Pilot, but it would mean spending a lot of time traveling and I had a
-girlfriend
-at the time I eventually married her *another spoiler alert*.
+girlfriend at the time I eventually married her _another spoiler alert_.
 
 ## College
 
@@ -183,7 +182,7 @@ bonus for using our app and the first referral in our company history for it.
 
 Around March 2017, the company didn't have much runway to keep going, and I remember it vividly when I was in the zone
 coding, we had a daily all-hands, but I was just killing it. Walking to the elevator, thinking about the problem at
-hand, got into the meeting, still thinking about the issue at hand and I just heard Ryan that this was going to be the
+hand, got into the meeting, still thinking about the issue at hand, and I just heard Ryan that this was going to be the
 **last day** for everybody. I froze. I was in shock.
 
 It felt like a heartbreak where you were just processing what just happened, and you were just in shock. I was in a daze
@@ -213,18 +212,18 @@ From right to left, they were the Manager, 3 Senior Engineers, and some Front En
 
 I just kept saying to my head, relax, it's going to be fine. They are just going to ask you about your resume.
 
-First question. Can you tell me the command to see the processes running in a Linux VM? *in a Russian accent*
+First question. Can you tell me the command to see the processes running in a Linux VM? _in a Russian accent_
 
 WHAT
 
 Luckily I knew the answer, and in that quick second of me thinking, oh ^%%#$, this is going to be another humiliation
 and hard interview. I replied. Yeah, is `px aux`
 
-Him: Ok, and if I want to filter by a specific process? *more Russian*
+Him: Ok, and if I want to filter by a specific process? _more Russian_
 
 Me: `px aux | grep process`
 
-Him: Ok, that's all I needed to know. *Russian smile*
+Him: Ok, that's all I needed to know. _Russian smile_
 
 After that, the hard questions kept coming by, more in the sense of my experience. The last guy asked me excellent
 questions about Angular, RxJs, and Observables. There were some I didn't know, and I was honest about it. I didn't know.
@@ -265,6 +264,7 @@ There was a culture problem at the company, we had the main office in Latin Amer
 people just didn't know how it works in Latin America, there is a different rhythm and different ideologies. There is a
 phrase I
 learned that is
+
 > Americans live to work, non-Americans work to live
 
 I say "non-Americans" because that's how the rest of the world sees the US. There were a couple in the US office who
