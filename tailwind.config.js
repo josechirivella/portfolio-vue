@@ -10,7 +10,7 @@ export default {
   plugins: [
     require('tailwindcss-primeui'),
     require('@tailwindcss/typography'),
-    plugin(function ({ addBase, theme }) {
+    plugin(({ addBase, theme }) => {
       addBase({
         h1: { fontSize: theme('fontSize.2xl') },
         h2: { fontSize: theme('fontSize.xl') },

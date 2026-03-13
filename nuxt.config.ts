@@ -57,16 +57,6 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
 
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: 'modern',
-        },
-      },
-    },
-  },
-
   devtools: { enabled: true },
   ssr: true,
 
@@ -164,7 +154,6 @@ export default defineNuxtConfig({
 
   modules: [
     '@posthog/nuxt',
-    '@nuxt/eslint',
     '@nuxtjs/stylelint-module',
     '@nuxt/test-utils/module',
     '@nuxtjs/tailwindcss',
@@ -219,21 +208,20 @@ export default defineNuxtConfig({
     },
   },
 
-  eslint: {
-    lintOnStart: false,
-  },
-
   stylelint: {
     lintOnStart: false,
     exclude: ['coverage'],
   },
 
   content: {
-    contentHead: false,
-    highlight: {
-      theme: {
-        default: 'one-dark-pro',
-        dark: 'github-dark',
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: 'one-dark-pro',
+            dark: 'github-dark',
+          },
+        },
       },
     },
   },
