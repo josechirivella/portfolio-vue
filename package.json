@@ -21,7 +21,7 @@
     "test:coverage": "vitest run --project nuxt --coverage"
   },
   "dependencies": {
-    "@posthog/nuxt": "^1.5.83",
+    "@posthog/nuxt": "^1.5.100",
     "@primeuix/themes": "^2.0.3",
     "@tailwindcss/typography": "^0.5.19",
     "@vercel/speed-insights": "^2.0.0",
