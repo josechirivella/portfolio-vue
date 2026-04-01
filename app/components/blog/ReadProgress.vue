@@ -1,7 +1,7 @@
 <template>
   <div class="read-progress-container">
     <span
-      :class="{ 'with-shadow': 'shadow' }"
+      :class="{ 'with-shadow': shadow }"
       :style="{
         width: readProgress + '%',
         color: color,

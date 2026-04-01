@@ -5,7 +5,7 @@
       class="mx-auto prose dark:prose-invert prose-code:before:content-none prose-code:after:content-none lg:prose-xl"
     >
       <h1>{{ post.title }}</h1>
-      <span>{{ post?.date }}</span>
+      <span>{{ useFormatDateToLocale(post.date) }}</span>
       <NuxtImg :src="post?.image" alt="Post cover" class="rounded-lg mx-auto" />
       <!-- Table of contents -->
       <LazyBlogToc v-if="post.body.toc?.links?.length > 0" :toc="post.body.toc" />
@@ -24,7 +24,7 @@ if (!post.value) {
   throw createError({
     statusCode: 404,
     statusMessage: 'Page not found',
-    fatal: true,
+    fatal: false,
   });
 }
 
