@@ -4,9 +4,9 @@
       :class="{ 'with-shadow': shadow }"
       :style="{
         width: readProgress + '%',
-        color: color,
-        height: height,
-        opacity: opacity,
+        color,
+        height,
+        opacity,
         backgroundColor: color,
       }"
       class="read-progress-bar"
@@ -33,23 +33,7 @@ defineProps({
     default: true,
   },
 });
-const readProgress = ref(0);
-
-onMounted(() => {
-  window.addEventListener('scroll', updateReadProgress);
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener('scroll', updateReadProgress);
-});
-
-function updateReadProgress(): void {
-  readProgress.value = currentScrollPosition(window.scrollY);
-}
-
-function currentScrollPosition(position: number): number {
-  return (position / (document.body.clientHeight - document.documentElement.clientHeight)) * 100;
-}
+const { readProgress } = useReadProgress();
 </script>
 
 <style lang="scss" scoped>
