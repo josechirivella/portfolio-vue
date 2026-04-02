@@ -219,6 +219,10 @@ export default defineNuxtConfig({
   },
 
   content: {
+    database: {
+      type: 'sqlite',
+      filename: ':memory:',
+    },
     build: {
       markdown: {
         highlight: {

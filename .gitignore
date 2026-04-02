@@ -94,4 +94,6 @@ sw.*
 
 # Sqlite
 .data
+data/
 identifier.sqlite
+*.db
