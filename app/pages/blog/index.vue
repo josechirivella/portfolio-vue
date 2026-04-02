@@ -58,13 +58,13 @@ const {
   data: posts,
   pending,
   error,
-} = useAsyncData('posts', () => {
+} = await useAsyncData('posts', () => {
   const query = queryCollection('content');
 
   return query
     .limit(9)
     .skip(9 * (pageNo.value - 1))
-    .order('date', 'ASC')
+    .order('date', 'DESC')
     .all();
 });
 
