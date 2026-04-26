@@ -45,7 +45,7 @@
     "@nuxtjs/sitemap": "^8.0.11",
     "@nuxtjs/stylelint-module": "^5.2.1",
     "@nuxtjs/tailwindcss": "^6.14.0",
-    "@primevue/nuxt-module": "^4.5.4",
+    "@primevue/nuxt-module": "^4.5.5",
     "@types/bun": "^1.3.11",
     "@vitest/coverage-v8": "4.1.2",
     "@vitest/eslint-plugin": "^1.6.14",
