@@ -55,7 +55,7 @@
     "nuxt": "^4.5.2",
     "oxfmt": "^0.64.0",
     "oxlint": "^1.79.0",
-    "oxlint-tsgolint": "^0.22.1",
+    "oxlint-tsgolint": "^7.0.2001",
     "postcss": "^8.5.26",
     "postcss-html": "^2.0.0",
     "postcss-scss": "^4.0.9",
