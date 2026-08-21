@@ -198,6 +198,11 @@ export default defineNuxtConfig({
     },
   },
 
+  // primevue / @primeuix/themes / @primevue/nuxt-module are pinned to the v4.x / v2.x
+  // MIT-licensed lines on purpose: v5 switches to a commercial dual-license
+  // (community tier requires annual revenue/headcount recertification). This repo only
+  // uses PrimeVue for the Noir theme's CSS tokens below, no components are rendered, so
+  // there's no upside to taking on the license. See PR #512 for the full writeup.
   primevue: {
     options: {
       ripple: true,

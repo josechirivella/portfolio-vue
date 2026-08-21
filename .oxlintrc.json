@@ -2,8 +2,7 @@
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "plugins": ["unicorn", "typescript", "vitest", "import", "vue", "oxc"],
   "categories": {},
-  "rules": {
-  },
+  "rules": {},
   "settings": {
     "vitest": {
       "typecheck": true
