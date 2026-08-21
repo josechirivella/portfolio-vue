@@ -97,3 +97,5 @@ sw.*
 data/
 identifier.sqlite
 *.db
+*.db-shm
+*.db-wal

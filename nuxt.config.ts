@@ -1,5 +1,6 @@
 import { definePreset } from '@primeuix/styled';
 import Aura from '@primeuix/themes/aura';
+import { fileURLToPath } from 'node:url';
 
 const Noir = definePreset(Aura, {
   semantic: {
@@ -67,7 +68,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
 
-  runtimeConfig: {},
+  // Server-only: read directly off process.env in server/utils/database.ts and
+  // server/utils/hash-ip.ts (no client-exposed public counterparts needed).
+  runtimeConfig: {
+    tursoDatabaseUrl: process.env.TURSO_DATABASE_URL,
+    tursoAuthToken: process.env.TURSO_AUTH_TOKEN,
+    likesHashSalt: process.env.LIKES_HASH_SALT,
+  },
 
   sitemap: {
     zeroRuntime: true,
@@ -171,9 +178,18 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: process.env.NITRO_PRESET,
+    // Inlines the generated .sql into the server build. Nitro only bundles JS, so without
+    // this the migration plugin finds no migrations folder on a serverless deploy. The path
+    // must be absolute: Nitro resolves a relative dir against its own srcDir (<root>/server),
+    // not the project root.
+    serverAssets: [
+      { baseName: 'migrations', dir: fileURLToPath(new URL('./server/database/migrations', import.meta.url)) },
+    ],
     prerender: {
       routes: ['/', '/sitemap.xml'],
       crawlLinks: true,
+      // crawlLinks would otherwise bake live like counts into static HTML at build time.
+      ignore: ['/api/**'],
     },
     rollupConfig: {
       output: {

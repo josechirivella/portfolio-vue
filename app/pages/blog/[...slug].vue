@@ -11,6 +11,7 @@
       <LazyBlogToc v-if="post.body.toc?.links?.length > 0" :toc="post.body.toc" />
       <ContentRenderer v-if="post" :value="post" />
     </article>
+    <BlogLikes :slug="likeSlug" />
     <ScrollTop />
   </div>
 </template>
@@ -27,6 +28,10 @@ if (!post.value) {
     fatal: false,
   });
 }
+
+// API slugs are bare, e.g. "my-post" — strip the "/blog/" prefix (and any stray leading/
+// trailing slashes from the catch-all route) that the content path carries.
+const likeSlug = computed(() => (post.value?.path ?? route.path).replace(/^\/?blog\/?/, '').replace(/^\/+|\/+$/g, ''));
 
 useSeoMeta({
   title: `${post.value.title} - Jose Chirivella`,
