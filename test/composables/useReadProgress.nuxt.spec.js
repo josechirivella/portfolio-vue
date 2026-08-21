@@ -1,6 +1,7 @@
-import { defineComponent, h } from 'vue';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
+import { defineComponent, h } from 'vue';
+
 import { useReadProgress } from '@/composables/useReadProgress';
 
 Object.defineProperty(document.body, 'clientHeight', { value: 1000, configurable: true });
