@@ -178,13 +178,13 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: process.env.NITRO_PRESET,
-    // Keep under nitro.vercel (not a top-level `vercel` key) so Nitro sees the Bun
-    // runtime. vercel.json `bunVersion` also selects Bun for deploy output. Content
-    // still needs an explicit experimental.sqliteConnector (its Vercel preset applies
-    // too late to change the adapter alias) — we use `native` (node:sqlite).
+    // Force Node for serverless functions. vercel.json `bunVersion` keeps *install/build*
+    // on Bun, but that same key also makes Nitro default the function runtime to Bun —
+    // and Vercel Bun fails to link native/ESM graphs here (ResolveMessage → every /api/*
+    // 500, including likes). Node runs @libsql/client/web + Content's node:sqlite fine.
     vercel: {
       functions: {
-        runtime: 'bun1.x',
+        runtime: 'nodejs22.x',
       },
     },
     // Inlines the generated .sql into the server build. Nitro only bundles JS, so without

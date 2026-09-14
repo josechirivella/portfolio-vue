@@ -1,11 +1,13 @@
 import type { H3Event } from 'h3';
+import { createError } from 'h3';
 
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
 
-// server/utils/hash-ip.ts calls useRuntimeConfig(), which Nitro auto-imports at build
-// time. Outside a Nitro build that global doesn't exist, so stub it before importing.
+// server/utils/hash-ip.ts calls useRuntimeConfig()/createError(), which Nitro auto-imports
+// at build time. Outside a Nitro build those globals don't exist, so stub before importing.
 const runtimeConfig = { likesHashSalt: 'test-salt' as string | undefined };
 vi.stubGlobal('useRuntimeConfig', () => runtimeConfig);
+vi.stubGlobal('createError', createError);
 
 const { hashVisitor } = await import('../../server/utils/hash-ip');
 
@@ -69,10 +71,21 @@ describe('hashVisitor', () => {
     expect(hashVisitor(makeEvent({}, '203.0.113.7'))).not.toBe(withFirstSalt);
   });
 
-  test('falls back to the dev salt without throwing when none is configured', () => {
+  test('falls back to the dev salt without throwing when none is configured off Vercel', () => {
     runtimeConfig.likesHashSalt = undefined;
 
     expect(hashVisitor(makeEvent({}, '203.0.113.7'))).toMatch(/^[0-9a-f]{32}$/);
+  });
+
+  test('fails closed on Vercel when LIKES_HASH_SALT is unset', () => {
+    process.env.VERCEL = '1';
+    runtimeConfig.likesHashSalt = undefined;
+
+    try {
+      expect(() => hashVisitor(makeEvent({}, '203.0.113.7'))).toThrowError(/LIKES_HASH_SALT/);
+    } finally {
+      delete process.env.VERCEL;
+    }
   });
 
   describe('IP extraction behind a trusted proxy', () => {

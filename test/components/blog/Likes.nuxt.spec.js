@@ -61,8 +61,9 @@ describe('BlogLikes', () => {
     const wrapper = await mountSuspended(Likes, { props: { slug: 'test-post' } });
     await flushPromises();
 
-    expect(wrapper.text()).toContain('12 likes');
-    expect(wrapper.text()).toContain("You've liked this 3 times");
+    expect(wrapper.text()).toContain('12');
+    expect(wrapper.text()).toContain('likes');
+    expect(wrapper.text()).toContain('3 · 7 left');
   });
 
   test('add increments optimistically before the request settles', async () => {
@@ -75,12 +76,12 @@ describe('BlogLikes', () => {
 
     // Assert on the very next tick, before the mocked network call resolves: the bump
     // to 13/4 must already be on screen, not waiting on the server round trip.
-    expect(wrapper.text()).toContain('13 likes');
-    expect(wrapper.text()).toContain("You've liked this 4 times");
+    expect(wrapper.text()).toContain('13');
+    expect(wrapper.text()).toContain('4 · 6 left');
 
     await flushPromises();
-    expect(wrapper.text()).toContain('13 likes');
-    expect(wrapper.text()).toContain("You've liked this 4 times");
+    expect(wrapper.text()).toContain('13');
+    expect(wrapper.text()).toContain('4 · 6 left');
   });
 
   test('the 10-like cap is respected and the add button disables at the max', async () => {
@@ -88,7 +89,7 @@ describe('BlogLikes', () => {
     const wrapper = await mountSuspended(Likes, { props: { slug: 'capped-post' } });
     await flushPromises();
 
-    expect(wrapper.text()).toContain("that's the max!");
+    expect(wrapper.text()).toContain('Max 10');
     const likeButton = wrapper.find('button[aria-label*="Like this post"]');
     expect(likeButton.attributes('disabled')).toBeDefined();
 
@@ -96,8 +97,8 @@ describe('BlogLikes', () => {
     await flushPromises();
 
     // Clicking a disabled control is a no-op; the count must not creep past the cap.
-    expect(wrapper.text()).toContain('20 likes');
-    expect(wrapper.text()).toContain("You've liked this 10 times");
+    expect(wrapper.text()).toContain('20');
+    expect(wrapper.text()).toContain('Max 10');
   });
 
   test('a failed request rolls back to the pre-click state', async () => {
@@ -115,16 +116,16 @@ describe('BlogLikes', () => {
 
     const wrapper = await mountSuspended(Likes, { props: { slug } });
     await flushPromises();
-    expect(wrapper.text()).toContain('5 likes');
+    expect(wrapper.text()).toContain('5');
 
     const likeButton = wrapper.find('button[aria-label*="Like this post"]');
     await likeButton.trigger('click');
-    expect(wrapper.text()).toContain('6 likes');
+    expect(wrapper.text()).toContain('6');
 
     await flushPromises();
 
-    expect(wrapper.text()).toContain('5 likes');
-    expect(wrapper.text()).toContain("You've liked this 2 times");
+    expect(wrapper.text()).toContain('5');
+    expect(wrapper.text()).toContain('2 · 8 left');
     expect(wrapper.text()).toContain('temporarily unavailable');
   });
 
@@ -145,8 +146,8 @@ describe('BlogLikes', () => {
 
     expect(state.postCount).toBeLessThanOrEqual(10);
     expect(state.userLikes).toBe(10);
-    expect(wrapper.text()).toContain('10 likes');
-    expect(wrapper.text()).toContain("that's the max!");
+    expect(wrapper.text()).toContain('10');
+    expect(wrapper.text()).toContain('Max 10');
     expect(likeButton.attributes('disabled')).toBeDefined();
   });
 
@@ -155,12 +156,12 @@ describe('BlogLikes', () => {
     const wrapper = await mountSuspended(Likes, { props: { slug: 'guarded-post' } });
     await flushPromises();
 
-    // Bypasses the disabled attribute entirely, the way a stray call or devtools would.
+    // defineExpose({ addLike }) keeps this stable across Vue Test Utils versions.
     wrapper.vm.addLike();
     await drainQueue(state);
 
     expect(state.postCount).toBe(0);
-    expect(wrapper.text()).toContain("You've liked this 10 times");
+    expect(wrapper.text()).toContain('Max 10');
   });
 
   test('undoing at the cap frees exactly one like back up', async () => {
@@ -171,7 +172,20 @@ describe('BlogLikes', () => {
     await wrapper.find('button[aria-label*="Remove one like"]').trigger('click');
     await flushPromises();
 
-    expect(wrapper.text()).toContain("You've liked this 9 times");
+    expect(wrapper.text()).toContain('9 · 1 left');
     expect(wrapper.find('button[aria-label*="Like this post"]').attributes('disabled')).toBeUndefined();
+  });
+
+  test('shows a first-like prompt only when the post has zero likes', async () => {
+    mockLikesApi('fresh-post', { totalLikes: 0, userLikes: 0, remainingLikes: 10, maxLikes: 10 });
+    const fresh = await mountSuspended(Likes, { props: { slug: 'fresh-post' } });
+    await flushPromises();
+    expect(fresh.text()).toContain('Be the first');
+
+    mockLikesApi('popular-post', { totalLikes: 4, userLikes: 0, remainingLikes: 10, maxLikes: 10 });
+    const popular = await mountSuspended(Likes, { props: { slug: 'popular-post' } });
+    await flushPromises();
+    expect(popular.text()).toContain('Tap to like');
+    expect(popular.text()).not.toContain('Be the first');
   });
 });

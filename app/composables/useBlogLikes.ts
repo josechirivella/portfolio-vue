@@ -52,7 +52,9 @@ export function useBlogLikes(slug: MaybeRefOrGetter<string>) {
       (err as { response?: { status?: number }; statusCode?: number })?.response?.status ??
       (err as { statusCode?: number })?.statusCode;
     if (status === 409) {
-      return action === 'add' ? "You've hit the 10-like limit on this post." : 'Nothing left to remove.';
+      return action === 'add'
+        ? `You've hit the ${maxLikes.value}-like limit on this post.`
+        : 'Nothing left to remove.';
     }
     if (status === 503) return 'Likes are temporarily unavailable — try again later.';
     if (status === 400) return 'That like got lost — please try again.';

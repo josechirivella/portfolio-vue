@@ -7,9 +7,22 @@ const DEV_ONLY_SALT = 'dev-only-insecure-salt-do-not-use-in-production';
 
 let warnedMissingSalt = false;
 
+function isVercelRuntime(): boolean {
+  return Boolean(process.env.VERCEL);
+}
+
 function getSalt(): string {
   const salt = useRuntimeConfig().likesHashSalt;
   if (salt) return salt;
+
+  // On Vercel, visitor ids must not be HMAC'd with a public salt (IPv4 space is
+  // brute-forceable). Fail closed so the likes handlers surface a clean 503 instead.
+  if (isVercelRuntime()) {
+    throw createError({
+      statusCode: 503,
+      statusMessage: 'LIKES_HASH_SALT is not configured.',
+    });
+  }
 
   if (!warnedMissingSalt) {
     console.warn('[likes] LIKES_HASH_SALT is not set; using an insecure dev-only salt. Set it in production.');
@@ -28,7 +41,7 @@ function stripIpv4MappedPrefix(ip: string): string {
  * any other reverse proxy that sanitises these headers.
  */
 function isBehindTrustedProxy(): boolean {
-  return Boolean(process.env.VERCEL) || process.env.TRUST_PROXY_HEADERS === 'true';
+  return isVercelRuntime() || process.env.TRUST_PROXY_HEADERS === 'true';
 }
 
 function firstForwardedEntry(value: string | undefined): string | undefined {
