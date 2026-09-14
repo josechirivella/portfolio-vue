@@ -74,6 +74,9 @@ typings/
 .cache
 dist
 
+# Vercel build output (local `NITRO_PRESET=vercel bun run build`)
+.vercel
+
 # vuepress build output
 .vuepress/dist
 
@@ -97,3 +100,5 @@ sw.*
 data/
 identifier.sqlite
 *.db
+*.db-shm
+*.db-wal

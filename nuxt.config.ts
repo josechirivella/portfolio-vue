@@ -1,5 +1,6 @@
 import { definePreset } from '@primeuix/styled';
 import Aura from '@primeuix/themes/aura';
+import { fileURLToPath } from 'node:url';
 
 const Noir = definePreset(Aura, {
   semantic: {
@@ -67,7 +68,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
 
-  runtimeConfig: {},
+  // Server-only: read directly off process.env in server/utils/database.ts and
+  // server/utils/hash-ip.ts (no client-exposed public counterparts needed).
+  runtimeConfig: {
+    tursoDatabaseUrl: process.env.TURSO_DATABASE_URL,
+    tursoAuthToken: process.env.TURSO_AUTH_TOKEN,
+    likesHashSalt: process.env.LIKES_HASH_SALT,
+  },
 
   sitemap: {
     zeroRuntime: true,
@@ -171,9 +178,27 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: process.env.NITRO_PRESET,
+    // Force Node for serverless functions. vercel.json `bunVersion` keeps *install/build*
+    // on Bun, but that same key also makes Nitro default the function runtime to Bun —
+    // and Vercel Bun fails to link native/ESM graphs here (ResolveMessage → every /api/*
+    // 500, including likes). Node runs @libsql/client/web + Content's node:sqlite fine.
+    vercel: {
+      functions: {
+        runtime: 'nodejs22.x',
+      },
+    },
+    // Inlines the generated .sql into the server build. Nitro only bundles JS, so without
+    // this the migration plugin finds no migrations folder on a serverless deploy. The path
+    // must be absolute: Nitro resolves a relative dir against its own srcDir (<root>/server),
+    // not the project root.
+    serverAssets: [
+      { baseName: 'migrations', dir: fileURLToPath(new URL('./server/database/migrations', import.meta.url)) },
+    ],
     prerender: {
       routes: ['/', '/sitemap.xml'],
       crawlLinks: true,
+      // crawlLinks would otherwise bake live like counts into static HTML at build time.
+      ignore: ['/api/**'],
     },
     rollupConfig: {
       output: {
@@ -228,6 +253,14 @@ export default defineNuxtConfig({
       type: 'sqlite',
       filename: ':memory:',
     },
+    // Use Node's built-in `node:sqlite` (works on Node prerender *and* Vercel Bun).
+    // Do NOT use better-sqlite3: it is a Node ABI addon that Bun cannot load, and it
+    // becomes a static import in the Nitro serverless bundle → ResolveMessage on every
+    // /api/* cold start. Do NOT use sqliteConnector: 'bun' either: Nitro's prerender
+    // worker is Node and cannot resolve the `bun:` scheme.
+    experimental: {
+      sqliteConnector: 'native',
+    },
     build: {
       markdown: {
         highlight: {
@@ -250,12 +283,6 @@ export default defineNuxtConfig({
 
   sourcemap: {
     client: 'hidden',
-  },
-
-  vercel: {
-    functions: {
-      runtime: 'bun1.x',
-    },
   },
 
   icon: {
