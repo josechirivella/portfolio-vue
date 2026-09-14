@@ -18,6 +18,7 @@
 <script lang="ts" setup>
 const route = useRoute();
 const url = useRequestURL();
+const { trackBlogPostView } = useAnalytics();
 const { data: post } = await useAsyncData(route.path, () => queryCollection('content').path(route.path).first());
 
 if (!post.value) {
@@ -42,5 +43,16 @@ useSeoMeta({
   twitterDescription: post.value.description ?? '',
   twitterImage: post.value.image,
   twitterImageAlt: post.value.imageAlt ?? '',
+});
+
+onMounted(() => {
+  if (!post.value) {
+    return;
+  }
+
+  trackBlogPostView({
+    path: route.path,
+    title: post.value.title,
+  });
 });
 </script>

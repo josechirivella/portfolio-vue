@@ -23,26 +23,32 @@ exports[`Hero > should render component 1`] = `
     <btn-icons-stub
       icon="fa-brands:twitter"
       link="https://twitter.com/chiri14"
+      trackcontext="hero_social"
     />
     <btn-icons-stub
       icon="fa-brands:linkedin"
       link="https://linkedin.com/in/josechirivella"
+      trackcontext="hero_social"
     />
     <btn-icons-stub
       icon="fa-brands:github"
       link="https://github.com/josechirivella"
+      trackcontext="hero_social"
     />
     <btn-icons-stub
       icon="fa-brands:medium"
       link="https://medium.com/@josechirivella"
+      trackcontext="hero_social"
     />
     <btn-icons-stub
       icon="fa6-regular:paper-plane"
       link="mailto:joser.chirivella@gmail.com"
+      trackcontext="hero_social"
     />
     <btn-icons-stub
       icon="fa6-regular:file-pdf"
       link="https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf"
+      trackcontext="hero_social"
     />
     
   </div>
