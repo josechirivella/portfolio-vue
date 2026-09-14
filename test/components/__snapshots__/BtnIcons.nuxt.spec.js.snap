@@ -4,6 +4,7 @@ exports[`BtnIcons > should render component 1`] = `
 <a
   data-v-fa03cf5c=""
   href="https://www.google.com"
+  rel="noopener noreferrer"
   target="_blank"
 >
   <div
@@ -24,6 +25,7 @@ exports[`BtnIcons > should render component with link 1`] = `
 <a
   data-v-fa03cf5c=""
   href="https://www.facebook.com"
+  rel="noopener noreferrer"
   target="_blank"
 >
   <div

@@ -4,6 +4,7 @@
     <main class="container mx-auto p-4">
       <slot />
     </main>
+    <AnalyticsConsentBanner />
   </div>
 </template>
 <script lang="ts" setup>

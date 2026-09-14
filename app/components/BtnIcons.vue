@@ -1,5 +1,5 @@
 <template>
-  <a v-if="link && icon" :href="link" target="_blank">
+  <a v-if="link && icon" :href="link" target="_blank" rel="noopener noreferrer" @click="onClick">
     <div class="icon-wrapper">
       <Icon :name="icon" color="white" />
     </div>
@@ -7,10 +7,17 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   link: { type: String, required: true },
   icon: { type: String, required: true },
+  trackContext: { type: String, default: 'hero_social' },
 });
+
+const { trackExternalLink } = useAnalytics();
+
+function onClick() {
+  trackExternalLink(props.link, props.trackContext);
+}
 </script>
 
 <style lang="scss" scoped>

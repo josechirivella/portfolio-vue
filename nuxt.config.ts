@@ -1,5 +1,10 @@
 import { definePreset } from '@primeuix/styled';
 import Aura from '@primeuix/themes/aura';
+import { resolveDeployEnvironment, resolvePostHogPublicKey } from './app/utils/analytics-env';
+
+const deployEnvironment = resolveDeployEnvironment();
+const posthogPublicKey = resolvePostHogPublicKey(deployEnvironment);
+const posthogHost = (process.env.POSTHOG_HOST ?? process.env.NUXT_PUBLIC_POSTHOG_HOST ?? 'https://us.i.posthog.com').trim();
 
 const Noir = definePreset(Aura, {
   semantic: {
@@ -67,7 +72,15 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
 
-  runtimeConfig: {},
+  runtimeConfig: {
+    public: {
+      analytics: {
+        environment: deployEnvironment,
+        enabled: Boolean(posthogPublicKey),
+        host: posthogHost,
+      },
+    },
+  },
 
   sitemap: {
     zeroRuntime: true,
@@ -182,19 +195,32 @@ export default defineNuxtConfig({
     },
   },
 
+  // Client capture stays off until the consent banner opts the visitor in.
+  // Preview vs production: optional POSTHOG_PUBLIC_KEY_PREVIEW, plus `environment` super property
+  // registered from `app/plugins/analytics.client.ts` after init / opt-in.
   posthogConfig: {
-    publicKey: process.env.POSTHOG_PUBLIC_KEY, // Find it in project settings https://app.posthog.com/settings/project
+    publicKey: posthogPublicKey,
+    host: posthogHost,
     clientConfig: {
-      capture_exceptions: true, // Enables automatic exception capture on the client side (Vue)
+      capture_exceptions: true,
+      // No events (incl. autocapture / pageviews / replay) until opt_in_capturing().
+      opt_out_capturing_by_default: true,
+      opt_out_capturing_persistence_type: 'localStorage',
+      persistence: 'localStorage+cookie',
+      person_profiles: 'identified_only',
+      capture_pageview: true,
+      capture_pageleave: true,
+      // Avoid noisy local/preview sessions even if a key is present.
+      disable_session_recording: deployEnvironment !== 'production',
     },
     serverConfig: {
-      enableExceptionAutocapture: true, // Enables automatic exception capture on the server side (Nitro)
+      enableExceptionAutocapture: true,
     },
     sourcemaps: {
       enabled: process.env.POSTHOG_SOURCEMAPS_ENABLED === 'true',
-      envId: process.env.POSTHOG_ENV_ID as string, // Your environment ID from PostHog settings https://app.posthog.com/settings/environment#variables
-      personalApiKey: process.env.POSTHOG_PERSONAL_API_KEY as string, // Your personal API key from PostHog settings https://app.posthog.com/settings/user-api-keys
-      project: 'portfolio', // Optional: defaults to git repository name
+      envId: process.env.POSTHOG_ENV_ID as string,
+      personalApiKey: process.env.POSTHOG_PERSONAL_API_KEY as string,
+      project: 'portfolio',
     },
   },
 

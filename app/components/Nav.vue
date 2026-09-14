@@ -23,7 +23,7 @@
               :target="item.target"
               :to="item.link"
               class="px-3 py-2 flex items-center text-lg font-bold leading-snug"
-              @click="toggleNavbar()"
+              @click="onNavClick(item)"
             >
               <i class="text-lg leading-lg opacity-75" /><span class="ml-2">{{ item.name }}</span>
             </NuxtLink>
@@ -41,9 +41,11 @@ interface INavItems {
   name: string;
   link: string;
   target?: string;
+  external?: boolean;
 }
 
 const route = useRoute();
+const { trackExternalLink } = useAnalytics();
 const showMenu = ref(false);
 const navItems: Array<INavItems> = [
   {
@@ -62,11 +64,19 @@ const navItems: Array<INavItems> = [
     name: 'Resume',
     link: 'https://storage.googleapis.com/portfolio-assets/resume/ResumeJose.pdf',
     target: '_blank',
+    external: true,
   },
 ];
 
 function toggleNavbar() {
   showMenu.value = !showMenu.value;
+}
+
+function onNavClick(item: INavItems) {
+  toggleNavbar();
+  if (item.external) {
+    trackExternalLink(item.link, 'nav');
+  }
 }
 
 function inBlog(): boolean {
