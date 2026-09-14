@@ -178,6 +178,15 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: process.env.NITRO_PRESET,
+    // Keep under nitro.vercel (not a top-level `vercel` key) so Nitro sees the Bun
+    // runtime. vercel.json `bunVersion` also selects Bun for deploy output. Content
+    // still needs an explicit experimental.sqliteConnector (its Vercel preset applies
+    // too late to change the adapter alias) — we use `native` (node:sqlite).
+    vercel: {
+      functions: {
+        runtime: 'bun1.x',
+      },
+    },
     // Inlines the generated .sql into the server build. Nitro only bundles JS, so without
     // this the migration plugin finds no migrations folder on a serverless deploy. The path
     // must be absolute: Nitro resolves a relative dir against its own srcDir (<root>/server),
@@ -244,6 +253,14 @@ export default defineNuxtConfig({
       type: 'sqlite',
       filename: ':memory:',
     },
+    // Use Node's built-in `node:sqlite` (works on Node prerender *and* Vercel Bun).
+    // Do NOT use better-sqlite3: it is a Node ABI addon that Bun cannot load, and it
+    // becomes a static import in the Nitro serverless bundle → ResolveMessage on every
+    // /api/* cold start. Do NOT use sqliteConnector: 'bun' either: Nitro's prerender
+    // worker is Node and cannot resolve the `bun:` scheme.
+    experimental: {
+      sqliteConnector: 'native',
+    },
     build: {
       markdown: {
         highlight: {
@@ -266,12 +283,6 @@ export default defineNuxtConfig({
 
   sourcemap: {
     client: 'hidden',
-  },
-
-  vercel: {
-    functions: {
-      runtime: 'bun1.x',
-    },
   },
 
   icon: {
