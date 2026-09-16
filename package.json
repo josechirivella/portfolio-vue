@@ -3,6 +3,11 @@
   "version": "1.1.1",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.33.3",
+  "engines": {
+    "node": "24.x",
+    "pnpm": ">=10"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --dotenv .env.local",
@@ -15,7 +20,7 @@
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "lint:style": "stylelint \"**/*.{vue,css,scss}\" --ignore-path .gitignore",
-    "lint": "bun lint:js && bun lint:style",
+    "lint": "pnpm lint:js && pnpm lint:style",
     "test": "vitest run --project nuxt",
     "test:watch": "vitest --project nuxt",
     "test:coverage": "vitest run --project nuxt --coverage"
@@ -44,7 +49,7 @@
     "@nuxtjs/stylelint-module": "^5.2.1",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@primevue/nuxt-module": "^4.5.5",
-    "@types/bun": "^1.4.0",
+    "@types/node": "^24.10.1",
     "@vitest/coverage-v8": "^4.1.11",
     "@vitest/eslint-plugin": "^1.6.27",
     "@vue/test-utils": "^2.4.11",
@@ -70,15 +75,17 @@
     "*.{js,vue}": "oxlint",
     "*.{css,vue}": "stylelint"
   },
-  "trustedDependencies": [
-    "@parcel/watcher",
-    "@posthog/cli",
-    "@vercel/speed-insights",
-    "better-sqlite3",
-    "core-js",
-    "esbuild",
-    "sharp",
-    "unrs-resolver",
-    "vue-demi"
-  ]
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "@posthog/cli",
+      "@vercel/speed-insights",
+      "better-sqlite3",
+      "core-js",
+      "esbuild",
+      "sharp",
+      "unrs-resolver",
+      "vue-demi"
+    ]
+  }
 }
