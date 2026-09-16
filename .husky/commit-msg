@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/common.sh"
 
-bun --bun commitlint --edit $1
+pnpm commitlint --edit $1

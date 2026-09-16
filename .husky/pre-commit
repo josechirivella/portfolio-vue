@@ -2,5 +2,5 @@
 
 . "$(dirname "$0")/common.sh"
 
-bun --bun run lint-staged
-bun --bun run test
+pnpm lint-staged
+pnpm test

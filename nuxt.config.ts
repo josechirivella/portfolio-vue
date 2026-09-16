@@ -254,7 +254,7 @@ export default defineNuxtConfig({
 
   vercel: {
     functions: {
-      runtime: 'bun1.x',
+      runtime: 'nodejs24.x',
     },
   },
 
