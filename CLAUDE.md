@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Development Commands
 
-This project uses **pnpm** as the package manager on **Node.js 24**.
+This project uses **pnpm 12** (`packageManager` in `package.json`) on **Node.js 24**. Workspace and build-approval settings live in `pnpm-workspace.yaml`.
 
 ### Common Commands
 
